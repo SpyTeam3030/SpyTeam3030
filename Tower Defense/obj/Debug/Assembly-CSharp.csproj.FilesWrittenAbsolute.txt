@@ -1,0 +1,36 @@
+/Users/Shirley/Tower Defense/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/Shirley/Tower Defense/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/Shirley/Tower Defense/obj/Debug/Assembly-CSharp.dll
+/Users/Shirley/Tower Defense/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/Shirley/Tower Defense/Temp/bin/Debug/UnityEngine.dll
+/Users/Shirley/Tower Defense/Temp/bin/Debug/UnityEditor.dll
+/Users/Shirley/Tower Defense/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/Shirley/Tower Defense/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/Shirley/Tower Defense/Temp/bin/Debug/UnityEngine.Analytics.dll
+/Users/Shirley/Tower Defense/Temp/bin/Debug/Mono.Cecil.dll
+/Users/Shirley/Tower Defense/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/Shirley/Tower Defense/Temp/bin/Debug/Unity.DataContract.dll
+/Users/Shirley/Tower Defense/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/Shirley/Tower Defense/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/Shirley/Tower Defense/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/Shirley/Tower Defense/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/Shirley/Tower Defense/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/Shirley/Tower Defense/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/Shirley/Unity Workspace/Tower Defense/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/Shirley/Unity Workspace/Tower Defense/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/Shirley/Unity Workspace/Tower Defense/obj/Debug/Assembly-CSharp.dll
+/Users/Shirley/Unity Workspace/Tower Defense/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/Shirley/Unity Workspace/Tower Defense/Temp/bin/Debug/UnityEngine.dll
+/Users/Shirley/Unity Workspace/Tower Defense/Temp/bin/Debug/UnityEditor.dll
+/Users/Shirley/Unity Workspace/Tower Defense/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/Shirley/Unity Workspace/Tower Defense/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/Shirley/Unity Workspace/Tower Defense/Temp/bin/Debug/UnityEngine.Analytics.dll
+/Users/Shirley/Unity Workspace/Tower Defense/Temp/bin/Debug/Mono.Cecil.dll
+/Users/Shirley/Unity Workspace/Tower Defense/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/Shirley/Unity Workspace/Tower Defense/Temp/bin/Debug/Unity.DataContract.dll
+/Users/Shirley/Unity Workspace/Tower Defense/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/Shirley/Unity Workspace/Tower Defense/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/Shirley/Unity Workspace/Tower Defense/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/Shirley/Unity Workspace/Tower Defense/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/Shirley/Unity Workspace/Tower Defense/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/Shirley/Unity Workspace/Tower Defense/Temp/bin/Debug/Mono.Cecil.Mdb.dll
