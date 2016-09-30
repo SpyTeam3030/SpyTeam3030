@@ -71,15 +71,15 @@ public class MySpy : MonoBehaviour {
 		}
 	}
 
-//	void OnCollisionEnter(Collision collision) {
-//		print ("collision happened");
-//		if (collision.gameObject.name == "EnemySpy") {
-//			print ("collision happened");
-//			attacking = true;
-//			agent.Stop ();
-//			collision.gameObject.GetComponent<EnemySpy>().TakeDamage (attack);
-//		}
-//	}
+	void OnCollisionEnter(Collision collision) {
+		print ("collision happened");
+		if (collision.gameObject.name == "EnemySpy") {
+			print ("collision happened");
+			attacking = true;
+			agent.Stop ();
+			collision.gameObject.GetComponent<EnemySpy>().TakeDamage (currentAttack);
+		}
+	}
 
 	public void DefaultColor(){
 		GetComponent<Renderer> ().material.color = defaultColor;
