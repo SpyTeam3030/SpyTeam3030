@@ -1,0 +1,742 @@
+fileFormatVersion: 2
+guid: 5d8ec6af9d7e6964e9525bd8d8d46e07
+timeCreated: 1475790657
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: isabella:Bip01
+    100004: isabella:Bip01 Footsteps
+    100006: isabella:Bip01 Head
+    100008: isabella:Bip01 HeadNub
+    100010: isabella:Bip01 L Calf
+    100012: isabella:Bip01 L Clavicle
+    100014: isabella:Bip01 L Finger0
+    100016: isabella:Bip01 L Finger01
+    100018: isabella:Bip01 L Finger02
+    100020: isabella:Bip01 L Finger0Nub
+    100022: isabella:Bip01 L Finger1
+    100024: isabella:Bip01 L Finger11
+    100026: isabella:Bip01 L Finger12
+    100028: isabella:Bip01 L Finger1Nub
+    100030: isabella:Bip01 L Finger2
+    100032: isabella:Bip01 L Finger21
+    100034: isabella:Bip01 L Finger22
+    100036: isabella:Bip01 L Finger2Nub
+    100038: isabella:Bip01 L Foot
+    100040: isabella:Bip01 L Forearm
+    100042: isabella:Bip01 L Hand
+    100044: isabella:Bip01 L Thigh
+    100046: isabella:Bip01 L Toe0
+    100048: isabella:Bip01 L Toe0Nub
+    100050: isabella:Bip01 L UpperArm
+    100052: isabella:Bip01 Neck
+    100054: isabella:Bip01 Pelvis
+    100056: isabella:Bip01 R Calf
+    100058: isabella:Bip01 R Clavicle
+    100060: isabella:Bip01 R Finger0
+    100062: isabella:Bip01 R Finger01
+    100064: isabella:Bip01 R Finger02
+    100066: isabella:Bip01 R Finger0Nub
+    100068: isabella:Bip01 R Finger1
+    100070: isabella:Bip01 R Finger11
+    100072: isabella:Bip01 R Finger12
+    100074: isabella:Bip01 R Finger1Nub
+    100076: isabella:Bip01 R Finger2
+    100078: isabella:Bip01 R Finger21
+    100080: isabella:Bip01 R Finger22
+    100082: isabella:Bip01 R Finger2Nub
+    100084: isabella:Bip01 R Foot
+    100086: isabella:Bip01 R Forearm
+    100088: isabella:Bip01 R Hand
+    100090: isabella:Bip01 R Thigh
+    100092: isabella:Bip01 R Toe0
+    100094: isabella:Bip01 R Toe0Nub
+    100096: isabella:Bip01 R UpperArm
+    100098: isabella:Bip01 Spine
+    100100: isabella:Bip01 Spine1
+    400000: //RootNode
+    400002: isabella:Bip01
+    400004: isabella:Bip01 Footsteps
+    400006: isabella:Bip01 Head
+    400008: isabella:Bip01 HeadNub
+    400010: isabella:Bip01 L Calf
+    400012: isabella:Bip01 L Clavicle
+    400014: isabella:Bip01 L Finger0
+    400016: isabella:Bip01 L Finger01
+    400018: isabella:Bip01 L Finger02
+    400020: isabella:Bip01 L Finger0Nub
+    400022: isabella:Bip01 L Finger1
+    400024: isabella:Bip01 L Finger11
+    400026: isabella:Bip01 L Finger12
+    400028: isabella:Bip01 L Finger1Nub
+    400030: isabella:Bip01 L Finger2
+    400032: isabella:Bip01 L Finger21
+    400034: isabella:Bip01 L Finger22
+    400036: isabella:Bip01 L Finger2Nub
+    400038: isabella:Bip01 L Foot
+    400040: isabella:Bip01 L Forearm
+    400042: isabella:Bip01 L Hand
+    400044: isabella:Bip01 L Thigh
+    400046: isabella:Bip01 L Toe0
+    400048: isabella:Bip01 L Toe0Nub
+    400050: isabella:Bip01 L UpperArm
+    400052: isabella:Bip01 Neck
+    400054: isabella:Bip01 Pelvis
+    400056: isabella:Bip01 R Calf
+    400058: isabella:Bip01 R Clavicle
+    400060: isabella:Bip01 R Finger0
+    400062: isabella:Bip01 R Finger01
+    400064: isabella:Bip01 R Finger02
+    400066: isabella:Bip01 R Finger0Nub
+    400068: isabella:Bip01 R Finger1
+    400070: isabella:Bip01 R Finger11
+    400072: isabella:Bip01 R Finger12
+    400074: isabella:Bip01 R Finger1Nub
+    400076: isabella:Bip01 R Finger2
+    400078: isabella:Bip01 R Finger21
+    400080: isabella:Bip01 R Finger22
+    400082: isabella:Bip01 R Finger2Nub
+    400084: isabella:Bip01 R Foot
+    400086: isabella:Bip01 R Forearm
+    400088: isabella:Bip01 R Hand
+    400090: isabella:Bip01 R Thigh
+    400092: isabella:Bip01 R Toe0
+    400094: isabella:Bip01 R Toe0Nub
+    400096: isabella:Bip01 R UpperArm
+    400098: isabella:Bip01 Spine
+    400100: isabella:Bip01 Spine1
+    7400000: mixamo.com
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: isabella:Bip01 Pelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 L Thigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 R Thigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 L Calf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 R Calf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 L Foot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 R Foot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 L Clavicle
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 R Clavicle
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 L UpperArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 R UpperArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 L Forearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 R Forearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 L Hand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 R Hand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 L Toe0
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 R Toe0
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 L Finger0
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 L Finger01
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 L Finger02
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 L Finger1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 L Finger11
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 L Finger12
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 L Finger2
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 L Finger21
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 L Finger22
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 R Finger0
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 R Finger01
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 R Finger02
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 R Finger1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 R Finger11
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 R Finger12
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 R Finger2
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 R Finger21
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: isabella:Bip01 R Finger22
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: cross_punch(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -0.048060305, y: -0.5250509, z: 0.02518027, w: 0.8493396}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01
+      position: {x: -0.001676594, y: 0.73704755, z: -0.006284112}
+      rotation: {x: -0.13810039, y: 0.6792292, z: 0.6962584, w: 0.18654807}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 Footsteps
+      position: {x: -0, y: 0, z: -0.85977596}
+      rotation: {x: 0, y: 0, z: -0.7071062, w: 0.7071074}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 Pelvis
+      position: {x: -0.0056420052, y: 0.010541499, z: 0.15638095}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 Spine
+      position: {x: -0.100227, y: 0.008687, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Thigh
+      position: {x: 0.100232996, y: -0.008607, z: 0.069253}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Calf
+      position: {x: -0.330703, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Foot
+      position: {x: -0.385595, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Toe0
+      position: {x: -0.15229699, y: 0.14504899, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Toe0Nub
+      position: {x: -0.08071499, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1, y: -1, z: -1}
+      transformModified: 1
+    - name: isabella:Bip01 R Thigh
+      position: {x: 0.100232996, y: -0.008607, z: -0.069253}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 R Calf
+      position: {x: -0.330703, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 R Foot
+      position: {x: -0.385595, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 R Toe0
+      position: {x: -0.15229699, y: 0.14504899, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 R Toe0Nub
+      position: {x: -0.08071499, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 Spine1
+      position: {x: -0.11270899, y: -0.00015499999, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 Neck
+      position: {x: -0.19838, y: -0.000094999996, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 Head
+      position: {x: -0.082398005, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 HeadNub
+      position: {x: -0.310569, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Clavicle
+      position: {x: 0.033065, y: 0.00529, z: 0.041667}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: -0.7071068, w: 0.000000030908623}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L UpperArm
+      position: {x: -0.07081699, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Forearm
+      position: {x: -0.16044599, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Hand
+      position: {x: -0.206921, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Finger0
+      position: {x: -0.025071, y: 0.010515, z: -0.038148}
+      rotation: {x: 0, y: 0.3826835, z: 0, w: -0.9238795}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Finger01
+      position: {x: -0.058365997, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Finger02
+      position: {x: -0.04838, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Finger0Nub
+      position: {x: -0.056355998, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Finger1
+      position: {x: -0.120283, y: -0.004105, z: -0.040283}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Finger11
+      position: {x: -0.044973996, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Finger12
+      position: {x: -0.044973, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Finger1Nub
+      position: {x: -0.044973996, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Finger2
+      position: {x: -0.12284999, y: -0.007437, z: 0.017999}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Finger21
+      position: {x: -0.044696998, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Finger22
+      position: {x: -0.04393, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 L Finger2Nub
+      position: {x: -0.047029, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 R Clavicle
+      position: {x: 0.033065, y: 0.00529, z: -0.041667}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: 0.7071068, w: -0.000000030908623}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 R UpperArm
+      position: {x: -0.07081699, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 R Forearm
+      position: {x: -0.16044599, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 R Hand
+      position: {x: -0.206921, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 R Finger0
+      position: {x: -0.025071999, y: 0.010515, z: 0.038148}
+      rotation: {x: 0, y: 0.38268346, z: 0, w: 0.9238795}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 R Finger01
+      position: {x: -0.058365997, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 R Finger02
+      position: {x: -0.04838, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 R Finger0Nub
+      position: {x: -0.056355998, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1, y: -1, z: -1}
+      transformModified: 1
+    - name: isabella:Bip01 R Finger1
+      position: {x: -0.120283, y: -0.004104, z: 0.040283}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 R Finger11
+      position: {x: -0.044973996, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 R Finger12
+      position: {x: -0.044973, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 R Finger1Nub
+      position: {x: -0.044973996, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1, y: -1, z: -1}
+      transformModified: 1
+    - name: isabella:Bip01 R Finger2
+      position: {x: -0.122851, y: -0.007437, z: -0.017999}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 R Finger21
+      position: {x: -0.044696998, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 R Finger22
+      position: {x: -0.04393, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: isabella:Bip01 R Finger2Nub
+      position: {x: -0.047029, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1, y: -1, z: -1}
+      transformModified: 1
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
