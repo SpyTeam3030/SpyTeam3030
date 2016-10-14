@@ -25,6 +25,7 @@ GameObject:
   - 114: {fileID: 114000012870931494}
   - 114: {fileID: 114000011114390000}
   - 195: {fileID: 195000010816216448}
+  - 114: {fileID: 114000013838690434}
   m_Layer: 0
   m_Name: Spy
   m_TagString: Untagged
@@ -133,6 +134,23 @@ MonoBehaviour:
     i15: 165
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
+--- !u!114 &114000013838690434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010004997538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 809637083fdbdd04fb111f87b1da0d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  attackPower: 0
+  attackRadius: 0
+  attackFrequency: 0
+  maxMovementSpeed: 0
+  moveAcceleration: 0
 --- !u!136 &136000014158392912
 CapsuleCollider:
   m_ObjectHideFlags: 1

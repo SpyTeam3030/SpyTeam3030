@@ -16,14 +16,15 @@ public class GameplayClient : NetworkBehaviour
 
     public override void OnStartLocalPlayer()
     {
-        CmdSpawnSpy();
+        Debug.Log("hjgjk");
         CmdRoateCamera();
+        CmdSpawnSpy();
     }
 
     [Command]
     void CmdRoateCamera()
     {
-        if((teamID = myServer.rotateCamera()) == 1)
+        if((teamID = myServer.rotateCamera()) == 0)
         {
             RpcRotateCamera();
         }
@@ -38,6 +39,7 @@ public class GameplayClient : NetworkBehaviour
     [ClientRpc]
     void RpcRotateCamera()
     {
+        Debug.Log("rotate");
         Camera.main.GetComponent<Transform>().RotateAround(Vector3.zero, Vector3.up, 180.0f);
     }
 }
