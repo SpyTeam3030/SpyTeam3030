@@ -12,8 +12,9 @@ public class SpyController : MonoBehaviour {
     public float maxMovementSpeed;
     public float moveAcceleration;
 
-    private Vector3 spawnPosition;
-    private Vector3 enemyBase;
+    private Vector3 spawnPosition = Vector3.zero;
+    private Vector3 enemyBase = Vector3.zero;
+    private NavMeshAgent agent;
 
     public void InitilizeSpy(Vector3 spawnpos, Vector3 basepos)
     {
@@ -21,14 +22,28 @@ public class SpyController : MonoBehaviour {
         enemyBase = basepos;
     }
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    void Start()
     {
-	    
-	}
+        agent = GetComponent<NavMeshAgent>();
+        //agent.Stop();
+    }
+
+    void OnMouseDown()
+    {
+        Debug.Log(enemyBase);
+    }
+
+    //// Use this for initialization
+    //void Start () {
+
+    //}
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(enemyBase != Vector3.zero)
+        {
+            agent.SetDestination(enemyBase);
+        }
+    }
 }
