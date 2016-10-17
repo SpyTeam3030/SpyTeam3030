@@ -925,7 +925,6 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-<<<<<<< HEAD
   m_AnchoredPosition: {x: 603, y: 66.5}
   m_SizeDelta: {x: 137.9, y: 133}
 =======
@@ -936,10 +935,6 @@ RectTransform:
   m_AnchoredPosition: {x: 40, y: -50}
   m_SizeDelta: {x: 75, y: 95}
 >>>>>>> f4e749dde8c7e9d98d8853028eacb447b7c0f610
-=======
-  m_AnchoredPosition: {x: 601.7, y: 66.5}
-  m_SizeDelta: {x: 140.6, y: 133}
->>>>>>> parent of b4e4c40... no message
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1355396845
 GameObject:
