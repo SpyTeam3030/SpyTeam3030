@@ -12,11 +12,13 @@ public class SpyController : MonoBehaviour {
     private Vector3 enemyBase = Vector3.zero;
     private NavMeshAgent agent;
     private bool combat;
+    private int teamID;
 
-    public void InitilizeSpy(Vector3 spawnpos, Vector3 basepos)
+    public void InitilizeSpy(Vector3 spawnpos, Vector3 basepos, int id)
     {
         spawnPosition = spawnpos;
         enemyBase = basepos;
+        teamID = id;
     }
 
     void Start()
@@ -47,6 +49,7 @@ public class SpyController : MonoBehaviour {
     public void onCombat()
     {
         agent.Stop();
+        agent.velocity *= 0.2f;
         combat = true;
     }
 
@@ -61,5 +64,10 @@ public class SpyController : MonoBehaviour {
         GetComponent<Transform>().position = spawnPosition;
         agent.Resume();
         combat = false;
+    }
+
+    public int GetTeamID()
+    {
+        return teamID;
     }
 }

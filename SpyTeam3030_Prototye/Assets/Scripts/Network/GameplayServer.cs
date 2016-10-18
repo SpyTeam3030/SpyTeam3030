@@ -71,10 +71,8 @@ public class GameplayServer : NetworkBehaviour
                 index[localId]++;
 
                 GameObject enemy = (GameObject)Instantiate(spyTypeList[0], pos, rotation);
-                enemy.GetComponent<SpyController>().InitilizeSpy(pos, basePosList[localId].position);
+                enemy.GetComponent<SpyController>().InitilizeSpy(pos, basePosList[localId].position, localId);
                 NetworkServer.Spawn(enemy);
-
-                //  Debug.Log("Team" + localId + "spawn a spy at line" + allSpyList[i].lineID);
             }
         }
 
