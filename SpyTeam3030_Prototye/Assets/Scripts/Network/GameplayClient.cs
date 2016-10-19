@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -19,6 +20,11 @@ public class GameplayClient : NetworkBehaviour
         Debug.Log("hjgjk");
         CmdRoateCamera();
         CmdSpawnSpy();
+    }
+
+    void OnDisconnectedFromServer(NetworkDisconnection info) 
+    {
+        SceneManager.LoadScene("Main_l");
     }
 
     [Command]

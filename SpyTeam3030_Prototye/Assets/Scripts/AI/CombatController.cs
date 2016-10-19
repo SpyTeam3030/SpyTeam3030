@@ -109,6 +109,7 @@ public class CombatController : NetworkBehaviour
     [ClientRpc]
     void RpcDisplayPopup(string value, Vector3 location)
     {
+        Debug.Log("pop up");
         PopupController.DisplayPopup(value, location);
     }
 
