@@ -23,16 +23,16 @@ public class Status : MonoBehaviour {
 		description.text = d;
 	}
 
-	public void SetAttack(int a){
-		attack.text = a + "";
+	public void SetAttack(float a){
+        attack.text = a.ToString();
 	}
 
-	public void SetHP(int hp){
-		HP.text = hp + "";
+	public void SetHP(float hp){
+        HP.text = hp.ToString();
 	}
 
-	public void SetSpeed(int s){
-		speed.text = s + "";
+	public void SetSpeed(float s){
+        speed.text = s.ToString();
 	}
 
 	public void ResetInformation(){
