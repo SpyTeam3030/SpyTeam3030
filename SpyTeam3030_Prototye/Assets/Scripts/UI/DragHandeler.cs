@@ -7,7 +7,13 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 	Vector3 startPosition;
 	Transform startParent;
 
-//	public GameObject slot;
+	public Status status;
+
+	public string description;
+
+	public int attack;
+	public int hp;
+	public int speed;
 
 	#region IBeginDragHandler implementation
 	public void OnBeginDrag (PointerEventData eventData)
@@ -22,12 +28,8 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
 	public void OnDrag (PointerEventData eventData)
 	{
-		print (Input.mousePosition);
-		print (transform.position);
-//		Vector3 position = Camera.main.WorldToScreenPoint(Input.mousePosition);
-//		GetComponent<RectTransform>().position = new Vector2(position.x,position.y);
 		GetComponent<Transform>().position = eventData.position;
-//		slot.transform.SetAsLastSibling ();
+		SetInformation ();
 	}
 
 	#endregion
@@ -39,8 +41,22 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 		itemBeingDragged = null;
 		GetComponent<CanvasGroup> ().blocksRaycasts = true;
 		GetComponent<Transform>().position = startPosition;
+		ResetInformation ();
+
+
 	}
 
 	#endregion
+
+	public void SetInformation(){
+		status.SetDescription (description);
+		status.SetAttack (attack);
+		status.SetHP (hp);
+		status.SetSpeed (speed);
+	}
+
+	public void ResetInformation(){
+		status.ResetInformation ();
+	}
 
 }
