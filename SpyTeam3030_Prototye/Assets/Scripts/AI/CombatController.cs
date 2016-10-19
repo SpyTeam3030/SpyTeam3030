@@ -8,9 +8,13 @@ public class CombatController : NetworkBehaviour
 
 
     [Header("Combat Attributes")]
+    [SyncVar]
     public float maxhealth;
+    [SyncVar]
     public float attackPower;
+    [SyncVar]
     public float attackRadius;
+    [SyncVar]
     public float attackSpeed;
 
     [Header("Combat Display")]
@@ -104,6 +108,14 @@ public class CombatController : NetworkBehaviour
     public bool IsSameTeam(int otherID)
     {
         return id == otherID;
+    }
+
+    public void AttributeChange(float maxHealthChange = 0.0f, float powerChange = 0.0f, float radiusChange = 0.0f, float speedChange = 0.0f)
+    {
+        maxhealth += maxHealthChange;
+        attackPower += powerChange;
+        attackRadius += radiusChange;
+        attackSpeed += speedChange;
     }
 
     [ClientRpc]
