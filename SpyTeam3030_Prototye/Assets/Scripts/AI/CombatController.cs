@@ -90,11 +90,11 @@ public class CombatController : NetworkBehaviour
         }
     }
 
-    public void TakeDamge(float power)
+    public virtual void TakeDamge(float power)
     {
         health -= power;
         RpcDisplayPopup(power.ToString(), popUpPos.position);
-        if(health <= 0.0f)
+        if (health <= 0.0f)
         {
             health = maxhealth;
             attackTargets.Clear();
@@ -105,12 +105,12 @@ public class CombatController : NetworkBehaviour
         RpcUpdateHealthBar(health / maxhealth);
     }
 
-    public bool IsSameTeam(int otherID)
+    public virtual bool IsSameTeam(int otherID)
     {
         return id == otherID;
     }
 
-    public void AttributeChange(float maxHealthChange = 0.0f, float powerChange = 0.0f, float radiusChange = 0.0f, float speedChange = 0.0f)
+    public virtual void AttributeChange(float maxHealthChange = 0.0f, float powerChange = 0.0f, float radiusChange = 0.0f, float speedChange = 0.0f)
     {
         maxhealth += maxHealthChange;
         attackPower += powerChange;
