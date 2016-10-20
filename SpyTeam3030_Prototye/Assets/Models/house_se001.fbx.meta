@@ -1,0 +1,3395 @@
+fileFormatVersion: 2
+guid: 3d8c695db87c54cf29d0b282df4a8505
+timeCreated: 1476998057
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: 3.1
+    100002: aile  arr
+    100004: aile  arr0
+    100006: aile avan0
+    100008: aile avant
+    100010: balcao cozinha
+    100012: balcoes
+    100014: banheira
+    100016: bas
+    100018: bas01
+    100020: bide
+    100022: bide.2
+    100024: Boole
+    100026: Boole.2
+    100028: Boole.3
+    100030: Boole.4
+    100032: Boole.5
+    100034: Boole.6
+    100036: Box01
+    100038: Box02
+    100040: Box03
+    100042: Box04
+    100044: Box05
+    100046: Box06
+    100048: Box07
+    100050: Box08
+    100052: Box09
+    100054: Box10
+    100056: Box11
+    100058: Box12
+    100060: Box13
+    100062: Box14
+    100064: Box15
+    100066: Box16
+    100068: Box17
+    100070: Box18
+    100072: Box19
+    100074: Box20
+    100076: Box21
+    100078: Box22
+    100080: Box23
+    100082: Box24
+    100084: Box25
+    100086: Box26
+    100088: Box27
+    100090: Box29
+    100092: Box31
+    100094: caisse01
+    100096: caixilho janela sala estar.1
+    100098: caixilho janela sala estar.1.10
+    100100: caixilho janela sala estar.1.11
+    100102: caixilho janela sala estar.1.12
+    100104: caixilho janela sala estar.1.13
+    100106: caixilho janela sala estar.1.14
+    100108: caixilho janela sala estar.1.15
+    100110: caixilho janela sala estar.1.16
+    100112: caixilho janela sala estar.1.17
+    100114: caixilho janela sala estar.1.18
+    100116: caixilho janela sala estar.1.19
+    100118: caixilho janela sala estar.1.2
+    100120: caixilho janela sala estar.1.20
+    100122: caixilho janela sala estar.1.21
+    100124: caixilho janela sala estar.1.22
+    100126: caixilho janela sala estar.1.23
+    100128: caixilho janela sala estar.1.24
+    100130: caixilho janela sala estar.1.25
+    100132: caixilho janela sala estar.1.26
+    100134: caixilho janela sala estar.1.27
+    100136: caixilho janela sala estar.1.28
+    100138: caixilho janela sala estar.1.29
+    100140: caixilho janela sala estar.1.3
+    100142: caixilho janela sala estar.1.30
+    100144: caixilho janela sala estar.1.31
+    100146: caixilho janela sala estar.1.32
+    100148: caixilho janela sala estar.1.4
+    100150: caixilho janela sala estar.1.5
+    100152: caixilho janela sala estar.1.6
+    100154: caixilho janela sala estar.1.7
+    100156: caixilho janela sala estar.1.8
+    100158: caixilho janela sala estar.1.9
+    100160: caixilhos dos vidros
+    100162: Cap 1
+    100164: Cap 2
+    100166: CAPOT01
+    100168: carnagens
+    100170: carros
+    100172: ciaxilhos
+    100174: coffre arriere
+    100176: corrimao 01
+    100178: corrimao 02
+    100180: corrimao 03
+    100182: corrimaos
+    100184: cozinha balcao
+    100186: cozinha balcao inferior
+    100188: cozinha balcao superior
+    100190: "cozinha lava-loi\xE7as"
+    100192: Cube
+    100194: Cube-Cube
+    100196: Cube-Cube.10
+    100198: Cube-Cube.11
+    100200: Cube-Cube.12
+    100202: Cube-Cube.13
+    100204: Cube-Cube.14
+    100206: Cube-Cube.15
+    100208: Cube-Cube.16
+    100210: Cube-Cube.17
+    100212: Cube-Cube.18
+    100214: Cube-Cube.19
+    100216: Cube-Cube.2
+    100218: Cube-Cube.20
+    100220: Cube-Cube.3
+    100222: Cube-Cube.4
+    100224: Cube-Cube.5
+    100226: Cube-Cube.6
+    100228: Cube-Cube.7
+    100230: Cube-Cube.8
+    100232: Cube-Cube.9
+    100234: Cube.1
+    100236: Cube.1.10
+    100238: Cube.1.11
+    100240: Cube.1.2
+    100242: Cube.1.3
+    100244: Cube.1.4
+    100246: Cube.1.5
+    100248: Cube.1.6
+    100250: Cube.1.7
+    100252: Cube.1.8
+    100254: Cube.1.9
+    100256: Cube.10
+    100258: Cube.100
+    100260: Cube.101
+    100262: Cube.102
+    100264: Cube.103
+    100266: Cube.104
+    100268: Cube.105
+    100270: Cube.106
+    100272: Cube.107
+    100274: Cube.108
+    100276: Cube.109
+    100278: Cube.11
+    100280: Cube.110
+    100282: Cube.111
+    100284: Cube.112
+    100286: Cube.113
+    100288: Cube.114
+    100290: Cube.12
+    100292: Cube.13
+    100294: Cube.14
+    100296: Cube.15
+    100298: Cube.16
+    100300: Cube.17
+    100302: Cube.18
+    100304: Cube.19
+    100306: Cube.2
+    100308: Cube.2.10
+    100310: Cube.2.11
+    100312: Cube.2.12
+    100314: Cube.2.13
+    100316: Cube.2.14
+    100318: Cube.2.2
+    100320: Cube.2.3
+    100322: Cube.2.4
+    100324: Cube.2.5
+    100326: Cube.2.6
+    100328: Cube.2.7
+    100330: Cube.2.8
+    100332: Cube.2.9
+    100334: Cube.20
+    100336: Cube.21
+    100338: Cube.22
+    100340: Cube.23
+    100342: Cube.24
+    100344: Cube.25
+    100346: Cube.26
+    100348: Cube.27
+    100350: Cube.28
+    100352: Cube.29
+    100354: Cube.3
+    100356: Cube.3.10
+    100358: Cube.3.11
+    100360: Cube.3.12
+    100362: Cube.3.13
+    100364: Cube.3.14
+    100366: Cube.3.15
+    100368: Cube.3.16
+    100370: Cube.3.17
+    100372: Cube.3.18
+    100374: Cube.3.19
+    100376: Cube.3.2
+    100378: Cube.3.20
+    100380: Cube.3.21
+    100382: Cube.3.22
+    100384: Cube.3.23
+    100386: Cube.3.24
+    100388: Cube.3.25
+    100390: Cube.3.26
+    100392: Cube.3.27
+    100394: Cube.3.28
+    100396: Cube.3.29
+    100398: Cube.3.3
+    100400: Cube.3.30
+    100402: Cube.3.31
+    100404: Cube.3.32
+    100406: Cube.3.33
+    100408: Cube.3.34
+    100410: Cube.3.35
+    100412: Cube.3.36
+    100414: Cube.3.37
+    100416: Cube.3.38
+    100418: Cube.3.39
+    100420: Cube.3.4
+    100422: Cube.3.40
+    100424: Cube.3.41
+    100426: Cube.3.42
+    100428: Cube.3.43
+    100430: Cube.3.44
+    100432: Cube.3.45
+    100434: Cube.3.46
+    100436: Cube.3.47
+    100438: Cube.3.48
+    100440: Cube.3.49
+    100442: Cube.3.5
+    100444: Cube.3.50
+    100446: Cube.3.51
+    100448: Cube.3.52
+    100450: Cube.3.53
+    100452: Cube.3.54
+    100454: Cube.3.6
+    100456: Cube.3.7
+    100458: Cube.3.8
+    100460: Cube.3.9
+    100462: Cube.30
+    100464: Cube.31
+    100466: Cube.32
+    100468: Cube.33
+    100470: Cube.34
+    100472: Cube.35
+    100474: Cube.36
+    100476: Cube.37
+    100478: Cube.38
+    100480: Cube.39
+    100482: Cube.4
+    100484: Cube.4.2
+    100486: Cube.40
+    100488: Cube.41
+    100490: Cube.42
+    100492: Cube.43
+    100494: Cube.44
+    100496: Cube.45
+    100498: Cube.46
+    100500: Cube.47
+    100502: Cube.48
+    100504: Cube.49
+    100506: Cube.5
+    100508: Cube.50
+    100510: Cube.51
+    100512: Cube.52
+    100514: Cube.53
+    100516: Cube.54
+    100518: Cube.55
+    100520: Cube.56
+    100522: Cube.57
+    100524: Cube.58
+    100526: Cube.59
+    100528: Cube.6
+    100530: Cube.60
+    100532: Cube.61
+    100534: Cube.62
+    100536: Cube.63
+    100538: Cube.64
+    100540: Cube.65
+    100542: Cube.66
+    100544: Cube.67
+    100546: Cube.68
+    100548: Cube.69
+    100550: Cube.7
+    100552: Cube.70
+    100554: Cube.71
+    100556: Cube.72
+    100558: Cube.73
+    100560: Cube.74
+    100562: Cube.75
+    100564: Cube.76
+    100566: Cube.77
+    100568: Cube.78
+    100570: Cube.79
+    100572: Cube.8
+    100574: Cube.80
+    100576: Cube.81
+    100578: Cube.82
+    100580: Cube.83
+    100582: Cube.84
+    100584: Cube.85
+    100586: Cube.86
+    100588: Cube.87
+    100590: Cube.88
+    100592: Cube.89
+    100594: Cube.9
+    100596: Cube.90
+    100598: Cube.91
+    100600: Cube.92
+    100602: Cube.93
+    100604: Cube.94
+    100606: Cube.95
+    100608: Cube.96
+    100610: Cube.97
+    100612: Cube.98
+    100614: Cube.99
+    100616: Cylinder
+    100618: Cylinder.10
+    100620: Cylinder.11
+    100622: Cylinder.12
+    100624: Cylinder.13
+    100626: Cylinder.14
+    100628: Cylinder.15
+    100630: Cylinder.16
+    100632: Cylinder.17
+    100634: Cylinder.18
+    100636: Cylinder.19
+    100638: Cylinder.2
+    100640: Cylinder.20
+    100642: Cylinder.21
+    100644: Cylinder.22
+    100646: Cylinder.23
+    100648: Cylinder.24
+    100650: Cylinder.25
+    100652: Cylinder.26
+    100654: Cylinder.27
+    100656: Cylinder.28
+    100658: Cylinder.29
+    100660: Cylinder.3
+    100662: Cylinder.30
+    100664: Cylinder.31
+    100666: Cylinder.32
+    100668: Cylinder.33
+    100670: Cylinder.34
+    100672: Cylinder.35
+    100674: Cylinder.36
+    100676: Cylinder.37
+    100678: Cylinder.38
+    100680: Cylinder.39
+    100682: Cylinder.4
+    100684: Cylinder.40
+    100686: Cylinder.41
+    100688: Cylinder.42
+    100690: Cylinder.43
+    100692: Cylinder.44
+    100694: Cylinder.45
+    100696: Cylinder.46
+    100698: Cylinder.47
+    100700: Cylinder.48
+    100702: Cylinder.49
+    100704: Cylinder.5
+    100706: Cylinder.50
+    100708: Cylinder.51
+    100710: Cylinder.52
+    100712: Cylinder.53
+    100714: Cylinder.54
+    100716: Cylinder.55
+    100718: Cylinder.56
+    100720: Cylinder.57
+    100722: Cylinder.58
+    100724: Cylinder.59
+    100726: Cylinder.6
+    100728: Cylinder.60
+    100730: Cylinder.61
+    100732: Cylinder.62
+    100734: Cylinder.63
+    100736: Cylinder.64
+    100738: Cylinder.65
+    100740: Cylinder.66
+    100742: Cylinder.67
+    100744: Cylinder.68
+    100746: Cylinder.69
+    100748: Cylinder.7
+    100750: Cylinder.70
+    100752: Cylinder.71
+    100754: Cylinder.72
+    100756: Cylinder.73
+    100758: Cylinder.74
+    100760: Cylinder.75
+    100762: Cylinder.76
+    100764: Cylinder.77
+    100766: Cylinder.78
+    100768: Cylinder.8
+    100770: Cylinder.9
+    100772: Cylinder01
+    100774: Cylinder03
+    100776: Cylinder10
+    100778: Cylinder11
+    100780: Cylinder17
+    100782: Cylinder19
+    100784: Cylinder19.2
+    100786: Cylinder19.3
+    100788: Cylinder19.4
+    100790: Cylinder32
+    100792: Cylinder35
+    100794: Cylinder38
+    100796: Cylinder41
+    100798: escadas exteriores
+    100800: escadas piscina
+    100802: escadas piscina.2
+    100804: exteriores
+    100806: Extrude NURBS
+    100808: fechadura
+    100810: fechadura.10
+    100812: fechadura.11
+    100814: fechadura.12
+    100816: fechadura.13
+    100818: fechadura.14
+    100820: fechadura.15
+    100822: fechadura.16
+    100824: fechadura.17
+    100826: fechadura.18
+    100828: fechadura.2
+    100830: fechadura.3
+    100832: fechadura.4
+    100834: fechadura.5
+    100836: fechadura.6
+    100838: fechadura.7
+    100840: fechadura.8
+    100842: fechadura.9
+    100844: Group01
+    100846: Group02
+    100848: //RootNode
+    100850: HyperNURBS
+    100852: HyperNURBS.10
+    100854: HyperNURBS.2
+    100856: HyperNURBS.3
+    100858: HyperNURBS.4
+    100860: HyperNURBS.5
+    100862: HyperNURBS.6
+    100864: HyperNURBS.7
+    100866: HyperNURBS.8
+    100868: HyperNURBS.9
+    100870: Instance
+    100872: Instance.10
+    100874: Instance.11
+    100876: Instance.12
+    100878: Instance.13
+    100880: Instance.14
+    100882: Instance.15
+    100884: Instance.16
+    100886: Instance.17
+    100888: Instance.18
+    100890: Instance.19
+    100892: Instance.2
+    100894: Instance.20
+    100896: Instance.21
+    100898: Instance.22
+    100900: Instance.23
+    100902: Instance.24
+    100904: Instance.25
+    100906: Instance.26
+    100908: Instance.27
+    100910: Instance.28
+    100912: Instance.29
+    100914: Instance.3
+    100916: Instance.30
+    100918: Instance.31
+    100920: Instance.32
+    100922: Instance.33
+    100924: Instance.4
+    100926: Instance.5
+    100928: Instance.6
+    100930: Instance.7
+    100932: Instance.8
+    100934: Instance.9
+    100936: interiores
+    100938: interropetor
+    100940: interropetor.10
+    100942: interropetor.11
+    100944: interropetor.12
+    100946: interropetor.13
+    100948: interropetor.14
+    100950: interropetor.15
+    100952: interropetor.16
+    100954: interropetor.17
+    100956: interropetor.2
+    100958: interropetor.3
+    100960: interropetor.4
+    100962: interropetor.5
+    100964: interropetor.6
+    100966: interropetor.7
+    100968: interropetor.8
+    100970: interropetor.9
+    100972: J_Back
+    100974: J_Back_MeshPart0
+    100976: J_Back_MeshPart1
+    100978: J_DoorL
+    100980: J_DoorR
+    100982: J_Front
+    100984: J_Front_MeshPart0
+    100986: J_Front_MeshPart1
+    100988: J_Front_MeshPart2
+    100990: J_TyreBack2
+    100992: J_TyreFrontL
+    100994: J_TyreFrontR
+    100996: J_Volante
+    100998: jag type E
+    101000: janela 01 quarto
+    101002: janela 01 quarto.2
+    101004: janela 01 quarto.3
+    101006: janela 01 quarto.4
+    101008: janela 01 quarto.5
+    101010: janela 01 quarto.6
+    101012: janela 02 quarto
+    101014: janela 02 quarto.2
+    101016: janela 02 quarto.3
+    101018: janela 02 quarto.4
+    101020: janela cozinha
+    101022: janela cozinha 02
+    101024: janela cozinha 02.2
+    101026: janela cozinha 02.3
+    101028: janela cozinha.2
+    101030: janela fixa cozinha
+    101032: janela movel
+    101034: janela rot
+    101036: janela sala estar
+    101038: janela sala estar.1
+    101040: janela sala estar.2
+    101042: janela sala estar.3
+    101044: janela sala estar.4
+    101046: janela sala jantar
+    101048: janela sala jantar 02
+    101050: janela sala jantar.1
+    101052: janela sala jantar.1.10
+    101054: janela sala jantar.1.11
+    101056: janela sala jantar.1.12
+    101058: janela sala jantar.1.13
+    101060: janela sala jantar.1.14
+    101062: janela sala jantar.1.15
+    101064: janela sala jantar.1.16
+    101066: janela sala jantar.1.17
+    101068: janela sala jantar.1.18
+    101070: janela sala jantar.1.19
+    101072: janela sala jantar.1.2
+    101074: janela sala jantar.1.20
+    101076: janela sala jantar.1.21
+    101078: janela sala jantar.1.22
+    101080: janela sala jantar.1.23
+    101082: janela sala jantar.1.24
+    101084: janela sala jantar.1.25
+    101086: janela sala jantar.1.26
+    101088: janela sala jantar.1.27
+    101090: janela sala jantar.1.28
+    101092: janela sala jantar.1.29
+    101094: janela sala jantar.1.3
+    101096: janela sala jantar.1.30
+    101098: janela sala jantar.1.31
+    101100: janela sala jantar.1.4
+    101102: janela sala jantar.1.5
+    101104: janela sala jantar.1.6
+    101106: janela sala jantar.1.7
+    101108: janela sala jantar.1.8
+    101110: janela sala jantar.1.9
+    101112: janelas
+    101114: janelas e portas
+    101116: laje base
+    101118: laje principal
+    101120: laje quarto
+    101122: laje sala de estar
+    101124: lajes
+    101126: lajes secundarias
+    101128: lavatorio
+    101130: lavatorio.2
+    101132: Line01
+    101134: Line02
+    101136: Line04
+    101138: Line05
+    101140: Line06
+    101142: Line07
+    101144: Line08
+    101146: Line09
+    101148: logo 1
+    101150: luzes
+    101152: luzes.2
+    101154: mixer02001
+    101156: mixer02001.2
+    101158: mixer02004
+    101160: mixer02004.1
+    101162: mixer02004.1.2
+    101164: mixer02004.1.3
+    101166: mixer02004.2
+    101168: mobilias
+    101170: Null Object
+    101172: Null Object.1.10
+    101174: Null Object.1.11
+    101176: Null Object.1.12
+    101178: Null Object.1.13
+    101180: Null Object.1.14
+    101182: Null Object.1.2
+    101184: Null Object.1.3
+    101186: Null Object.1.4
+    101188: Null Object.1.5
+    101190: Null Object.1.6
+    101192: Null Object.1.7
+    101194: Null Object.1.8
+    101196: Null Object.1.9
+    101198: Null Object.10
+    101200: Null Object.11
+    101202: Null Object.12
+    101204: Null Object.13
+    101206: Null Object.2
+    101208: Null Object.2.10
+    101210: Null Object.2.11
+    101212: Null Object.2.12
+    101214: Null Object.2.13
+    101216: Null Object.2.14
+    101218: Null Object.2.15
+    101220: Null Object.2.16
+    101222: Null Object.2.17
+    101224: Null Object.2.2
+    101226: Null Object.2.3
+    101228: Null Object.2.4
+    101230: Null Object.2.5
+    101232: Null Object.2.6
+    101234: Null Object.2.7
+    101236: Null Object.2.8
+    101238: Null Object.2.9
+    101240: Null Object.3
+    101242: Null Object.3.2
+    101244: Null Object.4
+    101246: Null Object.4.2
+    101248: Null Object.5
+    101250: Null Object.6
+    101252: Null Object.7
+    101254: Null Object.8
+    101256: Null Object.9
+    101258: Object01
+    101260: Object02
+    101262: Object03
+    101264: Object04
+    101266: Object05
+    101268: Object06
+    101270: Object07
+    101272: Object08
+    101274: Object10
+    101276: Object11
+    101278: Object12
+    101280: Object13
+    101282: Object14
+    101284: Object15
+    101286: Object20
+    101288: Object21
+    101290: Object22
+    101292: Object23
+    101294: par brise0
+    101296: paredes e lajes
+    101298: paredes-Null Object
+    101300: paredes-Null Object.2
+    101302: patio base
+    101304: piscina
+    101306: Plane06
+    101308: Plane07
+    101310: Plane09
+    101312: Plane10
+    101314: Plane12
+    101316: porta 01 casa
+    101318: porta 01 sala de estar
+    101320: porta 01 sala de jantar
+    101322: porta 01 wc 02
+    101324: porta 02 casa
+    101326: porta 02 sala de estar
+    101328: porta 02 sala de jantar
+    101330: porta 02 wc 02
+    101332: porta 03 casa
+    101334: porta 04 casa
+    101336: porta cozinha
+    101338: porta quarto
+    101340: porta wc 01
+    101342: portas
+    101344: portas casa
+    101346: portas cozinha
+    101348: portas quarto
+    101350: portas sala de estar
+    101352: portas sala de jantar
+    101354: portas wc 02
+    101356: porte
+    101358: porte01
+    101360: "p\xE1tio cal\xE7ada.1"
+    101362: quarto wc balcao-Null Object.4
+    101364: rodape superior
+    101366: rodas
+    101368: rot
+    101370: rot.10
+    101372: rot.11
+    101374: rot.12
+    101376: rot.13
+    101378: rot.14
+    101380: rot.15
+    101382: rot.16
+    101384: rot.17
+    101386: rot.18
+    101388: rot.2
+    101390: rot.3
+    101392: rot.4
+    101394: rot.5
+    101396: rot.6
+    101398: rot.7
+    101400: rot.8
+    101402: rot.9
+    101404: sanita
+    101406: sanita.2
+    101408: sink
+    101410: sink.2
+    101412: Sphere01
+    101414: Sphere02
+    101416: Sphere07
+    101418: Sweep NURBS
+    101420: Sweep NURBS.10
+    101422: Sweep NURBS.11
+    101424: Sweep NURBS.2
+    101426: Sweep NURBS.3
+    101428: Sweep NURBS.4
+    101430: Sweep NURBS.5
+    101432: Sweep NURBS.6
+    101434: Sweep NURBS.7
+    101436: Sweep NURBS.8
+    101438: Sweep NURBS.9
+    101440: tecto falso interior-Cube.1
+    101442: telhado e tectos
+    101444: telhado garagem
+    101446: telhado-Null Object
+    101448: Text01
+    101450: tire02
+    101452: tire03
+    101454: tire04
+    101456: tire05
+    101458: Torus09
+    101460: TOUT BAS01
+    101462: Tube
+    101464: Tube.10
+    101466: Tube.11
+    101468: Tube.2
+    101470: Tube.3
+    101472: Tube.4
+    101474: Tube.5
+    101476: Tube.6
+    101478: Tube.7
+    101480: Tube.8
+    101482: Tube.9
+    101484: Tube06
+    101486: Tube07
+    101488: vidros
+    101490: vidros.2
+    101492: wc balcao
+    101494: wc balcao.1
+    101496: wc quarto balcao
+    101498: Z4
+    400000: 3.1
+    400002: aile  arr
+    400004: aile  arr0
+    400006: aile avan0
+    400008: aile avant
+    400010: balcao cozinha
+    400012: balcoes
+    400014: banheira
+    400016: bas
+    400018: bas01
+    400020: bide
+    400022: bide.2
+    400024: Boole
+    400026: Boole.2
+    400028: Boole.3
+    400030: Boole.4
+    400032: Boole.5
+    400034: Boole.6
+    400036: Box01
+    400038: Box02
+    400040: Box03
+    400042: Box04
+    400044: Box05
+    400046: Box06
+    400048: Box07
+    400050: Box08
+    400052: Box09
+    400054: Box10
+    400056: Box11
+    400058: Box12
+    400060: Box13
+    400062: Box14
+    400064: Box15
+    400066: Box16
+    400068: Box17
+    400070: Box18
+    400072: Box19
+    400074: Box20
+    400076: Box21
+    400078: Box22
+    400080: Box23
+    400082: Box24
+    400084: Box25
+    400086: Box26
+    400088: Box27
+    400090: Box29
+    400092: Box31
+    400094: caisse01
+    400096: caixilho janela sala estar.1
+    400098: caixilho janela sala estar.1.10
+    400100: caixilho janela sala estar.1.11
+    400102: caixilho janela sala estar.1.12
+    400104: caixilho janela sala estar.1.13
+    400106: caixilho janela sala estar.1.14
+    400108: caixilho janela sala estar.1.15
+    400110: caixilho janela sala estar.1.16
+    400112: caixilho janela sala estar.1.17
+    400114: caixilho janela sala estar.1.18
+    400116: caixilho janela sala estar.1.19
+    400118: caixilho janela sala estar.1.2
+    400120: caixilho janela sala estar.1.20
+    400122: caixilho janela sala estar.1.21
+    400124: caixilho janela sala estar.1.22
+    400126: caixilho janela sala estar.1.23
+    400128: caixilho janela sala estar.1.24
+    400130: caixilho janela sala estar.1.25
+    400132: caixilho janela sala estar.1.26
+    400134: caixilho janela sala estar.1.27
+    400136: caixilho janela sala estar.1.28
+    400138: caixilho janela sala estar.1.29
+    400140: caixilho janela sala estar.1.3
+    400142: caixilho janela sala estar.1.30
+    400144: caixilho janela sala estar.1.31
+    400146: caixilho janela sala estar.1.32
+    400148: caixilho janela sala estar.1.4
+    400150: caixilho janela sala estar.1.5
+    400152: caixilho janela sala estar.1.6
+    400154: caixilho janela sala estar.1.7
+    400156: caixilho janela sala estar.1.8
+    400158: caixilho janela sala estar.1.9
+    400160: caixilhos dos vidros
+    400162: Cap 1
+    400164: Cap 2
+    400166: CAPOT01
+    400168: carnagens
+    400170: carros
+    400172: ciaxilhos
+    400174: coffre arriere
+    400176: corrimao 01
+    400178: corrimao 02
+    400180: corrimao 03
+    400182: corrimaos
+    400184: cozinha balcao
+    400186: cozinha balcao inferior
+    400188: cozinha balcao superior
+    400190: "cozinha lava-loi\xE7as"
+    400192: Cube
+    400194: Cube-Cube
+    400196: Cube-Cube.10
+    400198: Cube-Cube.11
+    400200: Cube-Cube.12
+    400202: Cube-Cube.13
+    400204: Cube-Cube.14
+    400206: Cube-Cube.15
+    400208: Cube-Cube.16
+    400210: Cube-Cube.17
+    400212: Cube-Cube.18
+    400214: Cube-Cube.19
+    400216: Cube-Cube.2
+    400218: Cube-Cube.20
+    400220: Cube-Cube.3
+    400222: Cube-Cube.4
+    400224: Cube-Cube.5
+    400226: Cube-Cube.6
+    400228: Cube-Cube.7
+    400230: Cube-Cube.8
+    400232: Cube-Cube.9
+    400234: Cube.1
+    400236: Cube.1.10
+    400238: Cube.1.11
+    400240: Cube.1.2
+    400242: Cube.1.3
+    400244: Cube.1.4
+    400246: Cube.1.5
+    400248: Cube.1.6
+    400250: Cube.1.7
+    400252: Cube.1.8
+    400254: Cube.1.9
+    400256: Cube.10
+    400258: Cube.100
+    400260: Cube.101
+    400262: Cube.102
+    400264: Cube.103
+    400266: Cube.104
+    400268: Cube.105
+    400270: Cube.106
+    400272: Cube.107
+    400274: Cube.108
+    400276: Cube.109
+    400278: Cube.11
+    400280: Cube.110
+    400282: Cube.111
+    400284: Cube.112
+    400286: Cube.113
+    400288: Cube.114
+    400290: Cube.12
+    400292: Cube.13
+    400294: Cube.14
+    400296: Cube.15
+    400298: Cube.16
+    400300: Cube.17
+    400302: Cube.18
+    400304: Cube.19
+    400306: Cube.2
+    400308: Cube.2.10
+    400310: Cube.2.11
+    400312: Cube.2.12
+    400314: Cube.2.13
+    400316: Cube.2.14
+    400318: Cube.2.2
+    400320: Cube.2.3
+    400322: Cube.2.4
+    400324: Cube.2.5
+    400326: Cube.2.6
+    400328: Cube.2.7
+    400330: Cube.2.8
+    400332: Cube.2.9
+    400334: Cube.20
+    400336: Cube.21
+    400338: Cube.22
+    400340: Cube.23
+    400342: Cube.24
+    400344: Cube.25
+    400346: Cube.26
+    400348: Cube.27
+    400350: Cube.28
+    400352: Cube.29
+    400354: Cube.3
+    400356: Cube.3.10
+    400358: Cube.3.11
+    400360: Cube.3.12
+    400362: Cube.3.13
+    400364: Cube.3.14
+    400366: Cube.3.15
+    400368: Cube.3.16
+    400370: Cube.3.17
+    400372: Cube.3.18
+    400374: Cube.3.19
+    400376: Cube.3.2
+    400378: Cube.3.20
+    400380: Cube.3.21
+    400382: Cube.3.22
+    400384: Cube.3.23
+    400386: Cube.3.24
+    400388: Cube.3.25
+    400390: Cube.3.26
+    400392: Cube.3.27
+    400394: Cube.3.28
+    400396: Cube.3.29
+    400398: Cube.3.3
+    400400: Cube.3.30
+    400402: Cube.3.31
+    400404: Cube.3.32
+    400406: Cube.3.33
+    400408: Cube.3.34
+    400410: Cube.3.35
+    400412: Cube.3.36
+    400414: Cube.3.37
+    400416: Cube.3.38
+    400418: Cube.3.39
+    400420: Cube.3.4
+    400422: Cube.3.40
+    400424: Cube.3.41
+    400426: Cube.3.42
+    400428: Cube.3.43
+    400430: Cube.3.44
+    400432: Cube.3.45
+    400434: Cube.3.46
+    400436: Cube.3.47
+    400438: Cube.3.48
+    400440: Cube.3.49
+    400442: Cube.3.5
+    400444: Cube.3.50
+    400446: Cube.3.51
+    400448: Cube.3.52
+    400450: Cube.3.53
+    400452: Cube.3.54
+    400454: Cube.3.6
+    400456: Cube.3.7
+    400458: Cube.3.8
+    400460: Cube.3.9
+    400462: Cube.30
+    400464: Cube.31
+    400466: Cube.32
+    400468: Cube.33
+    400470: Cube.34
+    400472: Cube.35
+    400474: Cube.36
+    400476: Cube.37
+    400478: Cube.38
+    400480: Cube.39
+    400482: Cube.4
+    400484: Cube.4.2
+    400486: Cube.40
+    400488: Cube.41
+    400490: Cube.42
+    400492: Cube.43
+    400494: Cube.44
+    400496: Cube.45
+    400498: Cube.46
+    400500: Cube.47
+    400502: Cube.48
+    400504: Cube.49
+    400506: Cube.5
+    400508: Cube.50
+    400510: Cube.51
+    400512: Cube.52
+    400514: Cube.53
+    400516: Cube.54
+    400518: Cube.55
+    400520: Cube.56
+    400522: Cube.57
+    400524: Cube.58
+    400526: Cube.59
+    400528: Cube.6
+    400530: Cube.60
+    400532: Cube.61
+    400534: Cube.62
+    400536: Cube.63
+    400538: Cube.64
+    400540: Cube.65
+    400542: Cube.66
+    400544: Cube.67
+    400546: Cube.68
+    400548: Cube.69
+    400550: Cube.7
+    400552: Cube.70
+    400554: Cube.71
+    400556: Cube.72
+    400558: Cube.73
+    400560: Cube.74
+    400562: Cube.75
+    400564: Cube.76
+    400566: Cube.77
+    400568: Cube.78
+    400570: Cube.79
+    400572: Cube.8
+    400574: Cube.80
+    400576: Cube.81
+    400578: Cube.82
+    400580: Cube.83
+    400582: Cube.84
+    400584: Cube.85
+    400586: Cube.86
+    400588: Cube.87
+    400590: Cube.88
+    400592: Cube.89
+    400594: Cube.9
+    400596: Cube.90
+    400598: Cube.91
+    400600: Cube.92
+    400602: Cube.93
+    400604: Cube.94
+    400606: Cube.95
+    400608: Cube.96
+    400610: Cube.97
+    400612: Cube.98
+    400614: Cube.99
+    400616: Cylinder
+    400618: Cylinder.10
+    400620: Cylinder.11
+    400622: Cylinder.12
+    400624: Cylinder.13
+    400626: Cylinder.14
+    400628: Cylinder.15
+    400630: Cylinder.16
+    400632: Cylinder.17
+    400634: Cylinder.18
+    400636: Cylinder.19
+    400638: Cylinder.2
+    400640: Cylinder.20
+    400642: Cylinder.21
+    400644: Cylinder.22
+    400646: Cylinder.23
+    400648: Cylinder.24
+    400650: Cylinder.25
+    400652: Cylinder.26
+    400654: Cylinder.27
+    400656: Cylinder.28
+    400658: Cylinder.29
+    400660: Cylinder.3
+    400662: Cylinder.30
+    400664: Cylinder.31
+    400666: Cylinder.32
+    400668: Cylinder.33
+    400670: Cylinder.34
+    400672: Cylinder.35
+    400674: Cylinder.36
+    400676: Cylinder.37
+    400678: Cylinder.38
+    400680: Cylinder.39
+    400682: Cylinder.4
+    400684: Cylinder.40
+    400686: Cylinder.41
+    400688: Cylinder.42
+    400690: Cylinder.43
+    400692: Cylinder.44
+    400694: Cylinder.45
+    400696: Cylinder.46
+    400698: Cylinder.47
+    400700: Cylinder.48
+    400702: Cylinder.49
+    400704: Cylinder.5
+    400706: Cylinder.50
+    400708: Cylinder.51
+    400710: Cylinder.52
+    400712: Cylinder.53
+    400714: Cylinder.54
+    400716: Cylinder.55
+    400718: Cylinder.56
+    400720: Cylinder.57
+    400722: Cylinder.58
+    400724: Cylinder.59
+    400726: Cylinder.6
+    400728: Cylinder.60
+    400730: Cylinder.61
+    400732: Cylinder.62
+    400734: Cylinder.63
+    400736: Cylinder.64
+    400738: Cylinder.65
+    400740: Cylinder.66
+    400742: Cylinder.67
+    400744: Cylinder.68
+    400746: Cylinder.69
+    400748: Cylinder.7
+    400750: Cylinder.70
+    400752: Cylinder.71
+    400754: Cylinder.72
+    400756: Cylinder.73
+    400758: Cylinder.74
+    400760: Cylinder.75
+    400762: Cylinder.76
+    400764: Cylinder.77
+    400766: Cylinder.78
+    400768: Cylinder.8
+    400770: Cylinder.9
+    400772: Cylinder01
+    400774: Cylinder03
+    400776: Cylinder10
+    400778: Cylinder11
+    400780: Cylinder17
+    400782: Cylinder19
+    400784: Cylinder19.2
+    400786: Cylinder19.3
+    400788: Cylinder19.4
+    400790: Cylinder32
+    400792: Cylinder35
+    400794: Cylinder38
+    400796: Cylinder41
+    400798: escadas exteriores
+    400800: escadas piscina
+    400802: escadas piscina.2
+    400804: exteriores
+    400806: Extrude NURBS
+    400808: fechadura
+    400810: fechadura.10
+    400812: fechadura.11
+    400814: fechadura.12
+    400816: fechadura.13
+    400818: fechadura.14
+    400820: fechadura.15
+    400822: fechadura.16
+    400824: fechadura.17
+    400826: fechadura.18
+    400828: fechadura.2
+    400830: fechadura.3
+    400832: fechadura.4
+    400834: fechadura.5
+    400836: fechadura.6
+    400838: fechadura.7
+    400840: fechadura.8
+    400842: fechadura.9
+    400844: Group01
+    400846: Group02
+    400848: //RootNode
+    400850: HyperNURBS
+    400852: HyperNURBS.10
+    400854: HyperNURBS.2
+    400856: HyperNURBS.3
+    400858: HyperNURBS.4
+    400860: HyperNURBS.5
+    400862: HyperNURBS.6
+    400864: HyperNURBS.7
+    400866: HyperNURBS.8
+    400868: HyperNURBS.9
+    400870: Instance
+    400872: Instance.10
+    400874: Instance.11
+    400876: Instance.12
+    400878: Instance.13
+    400880: Instance.14
+    400882: Instance.15
+    400884: Instance.16
+    400886: Instance.17
+    400888: Instance.18
+    400890: Instance.19
+    400892: Instance.2
+    400894: Instance.20
+    400896: Instance.21
+    400898: Instance.22
+    400900: Instance.23
+    400902: Instance.24
+    400904: Instance.25
+    400906: Instance.26
+    400908: Instance.27
+    400910: Instance.28
+    400912: Instance.29
+    400914: Instance.3
+    400916: Instance.30
+    400918: Instance.31
+    400920: Instance.32
+    400922: Instance.33
+    400924: Instance.4
+    400926: Instance.5
+    400928: Instance.6
+    400930: Instance.7
+    400932: Instance.8
+    400934: Instance.9
+    400936: interiores
+    400938: interropetor
+    400940: interropetor.10
+    400942: interropetor.11
+    400944: interropetor.12
+    400946: interropetor.13
+    400948: interropetor.14
+    400950: interropetor.15
+    400952: interropetor.16
+    400954: interropetor.17
+    400956: interropetor.2
+    400958: interropetor.3
+    400960: interropetor.4
+    400962: interropetor.5
+    400964: interropetor.6
+    400966: interropetor.7
+    400968: interropetor.8
+    400970: interropetor.9
+    400972: J_Back
+    400974: J_Back_MeshPart0
+    400976: J_Back_MeshPart1
+    400978: J_DoorL
+    400980: J_DoorR
+    400982: J_Front
+    400984: J_Front_MeshPart0
+    400986: J_Front_MeshPart1
+    400988: J_Front_MeshPart2
+    400990: J_TyreBack2
+    400992: J_TyreFrontL
+    400994: J_TyreFrontR
+    400996: J_Volante
+    400998: jag type E
+    401000: janela 01 quarto
+    401002: janela 01 quarto.2
+    401004: janela 01 quarto.3
+    401006: janela 01 quarto.4
+    401008: janela 01 quarto.5
+    401010: janela 01 quarto.6
+    401012: janela 02 quarto
+    401014: janela 02 quarto.2
+    401016: janela 02 quarto.3
+    401018: janela 02 quarto.4
+    401020: janela cozinha
+    401022: janela cozinha 02
+    401024: janela cozinha 02.2
+    401026: janela cozinha 02.3
+    401028: janela cozinha.2
+    401030: janela fixa cozinha
+    401032: janela movel
+    401034: janela rot
+    401036: janela sala estar
+    401038: janela sala estar.1
+    401040: janela sala estar.2
+    401042: janela sala estar.3
+    401044: janela sala estar.4
+    401046: janela sala jantar
+    401048: janela sala jantar 02
+    401050: janela sala jantar.1
+    401052: janela sala jantar.1.10
+    401054: janela sala jantar.1.11
+    401056: janela sala jantar.1.12
+    401058: janela sala jantar.1.13
+    401060: janela sala jantar.1.14
+    401062: janela sala jantar.1.15
+    401064: janela sala jantar.1.16
+    401066: janela sala jantar.1.17
+    401068: janela sala jantar.1.18
+    401070: janela sala jantar.1.19
+    401072: janela sala jantar.1.2
+    401074: janela sala jantar.1.20
+    401076: janela sala jantar.1.21
+    401078: janela sala jantar.1.22
+    401080: janela sala jantar.1.23
+    401082: janela sala jantar.1.24
+    401084: janela sala jantar.1.25
+    401086: janela sala jantar.1.26
+    401088: janela sala jantar.1.27
+    401090: janela sala jantar.1.28
+    401092: janela sala jantar.1.29
+    401094: janela sala jantar.1.3
+    401096: janela sala jantar.1.30
+    401098: janela sala jantar.1.31
+    401100: janela sala jantar.1.4
+    401102: janela sala jantar.1.5
+    401104: janela sala jantar.1.6
+    401106: janela sala jantar.1.7
+    401108: janela sala jantar.1.8
+    401110: janela sala jantar.1.9
+    401112: janelas
+    401114: janelas e portas
+    401116: laje base
+    401118: laje principal
+    401120: laje quarto
+    401122: laje sala de estar
+    401124: lajes
+    401126: lajes secundarias
+    401128: lavatorio
+    401130: lavatorio.2
+    401132: Line01
+    401134: Line02
+    401136: Line04
+    401138: Line05
+    401140: Line06
+    401142: Line07
+    401144: Line08
+    401146: Line09
+    401148: logo 1
+    401150: luzes
+    401152: luzes.2
+    401154: mixer02001
+    401156: mixer02001.2
+    401158: mixer02004
+    401160: mixer02004.1
+    401162: mixer02004.1.2
+    401164: mixer02004.1.3
+    401166: mixer02004.2
+    401168: mobilias
+    401170: Null Object
+    401172: Null Object.1.10
+    401174: Null Object.1.11
+    401176: Null Object.1.12
+    401178: Null Object.1.13
+    401180: Null Object.1.14
+    401182: Null Object.1.2
+    401184: Null Object.1.3
+    401186: Null Object.1.4
+    401188: Null Object.1.5
+    401190: Null Object.1.6
+    401192: Null Object.1.7
+    401194: Null Object.1.8
+    401196: Null Object.1.9
+    401198: Null Object.10
+    401200: Null Object.11
+    401202: Null Object.12
+    401204: Null Object.13
+    401206: Null Object.2
+    401208: Null Object.2.10
+    401210: Null Object.2.11
+    401212: Null Object.2.12
+    401214: Null Object.2.13
+    401216: Null Object.2.14
+    401218: Null Object.2.15
+    401220: Null Object.2.16
+    401222: Null Object.2.17
+    401224: Null Object.2.2
+    401226: Null Object.2.3
+    401228: Null Object.2.4
+    401230: Null Object.2.5
+    401232: Null Object.2.6
+    401234: Null Object.2.7
+    401236: Null Object.2.8
+    401238: Null Object.2.9
+    401240: Null Object.3
+    401242: Null Object.3.2
+    401244: Null Object.4
+    401246: Null Object.4.2
+    401248: Null Object.5
+    401250: Null Object.6
+    401252: Null Object.7
+    401254: Null Object.8
+    401256: Null Object.9
+    401258: Object01
+    401260: Object02
+    401262: Object03
+    401264: Object04
+    401266: Object05
+    401268: Object06
+    401270: Object07
+    401272: Object08
+    401274: Object10
+    401276: Object11
+    401278: Object12
+    401280: Object13
+    401282: Object14
+    401284: Object15
+    401286: Object20
+    401288: Object21
+    401290: Object22
+    401292: Object23
+    401294: par brise0
+    401296: paredes e lajes
+    401298: paredes-Null Object
+    401300: paredes-Null Object.2
+    401302: patio base
+    401304: piscina
+    401306: Plane06
+    401308: Plane07
+    401310: Plane09
+    401312: Plane10
+    401314: Plane12
+    401316: porta 01 casa
+    401318: porta 01 sala de estar
+    401320: porta 01 sala de jantar
+    401322: porta 01 wc 02
+    401324: porta 02 casa
+    401326: porta 02 sala de estar
+    401328: porta 02 sala de jantar
+    401330: porta 02 wc 02
+    401332: porta 03 casa
+    401334: porta 04 casa
+    401336: porta cozinha
+    401338: porta quarto
+    401340: porta wc 01
+    401342: portas
+    401344: portas casa
+    401346: portas cozinha
+    401348: portas quarto
+    401350: portas sala de estar
+    401352: portas sala de jantar
+    401354: portas wc 02
+    401356: porte
+    401358: porte01
+    401360: "p\xE1tio cal\xE7ada.1"
+    401362: quarto wc balcao-Null Object.4
+    401364: rodape superior
+    401366: rodas
+    401368: rot
+    401370: rot.10
+    401372: rot.11
+    401374: rot.12
+    401376: rot.13
+    401378: rot.14
+    401380: rot.15
+    401382: rot.16
+    401384: rot.17
+    401386: rot.18
+    401388: rot.2
+    401390: rot.3
+    401392: rot.4
+    401394: rot.5
+    401396: rot.6
+    401398: rot.7
+    401400: rot.8
+    401402: rot.9
+    401404: sanita
+    401406: sanita.2
+    401408: sink
+    401410: sink.2
+    401412: Sphere01
+    401414: Sphere02
+    401416: Sphere07
+    401418: Sweep NURBS
+    401420: Sweep NURBS.10
+    401422: Sweep NURBS.11
+    401424: Sweep NURBS.2
+    401426: Sweep NURBS.3
+    401428: Sweep NURBS.4
+    401430: Sweep NURBS.5
+    401432: Sweep NURBS.6
+    401434: Sweep NURBS.7
+    401436: Sweep NURBS.8
+    401438: Sweep NURBS.9
+    401440: tecto falso interior-Cube.1
+    401442: telhado e tectos
+    401444: telhado garagem
+    401446: telhado-Null Object
+    401448: Text01
+    401450: tire02
+    401452: tire03
+    401454: tire04
+    401456: tire05
+    401458: Torus09
+    401460: TOUT BAS01
+    401462: Tube
+    401464: Tube.10
+    401466: Tube.11
+    401468: Tube.2
+    401470: Tube.3
+    401472: Tube.4
+    401474: Tube.5
+    401476: Tube.6
+    401478: Tube.7
+    401480: Tube.8
+    401482: Tube.9
+    401484: Tube06
+    401486: Tube07
+    401488: vidros
+    401490: vidros.2
+    401492: wc balcao
+    401494: wc balcao.1
+    401496: wc quarto balcao
+    401498: Z4
+    2300000: aile  arr
+    2300002: aile  arr0
+    2300004: aile avan0
+    2300006: aile avant
+    2300008: bas
+    2300010: bas01
+    2300012: Box01
+    2300014: Box02
+    2300016: Box03
+    2300018: Box04
+    2300020: Box05
+    2300022: Box06
+    2300024: Box07
+    2300026: Box08
+    2300028: Box09
+    2300030: Box10
+    2300032: Box11
+    2300034: Box12
+    2300036: Box13
+    2300038: Box14
+    2300040: Box15
+    2300042: Box16
+    2300044: Box17
+    2300046: Box18
+    2300048: Box19
+    2300050: Box20
+    2300052: Box21
+    2300054: Box22
+    2300056: Box23
+    2300058: Box24
+    2300060: Box25
+    2300062: Box26
+    2300064: Box27
+    2300066: Box29
+    2300068: Box31
+    2300070: caisse01
+    2300072: caixilho janela sala estar.1
+    2300074: caixilho janela sala estar.1.10
+    2300076: caixilho janela sala estar.1.11
+    2300078: caixilho janela sala estar.1.12
+    2300080: caixilho janela sala estar.1.13
+    2300082: caixilho janela sala estar.1.14
+    2300084: caixilho janela sala estar.1.15
+    2300086: caixilho janela sala estar.1.16
+    2300088: caixilho janela sala estar.1.17
+    2300090: caixilho janela sala estar.1.18
+    2300092: caixilho janela sala estar.1.19
+    2300094: caixilho janela sala estar.1.2
+    2300096: caixilho janela sala estar.1.20
+    2300098: caixilho janela sala estar.1.21
+    2300100: caixilho janela sala estar.1.22
+    2300102: caixilho janela sala estar.1.23
+    2300104: caixilho janela sala estar.1.24
+    2300106: caixilho janela sala estar.1.25
+    2300108: caixilho janela sala estar.1.26
+    2300110: caixilho janela sala estar.1.27
+    2300112: caixilho janela sala estar.1.28
+    2300114: caixilho janela sala estar.1.29
+    2300116: caixilho janela sala estar.1.3
+    2300118: caixilho janela sala estar.1.30
+    2300120: caixilho janela sala estar.1.31
+    2300122: caixilho janela sala estar.1.32
+    2300124: caixilho janela sala estar.1.4
+    2300126: caixilho janela sala estar.1.5
+    2300128: caixilho janela sala estar.1.6
+    2300130: caixilho janela sala estar.1.7
+    2300132: caixilho janela sala estar.1.8
+    2300134: caixilho janela sala estar.1.9
+    2300136: Cap 1
+    2300138: Cap 2
+    2300140: CAPOT01
+    2300142: coffre arriere
+    2300144: corrimao 01
+    2300146: corrimao 02
+    2300148: corrimao 03
+    2300150: cozinha balcao
+    2300152: cozinha balcao inferior
+    2300154: cozinha balcao superior
+    2300156: Cube
+    2300158: Cube-Cube
+    2300160: Cube-Cube.10
+    2300162: Cube-Cube.11
+    2300164: Cube-Cube.12
+    2300166: Cube-Cube.13
+    2300168: Cube-Cube.14
+    2300170: Cube-Cube.15
+    2300172: Cube-Cube.16
+    2300174: Cube-Cube.17
+    2300176: Cube-Cube.18
+    2300178: Cube-Cube.19
+    2300180: Cube-Cube.2
+    2300182: Cube-Cube.20
+    2300184: Cube-Cube.3
+    2300186: Cube-Cube.4
+    2300188: Cube-Cube.5
+    2300190: Cube-Cube.6
+    2300192: Cube-Cube.7
+    2300194: Cube-Cube.8
+    2300196: Cube-Cube.9
+    2300198: Cube.1
+    2300200: Cube.1.10
+    2300202: Cube.1.11
+    2300204: Cube.1.2
+    2300206: Cube.1.3
+    2300208: Cube.1.4
+    2300210: Cube.1.5
+    2300212: Cube.1.6
+    2300214: Cube.1.7
+    2300216: Cube.1.8
+    2300218: Cube.1.9
+    2300220: Cube.10
+    2300222: Cube.100
+    2300224: Cube.101
+    2300226: Cube.102
+    2300228: Cube.103
+    2300230: Cube.104
+    2300232: Cube.105
+    2300234: Cube.106
+    2300236: Cube.107
+    2300238: Cube.108
+    2300240: Cube.109
+    2300242: Cube.11
+    2300244: Cube.110
+    2300246: Cube.111
+    2300248: Cube.112
+    2300250: Cube.113
+    2300252: Cube.114
+    2300254: Cube.12
+    2300256: Cube.13
+    2300258: Cube.14
+    2300260: Cube.15
+    2300262: Cube.16
+    2300264: Cube.17
+    2300266: Cube.18
+    2300268: Cube.19
+    2300270: Cube.2
+    2300272: Cube.2.10
+    2300274: Cube.2.11
+    2300276: Cube.2.12
+    2300278: Cube.2.13
+    2300280: Cube.2.14
+    2300282: Cube.2.2
+    2300284: Cube.2.3
+    2300286: Cube.2.4
+    2300288: Cube.2.5
+    2300290: Cube.2.6
+    2300292: Cube.2.7
+    2300294: Cube.2.8
+    2300296: Cube.2.9
+    2300298: Cube.20
+    2300300: Cube.21
+    2300302: Cube.22
+    2300304: Cube.23
+    2300306: Cube.24
+    2300308: Cube.25
+    2300310: Cube.26
+    2300312: Cube.27
+    2300314: Cube.28
+    2300316: Cube.29
+    2300318: Cube.3
+    2300320: Cube.3.10
+    2300322: Cube.3.11
+    2300324: Cube.3.12
+    2300326: Cube.3.13
+    2300328: Cube.3.14
+    2300330: Cube.3.15
+    2300332: Cube.3.16
+    2300334: Cube.3.17
+    2300336: Cube.3.18
+    2300338: Cube.3.19
+    2300340: Cube.3.2
+    2300342: Cube.3.20
+    2300344: Cube.3.21
+    2300346: Cube.3.22
+    2300348: Cube.3.23
+    2300350: Cube.3.24
+    2300352: Cube.3.25
+    2300354: Cube.3.26
+    2300356: Cube.3.27
+    2300358: Cube.3.28
+    2300360: Cube.3.29
+    2300362: Cube.3.3
+    2300364: Cube.3.30
+    2300366: Cube.3.31
+    2300368: Cube.3.32
+    2300370: Cube.3.33
+    2300372: Cube.3.34
+    2300374: Cube.3.35
+    2300376: Cube.3.36
+    2300378: Cube.3.37
+    2300380: Cube.3.38
+    2300382: Cube.3.39
+    2300384: Cube.3.4
+    2300386: Cube.3.40
+    2300388: Cube.3.41
+    2300390: Cube.3.42
+    2300392: Cube.3.43
+    2300394: Cube.3.44
+    2300396: Cube.3.45
+    2300398: Cube.3.46
+    2300400: Cube.3.47
+    2300402: Cube.3.48
+    2300404: Cube.3.49
+    2300406: Cube.3.5
+    2300408: Cube.3.50
+    2300410: Cube.3.51
+    2300412: Cube.3.52
+    2300414: Cube.3.53
+    2300416: Cube.3.54
+    2300418: Cube.3.6
+    2300420: Cube.3.7
+    2300422: Cube.3.8
+    2300424: Cube.3.9
+    2300426: Cube.30
+    2300428: Cube.31
+    2300430: Cube.32
+    2300432: Cube.33
+    2300434: Cube.34
+    2300436: Cube.35
+    2300438: Cube.36
+    2300440: Cube.37
+    2300442: Cube.38
+    2300444: Cube.39
+    2300446: Cube.4
+    2300448: Cube.4.2
+    2300450: Cube.40
+    2300452: Cube.41
+    2300454: Cube.42
+    2300456: Cube.43
+    2300458: Cube.44
+    2300460: Cube.45
+    2300462: Cube.46
+    2300464: Cube.47
+    2300466: Cube.48
+    2300468: Cube.49
+    2300470: Cube.5
+    2300472: Cube.50
+    2300474: Cube.51
+    2300476: Cube.52
+    2300478: Cube.53
+    2300480: Cube.54
+    2300482: Cube.55
+    2300484: Cube.56
+    2300486: Cube.57
+    2300488: Cube.58
+    2300490: Cube.59
+    2300492: Cube.6
+    2300494: Cube.60
+    2300496: Cube.61
+    2300498: Cube.62
+    2300500: Cube.63
+    2300502: Cube.64
+    2300504: Cube.65
+    2300506: Cube.66
+    2300508: Cube.67
+    2300510: Cube.68
+    2300512: Cube.69
+    2300514: Cube.7
+    2300516: Cube.70
+    2300518: Cube.71
+    2300520: Cube.72
+    2300522: Cube.73
+    2300524: Cube.74
+    2300526: Cube.75
+    2300528: Cube.76
+    2300530: Cube.77
+    2300532: Cube.78
+    2300534: Cube.79
+    2300536: Cube.8
+    2300538: Cube.80
+    2300540: Cube.81
+    2300542: Cube.82
+    2300544: Cube.83
+    2300546: Cube.84
+    2300548: Cube.85
+    2300550: Cube.86
+    2300552: Cube.87
+    2300554: Cube.88
+    2300556: Cube.89
+    2300558: Cube.9
+    2300560: Cube.90
+    2300562: Cube.91
+    2300564: Cube.92
+    2300566: Cube.93
+    2300568: Cube.94
+    2300570: Cube.95
+    2300572: Cube.96
+    2300574: Cube.97
+    2300576: Cube.98
+    2300578: Cube.99
+    2300580: Cylinder
+    2300582: Cylinder.10
+    2300584: Cylinder.11
+    2300586: Cylinder.12
+    2300588: Cylinder.13
+    2300590: Cylinder.14
+    2300592: Cylinder.15
+    2300594: Cylinder.16
+    2300596: Cylinder.17
+    2300598: Cylinder.18
+    2300600: Cylinder.19
+    2300602: Cylinder.2
+    2300604: Cylinder.20
+    2300606: Cylinder.21
+    2300608: Cylinder.22
+    2300610: Cylinder.23
+    2300612: Cylinder.24
+    2300614: Cylinder.25
+    2300616: Cylinder.26
+    2300618: Cylinder.27
+    2300620: Cylinder.28
+    2300622: Cylinder.29
+    2300624: Cylinder.3
+    2300626: Cylinder.30
+    2300628: Cylinder.31
+    2300630: Cylinder.32
+    2300632: Cylinder.33
+    2300634: Cylinder.34
+    2300636: Cylinder.35
+    2300638: Cylinder.36
+    2300640: Cylinder.37
+    2300642: Cylinder.38
+    2300644: Cylinder.39
+    2300646: Cylinder.4
+    2300648: Cylinder.40
+    2300650: Cylinder.41
+    2300652: Cylinder.42
+    2300654: Cylinder.43
+    2300656: Cylinder.44
+    2300658: Cylinder.45
+    2300660: Cylinder.46
+    2300662: Cylinder.47
+    2300664: Cylinder.48
+    2300666: Cylinder.49
+    2300668: Cylinder.5
+    2300670: Cylinder.50
+    2300672: Cylinder.51
+    2300674: Cylinder.52
+    2300676: Cylinder.53
+    2300678: Cylinder.54
+    2300680: Cylinder.55
+    2300682: Cylinder.56
+    2300684: Cylinder.57
+    2300686: Cylinder.58
+    2300688: Cylinder.59
+    2300690: Cylinder.6
+    2300692: Cylinder.60
+    2300694: Cylinder.61
+    2300696: Cylinder.62
+    2300698: Cylinder.63
+    2300700: Cylinder.64
+    2300702: Cylinder.65
+    2300704: Cylinder.66
+    2300706: Cylinder.67
+    2300708: Cylinder.68
+    2300710: Cylinder.69
+    2300712: Cylinder.7
+    2300714: Cylinder.70
+    2300716: Cylinder.71
+    2300718: Cylinder.72
+    2300720: Cylinder.73
+    2300722: Cylinder.74
+    2300724: Cylinder.75
+    2300726: Cylinder.76
+    2300728: Cylinder.77
+    2300730: Cylinder.78
+    2300732: Cylinder.8
+    2300734: Cylinder.9
+    2300736: Cylinder01
+    2300738: Cylinder03
+    2300740: Cylinder10
+    2300742: Cylinder11
+    2300744: Cylinder17
+    2300746: Cylinder19
+    2300748: Cylinder19.2
+    2300750: Cylinder19.3
+    2300752: Cylinder19.4
+    2300754: Cylinder32
+    2300756: Cylinder35
+    2300758: Cylinder38
+    2300760: Cylinder41
+    2300762: Extrude NURBS
+    2300764: fechadura
+    2300766: fechadura.10
+    2300768: fechadura.11
+    2300770: fechadura.12
+    2300772: fechadura.13
+    2300774: fechadura.14
+    2300776: fechadura.15
+    2300778: fechadura.16
+    2300780: fechadura.17
+    2300782: fechadura.18
+    2300784: fechadura.2
+    2300786: fechadura.3
+    2300788: fechadura.4
+    2300790: fechadura.5
+    2300792: fechadura.6
+    2300794: fechadura.7
+    2300796: fechadura.8
+    2300798: fechadura.9
+    2300800: HyperNURBS.4
+    2300802: HyperNURBS.5
+    2300804: HyperNURBS.6
+    2300806: Instance.10
+    2300808: Instance.11
+    2300810: Instance.12
+    2300812: Instance.13
+    2300814: Instance.14
+    2300816: Instance.21
+    2300818: Instance.22
+    2300820: Instance.23
+    2300822: Instance.24
+    2300824: Instance.3
+    2300826: Instance.4
+    2300828: Instance.5
+    2300830: Instance.6
+    2300832: Instance.7
+    2300834: Instance.8
+    2300836: Instance.9
+    2300838: interropetor
+    2300840: interropetor.10
+    2300842: interropetor.11
+    2300844: interropetor.12
+    2300846: interropetor.13
+    2300848: interropetor.14
+    2300850: interropetor.15
+    2300852: interropetor.16
+    2300854: interropetor.17
+    2300856: interropetor.2
+    2300858: interropetor.3
+    2300860: interropetor.4
+    2300862: interropetor.5
+    2300864: interropetor.6
+    2300866: interropetor.7
+    2300868: interropetor.8
+    2300870: interropetor.9
+    2300872: J_Back_MeshPart0
+    2300874: J_Back_MeshPart1
+    2300876: J_DoorL
+    2300878: J_DoorR
+    2300880: J_Front_MeshPart0
+    2300882: J_Front_MeshPart1
+    2300884: J_Front_MeshPart2
+    2300886: J_TyreBack2
+    2300888: J_TyreFrontL
+    2300890: J_TyreFrontR
+    2300892: J_Volante
+    2300894: janela 01 quarto
+    2300896: janela 01 quarto.2
+    2300898: janela 01 quarto.3
+    2300900: janela 01 quarto.4
+    2300902: janela 01 quarto.5
+    2300904: janela 01 quarto.6
+    2300906: janela 02 quarto
+    2300908: janela 02 quarto.3
+    2300910: janela 02 quarto.4
+    2300912: janela cozinha
+    2300914: janela cozinha.2
+    2300916: janela fixa cozinha
+    2300918: janela sala estar
+    2300920: janela sala estar.1
+    2300922: janela sala estar.2
+    2300924: janela sala estar.3
+    2300926: janela sala estar.4
+    2300928: janela sala jantar
+    2300930: janela sala jantar.1
+    2300932: janela sala jantar.1.10
+    2300934: janela sala jantar.1.11
+    2300936: janela sala jantar.1.12
+    2300938: janela sala jantar.1.13
+    2300940: janela sala jantar.1.14
+    2300942: janela sala jantar.1.15
+    2300944: janela sala jantar.1.16
+    2300946: janela sala jantar.1.17
+    2300948: janela sala jantar.1.18
+    2300950: janela sala jantar.1.19
+    2300952: janela sala jantar.1.2
+    2300954: janela sala jantar.1.20
+    2300956: janela sala jantar.1.21
+    2300958: janela sala jantar.1.22
+    2300960: janela sala jantar.1.23
+    2300962: janela sala jantar.1.24
+    2300964: janela sala jantar.1.25
+    2300966: janela sala jantar.1.26
+    2300968: janela sala jantar.1.27
+    2300970: janela sala jantar.1.28
+    2300972: janela sala jantar.1.29
+    2300974: janela sala jantar.1.3
+    2300976: janela sala jantar.1.30
+    2300978: janela sala jantar.1.31
+    2300980: janela sala jantar.1.4
+    2300982: janela sala jantar.1.5
+    2300984: janela sala jantar.1.6
+    2300986: janela sala jantar.1.7
+    2300988: janela sala jantar.1.8
+    2300990: janela sala jantar.1.9
+    2300992: laje principal
+    2300994: laje quarto
+    2300996: laje sala de estar
+    2300998: Line01
+    2301000: Line02
+    2301002: Line04
+    2301004: Line06
+    2301006: Line07
+    2301008: Line08
+    2301010: Line09
+    2301012: logo 1
+    2301014: Object01
+    2301016: Object02
+    2301018: Object03
+    2301020: Object04
+    2301022: Object05
+    2301024: Object06
+    2301026: Object07
+    2301028: Object08
+    2301030: Object10
+    2301032: Object11
+    2301034: Object12
+    2301036: Object13
+    2301038: Object14
+    2301040: Object15
+    2301042: Object20
+    2301044: Object21
+    2301046: Object22
+    2301048: Object23
+    2301050: par brise0
+    2301052: paredes-Null Object
+    2301054: paredes-Null Object.2
+    2301056: patio base
+    2301058: piscina
+    2301060: Plane06
+    2301062: Plane07
+    2301064: Plane09
+    2301066: Plane10
+    2301068: Plane12
+    2301070: porta 01 casa
+    2301072: porta 01 sala de estar
+    2301074: porta 01 sala de jantar
+    2301076: porta 01 wc 02
+    2301078: porta 02 casa
+    2301080: porta 02 sala de estar
+    2301082: porta 02 sala de jantar
+    2301084: porta 02 wc 02
+    2301086: porta 03 casa
+    2301088: porta 04 casa
+    2301090: porta cozinha
+    2301092: porta quarto
+    2301094: porta wc 01
+    2301096: porte
+    2301098: porte01
+    2301100: "p\xE1tio cal\xE7ada.1"
+    2301102: quarto wc balcao-Null Object.4
+    2301104: rodape superior
+    2301106: rot
+    2301108: rot.10
+    2301110: rot.11
+    2301112: rot.12
+    2301114: rot.13
+    2301116: rot.14
+    2301118: rot.15
+    2301120: rot.16
+    2301122: rot.17
+    2301124: rot.18
+    2301126: rot.2
+    2301128: rot.3
+    2301130: rot.4
+    2301132: rot.5
+    2301134: rot.6
+    2301136: rot.7
+    2301138: rot.8
+    2301140: rot.9
+    2301142: Sphere01
+    2301144: Sphere02
+    2301146: Sphere07
+    2301148: Sweep NURBS
+    2301150: Sweep NURBS.10
+    2301152: Sweep NURBS.11
+    2301154: Sweep NURBS.2
+    2301156: Sweep NURBS.3
+    2301158: Sweep NURBS.4
+    2301160: Sweep NURBS.5
+    2301162: Sweep NURBS.6
+    2301164: Sweep NURBS.7
+    2301166: Sweep NURBS.8
+    2301168: Sweep NURBS.9
+    2301170: tecto falso interior-Cube.1
+    2301172: telhado-Null Object
+    2301174: Text01
+    2301176: tire02
+    2301178: tire03
+    2301180: tire04
+    2301182: tire05
+    2301184: Torus09
+    2301186: TOUT BAS01
+    2301188: Tube
+    2301190: Tube.10
+    2301192: Tube.11
+    2301194: Tube.2
+    2301196: Tube.3
+    2301198: Tube.4
+    2301200: Tube.5
+    2301202: Tube.6
+    2301204: Tube.7
+    2301206: Tube.8
+    2301208: Tube.9
+    2301210: Tube06
+    2301212: Tube07
+    2301214: wc balcao.1
+    3300000: aile  arr
+    3300002: aile  arr0
+    3300004: aile avan0
+    3300006: aile avant
+    3300008: bas
+    3300010: bas01
+    3300012: Box01
+    3300014: Box02
+    3300016: Box03
+    3300018: Box04
+    3300020: Box05
+    3300022: Box06
+    3300024: Box07
+    3300026: Box08
+    3300028: Box09
+    3300030: Box10
+    3300032: Box11
+    3300034: Box12
+    3300036: Box13
+    3300038: Box14
+    3300040: Box15
+    3300042: Box16
+    3300044: Box17
+    3300046: Box18
+    3300048: Box19
+    3300050: Box20
+    3300052: Box21
+    3300054: Box22
+    3300056: Box23
+    3300058: Box24
+    3300060: Box25
+    3300062: Box26
+    3300064: Box27
+    3300066: Box29
+    3300068: Box31
+    3300070: caisse01
+    3300072: caixilho janela sala estar.1
+    3300074: caixilho janela sala estar.1.10
+    3300076: caixilho janela sala estar.1.11
+    3300078: caixilho janela sala estar.1.12
+    3300080: caixilho janela sala estar.1.13
+    3300082: caixilho janela sala estar.1.14
+    3300084: caixilho janela sala estar.1.15
+    3300086: caixilho janela sala estar.1.16
+    3300088: caixilho janela sala estar.1.17
+    3300090: caixilho janela sala estar.1.18
+    3300092: caixilho janela sala estar.1.19
+    3300094: caixilho janela sala estar.1.2
+    3300096: caixilho janela sala estar.1.20
+    3300098: caixilho janela sala estar.1.21
+    3300100: caixilho janela sala estar.1.22
+    3300102: caixilho janela sala estar.1.23
+    3300104: caixilho janela sala estar.1.24
+    3300106: caixilho janela sala estar.1.25
+    3300108: caixilho janela sala estar.1.26
+    3300110: caixilho janela sala estar.1.27
+    3300112: caixilho janela sala estar.1.28
+    3300114: caixilho janela sala estar.1.29
+    3300116: caixilho janela sala estar.1.3
+    3300118: caixilho janela sala estar.1.30
+    3300120: caixilho janela sala estar.1.31
+    3300122: caixilho janela sala estar.1.32
+    3300124: caixilho janela sala estar.1.4
+    3300126: caixilho janela sala estar.1.5
+    3300128: caixilho janela sala estar.1.6
+    3300130: caixilho janela sala estar.1.7
+    3300132: caixilho janela sala estar.1.8
+    3300134: caixilho janela sala estar.1.9
+    3300136: Cap 1
+    3300138: Cap 2
+    3300140: CAPOT01
+    3300142: coffre arriere
+    3300144: corrimao 01
+    3300146: corrimao 02
+    3300148: corrimao 03
+    3300150: cozinha balcao
+    3300152: cozinha balcao inferior
+    3300154: cozinha balcao superior
+    3300156: Cube
+    3300158: Cube-Cube
+    3300160: Cube-Cube.10
+    3300162: Cube-Cube.11
+    3300164: Cube-Cube.12
+    3300166: Cube-Cube.13
+    3300168: Cube-Cube.14
+    3300170: Cube-Cube.15
+    3300172: Cube-Cube.16
+    3300174: Cube-Cube.17
+    3300176: Cube-Cube.18
+    3300178: Cube-Cube.19
+    3300180: Cube-Cube.2
+    3300182: Cube-Cube.20
+    3300184: Cube-Cube.3
+    3300186: Cube-Cube.4
+    3300188: Cube-Cube.5
+    3300190: Cube-Cube.6
+    3300192: Cube-Cube.7
+    3300194: Cube-Cube.8
+    3300196: Cube-Cube.9
+    3300198: Cube.1
+    3300200: Cube.1.10
+    3300202: Cube.1.11
+    3300204: Cube.1.2
+    3300206: Cube.1.3
+    3300208: Cube.1.4
+    3300210: Cube.1.5
+    3300212: Cube.1.6
+    3300214: Cube.1.7
+    3300216: Cube.1.8
+    3300218: Cube.1.9
+    3300220: Cube.10
+    3300222: Cube.100
+    3300224: Cube.101
+    3300226: Cube.102
+    3300228: Cube.103
+    3300230: Cube.104
+    3300232: Cube.105
+    3300234: Cube.106
+    3300236: Cube.107
+    3300238: Cube.108
+    3300240: Cube.109
+    3300242: Cube.11
+    3300244: Cube.110
+    3300246: Cube.111
+    3300248: Cube.112
+    3300250: Cube.113
+    3300252: Cube.114
+    3300254: Cube.12
+    3300256: Cube.13
+    3300258: Cube.14
+    3300260: Cube.15
+    3300262: Cube.16
+    3300264: Cube.17
+    3300266: Cube.18
+    3300268: Cube.19
+    3300270: Cube.2
+    3300272: Cube.2.10
+    3300274: Cube.2.11
+    3300276: Cube.2.12
+    3300278: Cube.2.13
+    3300280: Cube.2.14
+    3300282: Cube.2.2
+    3300284: Cube.2.3
+    3300286: Cube.2.4
+    3300288: Cube.2.5
+    3300290: Cube.2.6
+    3300292: Cube.2.7
+    3300294: Cube.2.8
+    3300296: Cube.2.9
+    3300298: Cube.20
+    3300300: Cube.21
+    3300302: Cube.22
+    3300304: Cube.23
+    3300306: Cube.24
+    3300308: Cube.25
+    3300310: Cube.26
+    3300312: Cube.27
+    3300314: Cube.28
+    3300316: Cube.29
+    3300318: Cube.3
+    3300320: Cube.3.10
+    3300322: Cube.3.11
+    3300324: Cube.3.12
+    3300326: Cube.3.13
+    3300328: Cube.3.14
+    3300330: Cube.3.15
+    3300332: Cube.3.16
+    3300334: Cube.3.17
+    3300336: Cube.3.18
+    3300338: Cube.3.19
+    3300340: Cube.3.2
+    3300342: Cube.3.20
+    3300344: Cube.3.21
+    3300346: Cube.3.22
+    3300348: Cube.3.23
+    3300350: Cube.3.24
+    3300352: Cube.3.25
+    3300354: Cube.3.26
+    3300356: Cube.3.27
+    3300358: Cube.3.28
+    3300360: Cube.3.29
+    3300362: Cube.3.3
+    3300364: Cube.3.30
+    3300366: Cube.3.31
+    3300368: Cube.3.32
+    3300370: Cube.3.33
+    3300372: Cube.3.34
+    3300374: Cube.3.35
+    3300376: Cube.3.36
+    3300378: Cube.3.37
+    3300380: Cube.3.38
+    3300382: Cube.3.39
+    3300384: Cube.3.4
+    3300386: Cube.3.40
+    3300388: Cube.3.41
+    3300390: Cube.3.42
+    3300392: Cube.3.43
+    3300394: Cube.3.44
+    3300396: Cube.3.45
+    3300398: Cube.3.46
+    3300400: Cube.3.47
+    3300402: Cube.3.48
+    3300404: Cube.3.49
+    3300406: Cube.3.5
+    3300408: Cube.3.50
+    3300410: Cube.3.51
+    3300412: Cube.3.52
+    3300414: Cube.3.53
+    3300416: Cube.3.54
+    3300418: Cube.3.6
+    3300420: Cube.3.7
+    3300422: Cube.3.8
+    3300424: Cube.3.9
+    3300426: Cube.30
+    3300428: Cube.31
+    3300430: Cube.32
+    3300432: Cube.33
+    3300434: Cube.34
+    3300436: Cube.35
+    3300438: Cube.36
+    3300440: Cube.37
+    3300442: Cube.38
+    3300444: Cube.39
+    3300446: Cube.4
+    3300448: Cube.4.2
+    3300450: Cube.40
+    3300452: Cube.41
+    3300454: Cube.42
+    3300456: Cube.43
+    3300458: Cube.44
+    3300460: Cube.45
+    3300462: Cube.46
+    3300464: Cube.47
+    3300466: Cube.48
+    3300468: Cube.49
+    3300470: Cube.5
+    3300472: Cube.50
+    3300474: Cube.51
+    3300476: Cube.52
+    3300478: Cube.53
+    3300480: Cube.54
+    3300482: Cube.55
+    3300484: Cube.56
+    3300486: Cube.57
+    3300488: Cube.58
+    3300490: Cube.59
+    3300492: Cube.6
+    3300494: Cube.60
+    3300496: Cube.61
+    3300498: Cube.62
+    3300500: Cube.63
+    3300502: Cube.64
+    3300504: Cube.65
+    3300506: Cube.66
+    3300508: Cube.67
+    3300510: Cube.68
+    3300512: Cube.69
+    3300514: Cube.7
+    3300516: Cube.70
+    3300518: Cube.71
+    3300520: Cube.72
+    3300522: Cube.73
+    3300524: Cube.74
+    3300526: Cube.75
+    3300528: Cube.76
+    3300530: Cube.77
+    3300532: Cube.78
+    3300534: Cube.79
+    3300536: Cube.8
+    3300538: Cube.80
+    3300540: Cube.81
+    3300542: Cube.82
+    3300544: Cube.83
+    3300546: Cube.84
+    3300548: Cube.85
+    3300550: Cube.86
+    3300552: Cube.87
+    3300554: Cube.88
+    3300556: Cube.89
+    3300558: Cube.9
+    3300560: Cube.90
+    3300562: Cube.91
+    3300564: Cube.92
+    3300566: Cube.93
+    3300568: Cube.94
+    3300570: Cube.95
+    3300572: Cube.96
+    3300574: Cube.97
+    3300576: Cube.98
+    3300578: Cube.99
+    3300580: Cylinder
+    3300582: Cylinder.10
+    3300584: Cylinder.11
+    3300586: Cylinder.12
+    3300588: Cylinder.13
+    3300590: Cylinder.14
+    3300592: Cylinder.15
+    3300594: Cylinder.16
+    3300596: Cylinder.17
+    3300598: Cylinder.18
+    3300600: Cylinder.19
+    3300602: Cylinder.2
+    3300604: Cylinder.20
+    3300606: Cylinder.21
+    3300608: Cylinder.22
+    3300610: Cylinder.23
+    3300612: Cylinder.24
+    3300614: Cylinder.25
+    3300616: Cylinder.26
+    3300618: Cylinder.27
+    3300620: Cylinder.28
+    3300622: Cylinder.29
+    3300624: Cylinder.3
+    3300626: Cylinder.30
+    3300628: Cylinder.31
+    3300630: Cylinder.32
+    3300632: Cylinder.33
+    3300634: Cylinder.34
+    3300636: Cylinder.35
+    3300638: Cylinder.36
+    3300640: Cylinder.37
+    3300642: Cylinder.38
+    3300644: Cylinder.39
+    3300646: Cylinder.4
+    3300648: Cylinder.40
+    3300650: Cylinder.41
+    3300652: Cylinder.42
+    3300654: Cylinder.43
+    3300656: Cylinder.44
+    3300658: Cylinder.45
+    3300660: Cylinder.46
+    3300662: Cylinder.47
+    3300664: Cylinder.48
+    3300666: Cylinder.49
+    3300668: Cylinder.5
+    3300670: Cylinder.50
+    3300672: Cylinder.51
+    3300674: Cylinder.52
+    3300676: Cylinder.53
+    3300678: Cylinder.54
+    3300680: Cylinder.55
+    3300682: Cylinder.56
+    3300684: Cylinder.57
+    3300686: Cylinder.58
+    3300688: Cylinder.59
+    3300690: Cylinder.6
+    3300692: Cylinder.60
+    3300694: Cylinder.61
+    3300696: Cylinder.62
+    3300698: Cylinder.63
+    3300700: Cylinder.64
+    3300702: Cylinder.65
+    3300704: Cylinder.66
+    3300706: Cylinder.67
+    3300708: Cylinder.68
+    3300710: Cylinder.69
+    3300712: Cylinder.7
+    3300714: Cylinder.70
+    3300716: Cylinder.71
+    3300718: Cylinder.72
+    3300720: Cylinder.73
+    3300722: Cylinder.74
+    3300724: Cylinder.75
+    3300726: Cylinder.76
+    3300728: Cylinder.77
+    3300730: Cylinder.78
+    3300732: Cylinder.8
+    3300734: Cylinder.9
+    3300736: Cylinder01
+    3300738: Cylinder03
+    3300740: Cylinder10
+    3300742: Cylinder11
+    3300744: Cylinder17
+    3300746: Cylinder19
+    3300748: Cylinder19.2
+    3300750: Cylinder19.3
+    3300752: Cylinder19.4
+    3300754: Cylinder32
+    3300756: Cylinder35
+    3300758: Cylinder38
+    3300760: Cylinder41
+    3300762: Extrude NURBS
+    3300764: fechadura
+    3300766: fechadura.10
+    3300768: fechadura.11
+    3300770: fechadura.12
+    3300772: fechadura.13
+    3300774: fechadura.14
+    3300776: fechadura.15
+    3300778: fechadura.16
+    3300780: fechadura.17
+    3300782: fechadura.18
+    3300784: fechadura.2
+    3300786: fechadura.3
+    3300788: fechadura.4
+    3300790: fechadura.5
+    3300792: fechadura.6
+    3300794: fechadura.7
+    3300796: fechadura.8
+    3300798: fechadura.9
+    3300800: HyperNURBS.4
+    3300802: HyperNURBS.5
+    3300804: HyperNURBS.6
+    3300806: Instance.10
+    3300808: Instance.11
+    3300810: Instance.12
+    3300812: Instance.13
+    3300814: Instance.14
+    3300816: Instance.21
+    3300818: Instance.22
+    3300820: Instance.23
+    3300822: Instance.24
+    3300824: Instance.3
+    3300826: Instance.4
+    3300828: Instance.5
+    3300830: Instance.6
+    3300832: Instance.7
+    3300834: Instance.8
+    3300836: Instance.9
+    3300838: interropetor
+    3300840: interropetor.10
+    3300842: interropetor.11
+    3300844: interropetor.12
+    3300846: interropetor.13
+    3300848: interropetor.14
+    3300850: interropetor.15
+    3300852: interropetor.16
+    3300854: interropetor.17
+    3300856: interropetor.2
+    3300858: interropetor.3
+    3300860: interropetor.4
+    3300862: interropetor.5
+    3300864: interropetor.6
+    3300866: interropetor.7
+    3300868: interropetor.8
+    3300870: interropetor.9
+    3300872: J_Back_MeshPart0
+    3300874: J_Back_MeshPart1
+    3300876: J_DoorL
+    3300878: J_DoorR
+    3300880: J_Front_MeshPart0
+    3300882: J_Front_MeshPart1
+    3300884: J_Front_MeshPart2
+    3300886: J_TyreBack2
+    3300888: J_TyreFrontL
+    3300890: J_TyreFrontR
+    3300892: J_Volante
+    3300894: janela 01 quarto
+    3300896: janela 01 quarto.2
+    3300898: janela 01 quarto.3
+    3300900: janela 01 quarto.4
+    3300902: janela 01 quarto.5
+    3300904: janela 01 quarto.6
+    3300906: janela 02 quarto
+    3300908: janela 02 quarto.3
+    3300910: janela 02 quarto.4
+    3300912: janela cozinha
+    3300914: janela cozinha.2
+    3300916: janela fixa cozinha
+    3300918: janela sala estar
+    3300920: janela sala estar.1
+    3300922: janela sala estar.2
+    3300924: janela sala estar.3
+    3300926: janela sala estar.4
+    3300928: janela sala jantar
+    3300930: janela sala jantar.1
+    3300932: janela sala jantar.1.10
+    3300934: janela sala jantar.1.11
+    3300936: janela sala jantar.1.12
+    3300938: janela sala jantar.1.13
+    3300940: janela sala jantar.1.14
+    3300942: janela sala jantar.1.15
+    3300944: janela sala jantar.1.16
+    3300946: janela sala jantar.1.17
+    3300948: janela sala jantar.1.18
+    3300950: janela sala jantar.1.19
+    3300952: janela sala jantar.1.2
+    3300954: janela sala jantar.1.20
+    3300956: janela sala jantar.1.21
+    3300958: janela sala jantar.1.22
+    3300960: janela sala jantar.1.23
+    3300962: janela sala jantar.1.24
+    3300964: janela sala jantar.1.25
+    3300966: janela sala jantar.1.26
+    3300968: janela sala jantar.1.27
+    3300970: janela sala jantar.1.28
+    3300972: janela sala jantar.1.29
+    3300974: janela sala jantar.1.3
+    3300976: janela sala jantar.1.30
+    3300978: janela sala jantar.1.31
+    3300980: janela sala jantar.1.4
+    3300982: janela sala jantar.1.5
+    3300984: janela sala jantar.1.6
+    3300986: janela sala jantar.1.7
+    3300988: janela sala jantar.1.8
+    3300990: janela sala jantar.1.9
+    3300992: laje principal
+    3300994: laje quarto
+    3300996: laje sala de estar
+    3300998: Line01
+    3301000: Line02
+    3301002: Line04
+    3301004: Line06
+    3301006: Line07
+    3301008: Line08
+    3301010: Line09
+    3301012: logo 1
+    3301014: Object01
+    3301016: Object02
+    3301018: Object03
+    3301020: Object04
+    3301022: Object05
+    3301024: Object06
+    3301026: Object07
+    3301028: Object08
+    3301030: Object10
+    3301032: Object11
+    3301034: Object12
+    3301036: Object13
+    3301038: Object14
+    3301040: Object15
+    3301042: Object20
+    3301044: Object21
+    3301046: Object22
+    3301048: Object23
+    3301050: par brise0
+    3301052: paredes-Null Object
+    3301054: paredes-Null Object.2
+    3301056: patio base
+    3301058: piscina
+    3301060: Plane06
+    3301062: Plane07
+    3301064: Plane09
+    3301066: Plane10
+    3301068: Plane12
+    3301070: porta 01 casa
+    3301072: porta 01 sala de estar
+    3301074: porta 01 sala de jantar
+    3301076: porta 01 wc 02
+    3301078: porta 02 casa
+    3301080: porta 02 sala de estar
+    3301082: porta 02 sala de jantar
+    3301084: porta 02 wc 02
+    3301086: porta 03 casa
+    3301088: porta 04 casa
+    3301090: porta cozinha
+    3301092: porta quarto
+    3301094: porta wc 01
+    3301096: porte
+    3301098: porte01
+    3301100: "p\xE1tio cal\xE7ada.1"
+    3301102: quarto wc balcao-Null Object.4
+    3301104: rodape superior
+    3301106: rot
+    3301108: rot.10
+    3301110: rot.11
+    3301112: rot.12
+    3301114: rot.13
+    3301116: rot.14
+    3301118: rot.15
+    3301120: rot.16
+    3301122: rot.17
+    3301124: rot.18
+    3301126: rot.2
+    3301128: rot.3
+    3301130: rot.4
+    3301132: rot.5
+    3301134: rot.6
+    3301136: rot.7
+    3301138: rot.8
+    3301140: rot.9
+    3301142: Sphere01
+    3301144: Sphere02
+    3301146: Sphere07
+    3301148: Sweep NURBS
+    3301150: Sweep NURBS.10
+    3301152: Sweep NURBS.11
+    3301154: Sweep NURBS.2
+    3301156: Sweep NURBS.3
+    3301158: Sweep NURBS.4
+    3301160: Sweep NURBS.5
+    3301162: Sweep NURBS.6
+    3301164: Sweep NURBS.7
+    3301166: Sweep NURBS.8
+    3301168: Sweep NURBS.9
+    3301170: tecto falso interior-Cube.1
+    3301172: telhado-Null Object
+    3301174: Text01
+    3301176: tire02
+    3301178: tire03
+    3301180: tire04
+    3301182: tire05
+    3301184: Torus09
+    3301186: TOUT BAS01
+    3301188: Tube
+    3301190: Tube.10
+    3301192: Tube.11
+    3301194: Tube.2
+    3301196: Tube.3
+    3301198: Tube.4
+    3301200: Tube.5
+    3301202: Tube.6
+    3301204: Tube.7
+    3301206: Tube.8
+    3301208: Tube.9
+    3301210: Tube06
+    3301212: Tube07
+    3301214: wc balcao.1
+    4300000: patio base
+    4300002: "p\xE1tio cal\xE7ada.1"
+    4300004: Box29
+    4300006: TOUT BAS01
+    4300008: Cylinder32
+    4300010: Object20
+    4300012: Object13
+    4300014: Object14
+    4300016: Object02
+    4300018: Object22
+    4300020: Object15
+    4300022: Plane07
+    4300024: Plane12
+    4300026: Cylinder17
+    4300028: CAPOT01
+    4300030: aile avan0
+    4300032: Object21
+    4300034: Line02
+    4300036: Plane06
+    4300038: Object07
+    4300040: Object08
+    4300042: porte01
+    4300044: aile  arr0
+    4300046: bas01
+    4300048: aile avant
+    4300050: bas
+    4300052: porte
+    4300054: aile  arr
+    4300056: caisse01
+    4300058: Object01
+    4300060: Object03
+    4300062: Object04
+    4300064: Cylinder01
+    4300066: Object05
+    4300068: tire02
+    4300070: Cylinder10
+    4300072: Cylinder19
+    4300074: tire03
+    4300076: Cylinder35
+    4300078: Cylinder19.2
+    4300080: tire04
+    4300082: Cylinder38
+    4300084: Cylinder19.3
+    4300086: tire05
+    4300088: Cylinder41
+    4300090: Cylinder19.4
+    4300092: par brise0
+    4300094: Object06
+    4300096: Object10
+    4300098: Object23
+    4300100: Sphere01
+    4300102: Sphere02
+    4300104: Line07
+    4300106: Line06
+    4300108: Line08
+    4300110: Line09
+    4300112: Line01
+    4300114: Object11
+    4300116: Line04
+    4300118: Object12
+    4300120: logo 1
+    4300122: Box22
+    4300124: Box25
+    4300126: Box26
+    4300128: Box27
+    4300130: Cylinder11
+    4300132: Torus09
+    4300134: Box31
+    4300136: Text01
+    4300138: Tube06
+    4300140: Tube07
+    4300142: Cylinder03
+    4300144: Plane09
+    4300146: Plane10
+    4300148: Sphere07
+    4300150: Box02
+    4300152: Box03
+    4300154: Box06
+    4300156: Box05
+    4300158: Box04
+    4300160: Box21
+    4300162: Box10
+    4300164: Box09
+    4300166: Box08
+    4300168: Box07
+    4300170: Box01
+    4300172: Box24
+    4300174: Box16
+    4300176: Box15
+    4300178: Box14
+    4300180: Box13
+    4300182: Box12
+    4300184: Box11
+    4300186: Box17
+    4300188: Box18
+    4300190: Box19
+    4300192: Box20
+    4300194: Box23
+    4300196: J_Back_MeshPart0
+    4300198: J_Back_MeshPart1
+    4300200: J_DoorL
+    4300202: J_DoorR
+    4300204: coffre arriere
+    4300206: J_Front_MeshPart0
+    4300208: J_Front_MeshPart1
+    4300210: J_Front_MeshPart2
+    4300212: J_TyreFrontL
+    4300214: J_TyreFrontR
+    4300216: J_TyreBack2
+    4300218: J_Volante
+    4300220: Cube.1
+    4300222: Cube
+    4300224: Cube.2
+    4300226: Cube.1.2
+    4300228: Cube.3
+    4300230: Cube.4
+    4300232: Cube.3.2
+    4300234: Cube.1.3
+    4300236: Cube.4.2
+    4300238: telhado-Null Object
+    4300240: Cube.5
+    4300242: Cube.6
+    4300244: Cube.7
+    4300246: Cube.8
+    4300248: Cube.9
+    4300250: Cube.10
+    4300252: Cube.11
+    4300254: Cube.12
+    4300256: Cube.13
+    4300258: tecto falso interior-Cube.1
+    4300260: Cube.1.4
+    4300262: Cube.1.5
+    4300264: Cube.1.6
+    4300266: Cube.1.7
+    4300268: Cube.1.8
+    4300270: Cube.1.9
+    4300272: Cube.1.10
+    4300274: Cube.1.11
+    4300276: Cube.14
+    4300278: Cube.15
+    4300280: piscina
+    4300282: Cube.16
+    4300284: Cube.17
+    4300286: Cube.18
+    4300288: Sweep NURBS
+    4300290: Sweep NURBS.2
+    4300292: Cube.19
+    4300294: Cube.20
+    4300296: Cube.21
+    4300298: Sweep NURBS.3
+    4300300: Sweep NURBS.4
+    4300302: Cube.22
+    4300304: Cube.23
+    4300306: Cylinder
+    4300308: Cube.24
+    4300310: Cylinder.2
+    4300312: Cylinder.3
+    4300314: Cylinder.4
+    4300316: Cube.25
+    4300318: Cube.26
+    4300320: Cylinder.5
+    4300322: Cylinder.6
+    4300324: Cylinder.7
+    4300326: Cube.27
+    4300328: Cylinder.8
+    4300330: Cube.28
+    4300332: Sweep NURBS.5
+    4300334: Cube.29
+    4300336: Cylinder.9
+    4300338: Cube.30
+    4300340: Cylinder.10
+    4300342: Cylinder.11
+    4300344: Cylinder.12
+    4300346: Cube.31
+    4300348: Cube.32
+    4300350: Cylinder.13
+    4300352: Cylinder.14
+    4300354: Cylinder.15
+    4300356: Cube.33
+    4300358: Cube.34
+    4300360: Cylinder.16
+    4300362: Sweep NURBS.6
+    4300364: Cylinder.17
+    4300366: Cube.35
+    4300368: wc balcao.1
+    4300370: HyperNURBS.4
+    4300372: HyperNURBS.5
+    4300374: HyperNURBS.6
+    4300376: quarto wc balcao-Null Object.4
+    4300378: Cube.36
+    4300380: Cylinder.18
+    4300382: Cylinder.19
+    4300384: Cylinder.20
+    4300386: Cube.37
+    4300388: Cube.38
+    4300390: Cylinder.21
+    4300392: Cylinder.22
+    4300394: Cylinder.23
+    4300396: Cube.39
+    4300398: Cylinder.24
+    4300400: Cube.40
+    4300402: Sweep NURBS.7
+    4300404: Cylinder.25
+    4300406: Cube.41
+    4300408: Cube.42
+    4300410: Cube.43
+    4300412: Cylinder.26
+    4300414: Cube.44
+    4300416: Cylinder.27
+    4300418: Cylinder.28
+    4300420: Cylinder.29
+    4300422: Cube.45
+    4300424: Cube.46
+    4300426: Cylinder.30
+    4300428: Cylinder.31
+    4300430: Cylinder.32
+    4300432: Cube.47
+    4300434: Cylinder.33
+    4300436: Cube.48
+    4300438: Sweep NURBS.8
+    4300440: Cube.49
+    4300442: Cylinder.34
+    4300444: Cube.50
+    4300446: Cylinder.35
+    4300448: Cylinder.36
+    4300450: Cylinder.37
+    4300452: Cube.51
+    4300454: Cube.52
+    4300456: Cylinder.38
+    4300458: Cylinder.39
+    4300460: Cylinder.40
+    4300462: Cube.53
+    4300464: Cube.54
+    4300466: Cylinder.41
+    4300468: Sweep NURBS.9
+    4300470: Cylinder.42
+    4300472: Cube.55
+    4300474: cozinha balcao superior
+    4300476: cozinha balcao inferior
+    4300478: cozinha balcao
+    4300480: Cube.56
+    4300482: Cube.57
+    4300484: Cube.58
+    4300486: Cylinder.43
+    4300488: Cylinder.44
+    4300490: Cylinder.45
+    4300492: Cube.59
+    4300494: Cube.60
+    4300496: Cylinder.46
+    4300498: Cylinder.47
+    4300500: Cylinder.48
+    4300502: Cube.61
+    4300504: Cube.62
+    4300506: Cylinder.49
+    4300508: Sweep NURBS.10
+    4300510: Cylinder.50
+    4300512: Cube.63
+    4300514: Cube.64
+    4300516: Cylinder.51
+    4300518: Cylinder.52
+    4300520: Cylinder.53
+    4300522: Cube.65
+    4300524: Cube.66
+    4300526: Cylinder.54
+    4300528: Cylinder.55
+    4300530: Cylinder.56
+    4300532: Cube.67
+    4300534: Cube.68
+    4300536: Cylinder.57
+    4300538: Sweep NURBS.11
+    4300540: Cylinder.58
+    4300542: Cube.69
+    4300544: corrimao 01
+    4300546: corrimao 02
+    4300548: corrimao 03
+    4300550: rodape superior
+    4300552: porta 01 casa
+    4300554: interropetor
+    4300556: Cube.70
+    4300558: Cube.71
+    4300560: Cube.2.2
+    4300562: Cylinder.59
+    4300564: rot
+    4300566: Cube.3.3
+    4300568: fechadura
+    4300570: Cube.3.4
+    4300572: Instance.3
+    4300574: Instance.4
+    4300576: Cube.3.5
+    4300578: Cube.3.6
+    4300580: porta 02 casa
+    4300582: interropetor.2
+    4300584: Cube.72
+    4300586: Cube.73
+    4300588: Cube.2.3
+    4300590: Cylinder.60
+    4300592: rot.2
+    4300594: Cube.3.7
+    4300596: fechadura.2
+    4300598: Cube.3.8
+    4300600: Instance.5
+    4300602: Instance.6
+    4300604: Cube.3.9
+    4300606: Cube.3.10
+    4300608: porta 03 casa
+    4300610: interropetor.3
+    4300612: Cube.74
+    4300614: Cube.75
+    4300616: Cube.2.4
+    4300618: Cylinder.61
+    4300620: rot.3
+    4300622: Cube.3.11
+    4300624: fechadura.3
+    4300626: Cube.3.12
+    4300628: Instance.7
+    4300630: Instance.8
+    4300632: Cube.3.13
+    4300634: Cube.3.14
+    4300636: porta 04 casa
+    4300638: interropetor.4
+    4300640: Cube.76
+    4300642: Cube.77
+    4300644: Cube.2.5
+    4300646: Cylinder.62
+    4300648: rot.4
+    4300650: Cube.3.15
+    4300652: fechadura.4
+    4300654: Cube.3.16
+    4300656: Instance.9
+    4300658: Instance.10
+    4300660: Cube.3.17
+    4300662: Cube.3.18
+    4300664: porta quarto
+    4300666: interropetor.5
+    4300668: Cube.78
+    4300670: Cube.79
+    4300672: Cube.2.6
+    4300674: Cylinder.63
+    4300676: rot.5
+    4300678: Cube.3.19
+    4300680: fechadura.5
+    4300682: Cube.3.20
+    4300684: Instance.11
+    4300686: Instance.12
+    4300688: Cube.3.21
+    4300690: Cube.3.22
+    4300692: porta wc 01
+    4300694: interropetor.6
+    4300696: Cube.80
+    4300698: interropetor.7
+    4300700: Cube.81
+    4300702: Cube.82
+    4300704: Cube.2.7
+    4300706: Cylinder.64
+    4300708: rot.6
+    4300710: Cube.3.23
+    4300712: fechadura.6
+    4300714: Cube.3.24
+    4300716: Instance.13
+    4300718: Instance.14
+    4300720: Cube.3.25
+    4300722: Cube.3.26
+    4300724: porta 01 sala de estar
+    4300726: interropetor.8
+    4300728: Cube.83
+    4300730: Cube.84
+    4300732: Cube.2.8
+    4300734: Cylinder.65
+    4300736: rot.7
+    4300738: Cube.3.27
+    4300740: fechadura.7
+    4300742: Cube.3.28
+    4300744: Cube-Cube
+    4300746: Cube-Cube.2
+    4300748: Cylinder.66
+    4300750: rot.8
+    4300752: Cube.3.29
+    4300754: fechadura.8
+    4300756: Cube.3.30
+    4300758: Cube-Cube.3
+    4300760: Cube-Cube.4
+    4300762: porta 02 sala de estar
+    4300764: interropetor.9
+    4300766: Cube.85
+    4300768: Cube.86
+    4300770: Cube.2.9
+    4300772: Cylinder.67
+    4300774: rot.9
+    4300776: Cube.3.31
+    4300778: fechadura.9
+    4300780: Cube.3.32
+    4300782: Cube-Cube.5
+    4300784: Cube-Cube.6
+    4300786: Cylinder.68
+    4300788: rot.10
+    4300790: Cube.3.33
+    4300792: fechadura.10
+    4300794: Cube.3.34
+    4300796: Cube-Cube.7
+    4300798: Cube-Cube.8
+    4300800: porta 01 wc 02
+    4300802: interropetor.10
+    4300804: Cube.87
+    4300806: Cube.88
+    4300808: Cube.2.10
+    4300810: Cylinder.69
+    4300812: rot.11
+    4300814: Cube.3.35
+    4300816: fechadura.11
+    4300818: Cube.3.36
+    4300820: Instance.21
+    4300822: Instance.22
+    4300824: Cube.3.37
+    4300826: Cube.3.38
+    4300828: porta 02 wc 02
+    4300830: interropetor.11
+    4300832: Cube.89
+    4300834: Cube.90
+    4300836: Cube.2.11
+    4300838: Cylinder.70
+    4300840: rot.12
+    4300842: Cube.3.39
+    4300844: fechadura.12
+    4300846: Cube.3.40
+    4300848: Instance.23
+    4300850: Instance.24
+    4300852: Cube.3.41
+    4300854: Cube.3.42
+    4300856: porta 01 sala de jantar
+    4300858: interropetor.12
+    4300860: Cube.91
+    4300862: interropetor.13
+    4300864: Cube.92
+    4300866: Cube.93
+    4300868: Cube.2.12
+    4300870: Cylinder.71
+    4300872: rot.13
+    4300874: Cube.3.43
+    4300876: fechadura.13
+    4300878: Cube.3.44
+    4300880: Cube-Cube.9
+    4300882: Cube-Cube.10
+    4300884: Cylinder.72
+    4300886: rot.14
+    4300888: Cube.3.45
+    4300890: fechadura.14
+    4300892: Cube.3.46
+    4300894: Cube-Cube.11
+    4300896: Cube-Cube.12
+    4300898: porta 02 sala de jantar
+    4300900: interropetor.14
+    4300902: Cube.94
+    4300904: interropetor.15
+    4300906: Cube.95
+    4300908: Cube.96
+    4300910: Cube.2.13
+    4300912: Cylinder.73
+    4300914: rot.15
+    4300916: Cube.3.47
+    4300918: fechadura.15
+    4300920: Cube.3.48
+    4300922: Cube-Cube.13
+    4300924: Cube-Cube.14
+    4300926: Cylinder.74
+    4300928: rot.16
+    4300930: Cube.3.49
+    4300932: fechadura.16
+    4300934: Cube.3.50
+    4300936: Cube-Cube.15
+    4300938: Cube-Cube.16
+    4300940: porta cozinha
+    4300942: interropetor.16
+    4300944: Cube.97
+    4300946: interropetor.17
+    4300948: Cube.98
+    4300950: Cube.99
+    4300952: Cube.2.14
+    4300954: Cylinder.75
+    4300956: rot.17
+    4300958: Cube.3.51
+    4300960: fechadura.17
+    4300962: Cube.3.52
+    4300964: Cube-Cube.17
+    4300966: Cube-Cube.18
+    4300968: Cylinder.76
+    4300970: rot.18
+    4300972: Cube.3.53
+    4300974: fechadura.18
+    4300976: Cube.3.54
+    4300978: Cube-Cube.19
+    4300980: Cube-Cube.20
+    4300982: Tube
+    4300984: Tube.2
+    4300986: Tube.3
+    4300988: Tube.4
+    4300990: Tube.5
+    4300992: Tube.6
+    4300994: Tube.7
+    4300996: Tube.8
+    4300998: Tube.9
+    4301000: Tube.10
+    4301002: Tube.11
+    4301004: janela 01 quarto
+    4301006: Cylinder.77
+    4301008: janela 01 quarto.2
+    4301010: Cube.100
+    4301012: Cube.101
+    4301014: Cylinder.78
+    4301016: janela 01 quarto.3
+    4301018: Cube.102
+    4301020: Cube.103
+    4301022: janela 01 quarto.4
+    4301024: janela 01 quarto.5
+    4301026: Cube.104
+    4301028: janela 01 quarto.6
+    4301030: Cube.105
+    4301032: janela 02 quarto
+    4301034: caixilho janela sala estar.1
+    4301036: janela sala jantar.1
+    4301038: caixilho janela sala estar.1.2
+    4301040: janela sala jantar.1.2
+    4301042: caixilho janela sala estar.1.3
+    4301044: janela sala jantar.1.3
+    4301046: caixilho janela sala estar.1.4
+    4301048: janela sala jantar.1.4
+    4301050: caixilho janela sala estar.1.5
+    4301052: janela sala jantar.1.5
+    4301054: caixilho janela sala estar.1.6
+    4301056: janela sala jantar.1.6
+    4301058: janela 02 quarto.3
+    4301060: janela 02 quarto.4
+    4301062: janela cozinha
+    4301064: caixilho janela sala estar.1.7
+    4301066: janela sala jantar.1.7
+    4301068: caixilho janela sala estar.1.8
+    4301070: janela sala jantar.1.8
+    4301072: caixilho janela sala estar.1.9
+    4301074: janela sala jantar.1.9
+    4301076: caixilho janela sala estar.1.10
+    4301078: janela sala jantar.1.10
+    4301080: caixilho janela sala estar.1.11
+    4301082: janela sala jantar.1.11
+    4301084: caixilho janela sala estar.1.12
+    4301086: janela sala jantar.1.12
+    4301088: caixilho janela sala estar.1.13
+    4301090: janela sala jantar.1.13
+    4301092: caixilho janela sala estar.1.14
+    4301094: janela sala jantar.1.14
+    4301096: caixilho janela sala estar.1.15
+    4301098: janela sala jantar.1.15
+    4301100: caixilho janela sala estar.1.16
+    4301102: janela sala jantar.1.16
+    4301104: caixilho janela sala estar.1.17
+    4301106: janela sala jantar.1.17
+    4301108: caixilho janela sala estar.1.18
+    4301110: janela sala jantar.1.18
+    4301112: caixilho janela sala estar.1.19
+    4301114: janela sala jantar.1.19
+    4301116: caixilho janela sala estar.1.20
+    4301118: janela sala jantar.1.20
+    4301120: caixilho janela sala estar.1.21
+    4301122: janela sala jantar.1.21
+    4301124: caixilho janela sala estar.1.22
+    4301126: janela sala jantar.1.22
+    4301128: caixilho janela sala estar.1.23
+    4301130: janela sala jantar.1.23
+    4301132: caixilho janela sala estar.1.24
+    4301134: janela sala jantar.1.24
+    4301136: janela fixa cozinha
+    4301138: janela cozinha.2
+    4301140: janela sala estar
+    4301142: caixilho janela sala estar.1.25
+    4301144: janela sala estar.1
+    4301146: Cube.106
+    4301148: janela sala estar.2
+    4301150: Cube.107
+    4301152: Cube.108
+    4301154: Cube.109
+    4301156: janela sala estar.3
+    4301158: Cube.110
+    4301160: Cube.111
+    4301162: janela sala jantar
+    4301164: caixilho janela sala estar.1.26
+    4301166: janela sala jantar.1.25
+    4301168: caixilho janela sala estar.1.27
+    4301170: janela sala jantar.1.26
+    4301172: caixilho janela sala estar.1.28
+    4301174: janela sala jantar.1.27
+    4301176: caixilho janela sala estar.1.29
+    4301178: janela sala jantar.1.28
+    4301180: caixilho janela sala estar.1.30
+    4301182: janela sala jantar.1.29
+    4301184: caixilho janela sala estar.1.31
+    4301186: janela sala jantar.1.30
+    4301188: caixilho janela sala estar.1.32
+    4301190: janela sala jantar.1.31
+    4301192: Cube.112
+    4301194: janela sala estar.4
+    4301196: Cube.113
+    4301198: Cube.114
+    4301200: paredes-Null Object
+    4301202: paredes-Null Object.2
+    4301204: laje sala de estar
+    4301206: laje quarto
+    4301208: laje principal
+    4301210: Extrude NURBS
+    4301212: Cap 1
+    4301214: Cap 2
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
