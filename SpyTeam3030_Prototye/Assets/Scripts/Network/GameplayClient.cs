@@ -46,6 +46,8 @@ public class GameplayClient : NetworkBehaviour
     void RpcRotateCamera()
     {
         Debug.Log("rotate");
-        Camera.main.GetComponent<Transform>().RotateAround(Vector3.zero, Vector3.up, 180.0f);
+//        Camera.main.GetComponent<Transform>().RotateAround(Vector3.zero, Vector3.up, 180.0f);
+		Camera.main.GetComponent<Transform> ().position = new Vector3 (5.1f, 27.4f, 7.6f);
+		Camera.main.GetComponent<Transform> ().eulerAngles = new Vector3 (66.798f, -180f, 0f);
     }
 }
