@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: a5dec7a7954d24a499d42fa6d56ab6d6
-timeCreated: 1479252555
-licenseType: Free
+timeCreated: 1479434767
+licenseType: Pro
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
@@ -5313,7 +5313,7 @@ ModelImporter:
     9500000: //RootNode
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 1
     materialSearch: 2
   animations:
     legacyGenerateAnimations: 4
