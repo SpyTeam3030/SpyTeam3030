@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
 
-
+	public CardManager mCardManager;
 	public static GameObject itemBeingDragged;
 	Vector3 startPosition;
 	Transform startParent;
@@ -14,10 +14,15 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
   
 	public string description;
 
+	private int id;
+	private Card card;
 	public float attack;
 	public float hp;
     public float speed;
 
+	void Start(){
+		mCardManager.NextCard (gameObject);
+	}
 
 	#region IBeginDragHandler implementation
 	public void OnBeginDrag (PointerEventData eventData)
@@ -62,6 +67,8 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             {
                 hit.transform.gameObject.GetComponent<CombatController>().AttributeChange(hp, attack, 0, speed);
                 Debug.Log("Take Effect");
+
+				mCardManager.NextCard (gameObject);
             }
         } 
 	}
@@ -79,4 +86,14 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 		status.ResetInformation ();
 	}
 
+	public void Init(Card card){
+		this.id = card.id;
+		this.attack = card.attack;
+		this.hp = card.health;
+		this.speed = card.speed;
+
+		//attackSpeed
+		//attackRange
+		GetComponent<Image> ().sprite = card.image;
+	}
 }
