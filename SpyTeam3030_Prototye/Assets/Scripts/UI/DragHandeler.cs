@@ -12,7 +12,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
 	public Status status;
   
-	public string description;
+	private string description;
 
 	private int id;
 	private Card card;
@@ -88,6 +88,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
 	public void Init(Card card){
 		this.id = card.id;
+		this.description = card.description;
 		this.attack = card.attack;
 		this.hp = card.health;
 		this.speed = card.speed;
