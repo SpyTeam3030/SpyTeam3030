@@ -34,10 +34,7 @@ public class CardManager : MonoBehaviour {
 		ids = Shuffle (ids);
 
 		string excelPath = Application.dataPath + "/Excel/cards.xlsx";
-		Excel xls = ExcelHelper.LoadExcel(excelPath);
-
-		xls.ShowLog();
-
+//		Excel xls = ExcelHelper.LoadExcel(excelPath);
 
 		for (int i = 0; i < ids.Count; i++){
 //			Debug.Log (ids [i]);
@@ -46,11 +43,11 @@ public class CardManager : MonoBehaviour {
 			int ID = ids [i];
 
 			c.id = ID;
-			c.description = xls.Tables [0].GetValue (ID, 3).ToString();
+			c.description = "Hi";//xls.Tables [0].GetValue (ID, 3).ToString();
 
-			c.health = Convert.ToSingle(xls.Tables [0].GetValue (ID, 4));
-			c.speed = Convert.ToSingle(xls.Tables [0].GetValue (ID, 5));
-			c.attack = Convert.ToSingle(xls.Tables [0].GetValue (ID, 6));
+			c.health = 250f;//Convert.ToSingle(xls.Tables [0].GetValue (ID, 4));
+			c.speed = 250f;//Convert.ToSingle(xls.Tables [0].GetValue (ID, 5));
+			c.attack = 250f;//Convert.ToSingle(xls.Tables [0].GetValue (ID, 6));
 
 			c.attackSpeed = 25f;
 			c.attackDistance = 25f;

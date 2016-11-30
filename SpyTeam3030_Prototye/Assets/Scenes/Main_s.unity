@@ -31476,18 +31476,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1500cc1eb26fe784f8a5938aa6e2f0b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spyTypeList:
-  - {fileID: 1000010004997538, guid: eadca8471ae11d4488ac49f9ea6e8ea5, type: 2}
-  spawnPosList:
-  - {fileID: 1564093752}
-  - {fileID: 1180208761}
-  - {fileID: 1750519128}
-  - {fileID: 1044556384}
-  - {fileID: 1080779351}
-  - {fileID: 1066546764}
-  basePosList:
-  - {fileID: 2144678627}
-  - {fileID: 640356244}
+  spyTypeList: []
+  spawnPosList: []
+  basePosList: []
 --- !u!114 &665523628
 MonoBehaviour:
   m_ObjectHideFlags: 0
