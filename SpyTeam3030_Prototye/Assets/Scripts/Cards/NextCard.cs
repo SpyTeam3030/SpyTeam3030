@@ -9,11 +9,6 @@ public class NextCard : MonoBehaviour {
 	private Card card;
 
 	public CardManager mCardManager;
-
-	// Use this for initialization
-	void Start () {
-	
-	}
 	
 	// Update is called once per frame
 	void Update () {

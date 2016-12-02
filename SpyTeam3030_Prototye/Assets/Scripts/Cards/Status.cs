@@ -13,11 +13,6 @@ public class Status : MonoBehaviour {
 	void Start () {
 		ResetInformation ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	public void SetDescription(string d){
 		description.text = d;
