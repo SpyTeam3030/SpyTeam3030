@@ -20,14 +20,14 @@ public class CombatController : NetworkBehaviour
     [Header("Combat Display")]
     public GameObject healthBar;
     public Transform popUpPos;
-    private Vector3 fullHealth;
-    private Vector3 emptyHealth;
+    protected Vector3 fullHealth;
+    protected Vector3 emptyHealth;
 
-    private List<CombatController> attackTargets;
-    SpyController mSpyController;
-    private float counter;
-    private float health;
-    private int id;
+    protected List<CombatController> attackTargets;
+    protected SpyController mSpyController;
+    protected float counter;
+    protected float health;
+    protected int id;
 
 
     // Use this for initialization
@@ -45,6 +45,8 @@ public class CombatController : NetworkBehaviour
 	
 	// Update is called once per frame
 	void Update () {
+        if (!isServer)
+            return;
         if(attackTargets.Count != 0)
         {
             if(counter < attackSpeed)
@@ -61,6 +63,9 @@ public class CombatController : NetworkBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (!isServer)
+            return;
+        
         if(other.gameObject.tag == "CombatObject")
         {
             if (!other.gameObject.GetComponent<CombatController>().IsSameTeam(id))
@@ -77,6 +82,9 @@ public class CombatController : NetworkBehaviour
 
     void OnTriggerExit(Collider other)
     {
+        if (!isServer)
+            return;
+        
         if(other.gameObject.tag == "CombatObject")
         {
             if (!other.gameObject.GetComponent<CombatController>().IsSameTeam(id))
@@ -92,6 +100,9 @@ public class CombatController : NetworkBehaviour
 
     public virtual void TakeDamge(float power)
     {
+        if (!isServer)
+            return;
+        
         health -= power;
         RpcDisplayPopup(power.ToString(), popUpPos.position);
         if (health <= 0.0f)
@@ -114,9 +125,10 @@ public class CombatController : NetworkBehaviour
     {
         maxhealth += maxHealthChange;
         attackPower += powerChange;
-        attackRadius += radiusChange;
-        attackSpeed += speedChange;
+        GetComponent<SphereCollider>().radius = attackRadius = radiusChange;
+        attackSpeed = speedChange;
     }
+
 
     [ClientRpc]
     void RpcDisplayPopup(string value, Vector3 location)

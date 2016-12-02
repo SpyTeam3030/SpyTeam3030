@@ -29,7 +29,9 @@ public class GameplayServer : NetworkBehaviour
 {
     [Header("Spy Pool")]
     public List<GameObject> spyTypeList;
+    public List<GameObject> towerTypeList;
     public List<Transform> spawnPosList;
+    public List<Transform> towerSpanPosList;
     public List<Transform> basePosList;
 
     private int playerCount = 0;
@@ -65,14 +67,23 @@ public class GameplayServer : NetworkBehaviour
             int[] index = {0,0};
             for(int i = 0; i < 6; i++)
             {
+                // spawn the spay
                 int localId = allSpyList[i].teamID;
                 var pos = spawnPosList[localId * 3 + index[localId]].position;
                 var rotation = spawnPosList[localId * 3 + index[localId]].rotation;
-                index[localId]++;
 
                 GameObject enemy = (GameObject)Instantiate(spyTypeList[0], pos, rotation);
                 enemy.GetComponent<SpyController>().InitilizeSpy(pos, basePosList[localId].position, localId);
                 NetworkServer.Spawn(enemy);
+
+                // spawn the related tower
+                pos = towerSpanPosList[localId * 3 + index[localId]].position;
+                rotation = towerSpanPosList[localId * 3 + index[localId]].rotation;
+                GameObject tower = (GameObject)Instantiate(towerTypeList[0], pos, rotation);
+                tower.GetComponent<TowerController>().InitiID(localId);
+                NetworkServer.Spawn(tower);
+
+                index[localId]++;
             }
         }
 

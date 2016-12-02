@@ -5,15 +5,10 @@ using System.Collections.Generic;
 
 public class TowerController : CombatController
 {
-    [Header("Combat Display")]
-    private Vector3 fullHealth;
-    private Vector3 emptyHealth;
-    public int id;
-
-    private List<CombatController> attackTargets;
-    private float counter;
-    private float health;
-
+    public void InitiID(int id)
+    {
+        this.id = id;
+    }
 
     // Use this for initialization
     void Start()
@@ -30,6 +25,8 @@ public class TowerController : CombatController
     // Update is called once per frame
     void Update()
     {
+        if (!isServer)
+            return;
         if (attackTargets.Count != 0)
         {
             if (counter < attackSpeed)
@@ -47,6 +44,8 @@ public class TowerController : CombatController
 
     void OnTriggerEnter(Collider other)
     {
+        if (!isServer)
+            return;
         if (other.gameObject.tag == "CombatObject")
         {
             if (!other.gameObject.GetComponent<CombatController>().IsSameTeam(id))
@@ -58,6 +57,8 @@ public class TowerController : CombatController
 
     void OnTriggerExit(Collider other)
     {
+        if (!isServer)
+            return;
         if (other.gameObject.tag == "CombatObject")
         {
             if (!other.gameObject.GetComponent<CombatController>().IsSameTeam(id))
@@ -83,6 +84,8 @@ public class TowerController : CombatController
 
     public override void TakeDamge(float power)
     {
+        if (!isServer)
+            return;
         health -= power;
         RpcDisplayPopup(power.ToString(), popUpPos.position);
         if (health <= 0.0f)
@@ -101,16 +104,18 @@ public class TowerController : CombatController
     {
         maxhealth += maxHealthChange;
         attackPower += powerChange;
-        attackRadius += radiusChange;
-        attackSpeed += speedChange;
+        GetComponent<SphereCollider>().radius = attackRadius = radiusChange;
+        attackSpeed = speedChange;
     }
-
+        
+    [ClientRpc]
     void RpcDisplayPopup(string value, Vector3 location)
     {
         Debug.Log("pop up");
         PopupController.DisplayPopup(value, location);
     }
 
+    [ClientRpc]
     void RpcUpdateHealthBar(float ratio)
     {
         healthBar.transform.localScale = Vector3.Lerp(emptyHealth, fullHealth, ratio);

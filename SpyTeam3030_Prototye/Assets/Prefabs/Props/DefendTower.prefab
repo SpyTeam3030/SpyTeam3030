@@ -55,6 +55,8 @@ GameObject:
   - 33: {fileID: 33000011207376462}
   - 23: {fileID: 23000010692870414}
   - 135: {fileID: 135000010552337788}
+  - 114: {fileID: 114000010634495792}
+  - 114: {fileID: 114000011501637572}
   m_Layer: 0
   m_Name: DefendTower
   m_TagString: Untagged
@@ -447,6 +449,38 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000010634495792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010895797810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 115
+    i1: 17
+    i2: 9
+    i3: 178
+    i4: 84
+    i5: 94
+    i6: 212
+    i7: 184
+    i8: 72
+    i9: 116
+    i10: 162
+    i11: 116
+    i12: 38
+    i13: 48
+    i14: 138
+    i15: 217
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114000010848868140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -458,6 +492,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae1503672575f784d9cbf7923970de95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000011501637572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010895797810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7af61076665f94c4f9c1e85d3f206a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxhealth: 200
+  attackPower: 10
+  attackRadius: 4
+  attackSpeed: 1
+  healthBar: {fileID: 1000011542307786}
+  popUpPos: {fileID: 4000013281859476}
 --- !u!114 &114000011512055158
 MonoBehaviour:
   m_ObjectHideFlags: 1
