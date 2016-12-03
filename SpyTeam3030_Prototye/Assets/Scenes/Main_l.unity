@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43680865, g: 0.48440456, b: 0.564593, a: 1}
+  m_IndirectSpecularColor: {r: 0.43680853, g: 0.48440462, b: 0.56459266, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -60052,7 +60052,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0003695488, y: -416}
+  m_AnchoredPosition: {x: 0.0003695488, y: -575}
   m_SizeDelta: {x: 1536, y: 675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1528086939
@@ -66914,7 +66914,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1683823291}
-  serializedVersion: 4
+  serializedVersion: 2
   lengthInSec: 5
   startDelay:
     scalar: 0
@@ -66952,13 +66952,12 @@ ParticleSystem:
       m_RotationOrder: 4
     minMaxState: 0
   speed: 1
+  randomSeed: 1097351666
   looping: 1
   prewarm: 0
   playOnAwake: 1
   moveWithTransform: 1
-  autoRandomSeed: 0
   scalingMode: 1
-  randomSeed: 1097351666
   InitialModule:
     serializedVersion: 2
     enabled: 1

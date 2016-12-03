@@ -1,0 +1,209 @@
+[{
+    "id" : 1,
+	"type" : "ST",
+	"description" : "Monster Truck",
+
+	"health" : 50,
+	"speed" : 15,
+	"attack" : 0,
+
+	"attackSpeed" : 1,
+	"attackDistance" : 1,
+
+	"image" : 1
+},{
+    "id" : 2,
+	"type" : "ST",
+	"description" : "Ray Gun",
+
+	"health" : 0,
+	"speed" : 0,
+	"attack" : 40,
+
+	"attackSpeed" : 1,
+	"attackDistance" : 1,
+
+	"image" : 1
+},{
+    "id" : 3,
+	"type" : "ST",
+	"description" : "Jet Boots",
+
+	"health" : 0,
+	"speed" : 10,
+	"attack" : 25,
+
+	"attackSpeed" : 1,
+	"attackDistance" : 1,
+
+	"image" : 1
+},{
+    "id" : 4,
+	"type" : "ST",
+	"description" : "Portable Shield",
+
+	"health" : 100,
+	"speed" : -5,
+	"attack" : 0,
+
+	"attackSpeed" : 1,
+	"attackDistance" : 1,
+
+	"image" : 1
+},{
+    "id" : 5,
+	"type" : "ST",
+	"description" : "Tank",
+
+	"health" : 75,
+	"speed" : -7,
+	"attack" : 40,
+
+	"attackSpeed" : 1,
+	"attackDistance" : 1,
+
+	"image" : 1
+},{
+    "id" : 6,
+	"type" : "ST",
+	"description" : "Sports Car",
+
+	"health" : 20,
+	"speed" : 25,
+	"attack" : 0,
+
+	"attackSpeed" : 1,
+	"attackDistance" : 1,
+
+	"image" : 1
+},{
+    "id" : 7,
+	"type" : "ST",
+	"description" : "Mech Suit",
+
+	"health" : 50,
+	"speed" : -5,
+	"attack" : 40,
+
+	"attackSpeed" : 1,
+	"attackDistance" : 1,
+
+	"image" : 1
+},{
+    "id" : 8,
+	"type" : "ST",
+	"description" : "RPG Launcher",
+
+	"health" : 0,
+	"speed" : -2,
+	"attack" : 30,
+
+	"attackSpeed" : 1,
+	"attackDistance" : 1,
+
+	"image" : 1
+},{
+    "id" : 9,
+	"type" : "ST",
+	"description" : "Health Pack",
+
+	"health" : 200,
+	"speed" : 0,
+	"attack" : 0,
+
+	"attackSpeed" : 1,
+	"attackDistance" : 1,
+
+	"image" : 1
+},{
+    "id" : 10,
+	"type" : "ST",
+	"description" : "Exo Suit",
+
+	"health" : 20,
+	"speed" : 10,
+	"attack" : 0,
+
+	"attackSpeed" : 1,
+	"attackDistance" : 1,
+
+	"image" : 1
+},{
+    "id" : 11,
+	"type" : "ST",
+	"description" : "Broadsword",
+
+	"health" : 20,
+	"speed" : -2,
+	"attack" : 30,
+
+	"attackSpeed" : 1,
+	"attackDistance" : 1,
+
+	"image" : 1
+},{
+    "id" : 12,
+	"type" : "ST",
+	"description" : "Samurai Sword",
+
+	"health" : 0,
+	"speed" : 15,
+	"attack" : 20,
+
+	"attackSpeed" : 1,
+	"attackDistance" : 1,
+
+	"image" : 1
+},{
+    "id" : 13,
+	"type" : "ST",
+	"description" : "Tele-Crystal Staff",
+
+	"health" : 30,
+	"speed" : 0,
+	"attack" : 30,
+
+	"attackSpeed" : 1,
+	"attackDistance" : 1,
+
+	"image" : 1
+},{
+    "id" : 14,
+	"type" : "ST",
+	"description" : "Tele-Crystal Shield",
+
+	"health" : 50,
+	"speed" : 0,
+	"attack" : 20,
+
+	"attackSpeed" : 1,
+	"attackDistance" : 1,
+
+	"image" : 1
+},{
+    "id" : 15,
+	"type" : "ST",
+	"description" : "Last Ditch Shield",
+
+	"health" : 50,
+	"speed" : 0,
+	"attack" : 0,
+
+	"attackSpeed" : 1,
+	"attackDistance" : 1,
+
+	"image" : 1
+},{
+    "id" : 16,
+	"type" : "ST",
+	"description" : "Mini-Sub",
+
+	"health" : 0,
+	"speed" : -5,
+	"attack" : 40,
+
+	"attackSpeed" : 1,
+	"attackDistance" : 1,
+
+	"image" : 1
+}]

@@ -3,14 +3,35 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System.IO;
 
+[System.Serializable]
+public class JsonHelper
+{
+	public static T[] getJsonArray<T>(string json)
+	{
+		string newJson = "{ \"array\": " + json + "}";
+		Wrapper<T> wrapper = JsonUtility.FromJson<Wrapper<T>> (newJson);
+		return wrapper.array;
+	}
+
+	[Serializable]
+	private class Wrapper<T>
+	{
+		public T[] array;
+	}
+}
+
+[System.Serializable]
 public struct Card{
 	public int id;
+	public string type;
 	public string description;
 
-	public float attack;
 	public float health;
 	public float speed;
+	public float attack;
+
 	public float attackSpeed;
 	public float attackDistance;
 
@@ -28,29 +49,21 @@ public class CardManager : MonoBehaviour {
 	void Awake () {
 		cards = new Stack<Card> ();
 		ids = new List<int> ();
-		for (int i = 0; i < 30; i++) {
+		for (int i = 0; i < 32; i++) {
 			ids.Add(i + 1);
 		}
 		ids = Shuffle (ids);
 
-		string excelPath = Application.dataPath + "/Excel/cards.xlsx";
-//		Excel xls = ExcelHelper.LoadExcel(excelPath);
+		string jsonString = File.ReadAllText (Application.dataPath + "/Cards.json");
+		Card[] cardDeck = JsonHelper.getJsonArray<Card> (jsonString);
 
 		for (int i = 0; i < ids.Count; i++){
-//			Debug.Log (ids [i]);
 
-			Card c = new Card();
 			int ID = ids [i];
-
-			c.id = ID;
-			c.description = "Hi";//xls.Tables [0].GetValue (ID, 3).ToString();
-
-			c.health = 250f;//Convert.ToSingle(xls.Tables [0].GetValue (ID, 4));
-			c.speed = 250f;//Convert.ToSingle(xls.Tables [0].GetValue (ID, 5));
-			c.attack = 250f;//Convert.ToSingle(xls.Tables [0].GetValue (ID, 6));
-
-			c.attackSpeed = 25f;
-			c.attackDistance = 25f;
+			if (ID > 16) {
+				ID -= 16;
+			}
+			Card c = cardDeck[ID - 1];
 			c.image = images [ID-1];
 
 			cards.Push (c);
