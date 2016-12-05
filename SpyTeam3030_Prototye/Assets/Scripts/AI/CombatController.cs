@@ -8,6 +8,8 @@ public class CombatController : NetworkBehaviour
 
 
     [Header("Combat Attributes")]
+	[SyncVar]
+	public float originalHealth;
     [SyncVar]
     public float maxhealth;
     [SyncVar]
@@ -36,7 +38,8 @@ public class CombatController : NetworkBehaviour
         mSpyController = GetComponent<SpyController>();
         id = mSpyController.GetTeamID();
         counter = 0.0f;
-        health = maxhealth;
+		health = originalHealth;
+		maxhealth = originalHealth;
         attackTargets = new List<CombatController>();
         fullHealth = healthBar.transform.localScale;
         emptyHealth = fullHealth;
@@ -107,7 +110,9 @@ public class CombatController : NetworkBehaviour
         RpcDisplayPopup(power.ToString(), popUpPos.position);
         if (health <= 0.0f)
         {
-            health = maxhealth;
+			health = originalHealth;
+			maxhealth = originalHealth;
+			GetComponent<NavMeshAgent> ().speed = 3.5f;
             attackTargets.Clear();
             counter = 0.0f;
             mSpyController.Respawn();
@@ -121,13 +126,20 @@ public class CombatController : NetworkBehaviour
         return id == otherID;
     }
 
-    public virtual void AttributeChange(float maxHealthChange = 0.0f, float powerChange = 0.0f, float radiusChange = 0.0f, float speedChange = 0.0f)
-    {
-        maxhealth += maxHealthChange;
-        attackPower += powerChange;
-        GetComponent<SphereCollider>().radius = attackRadius = radiusChange;
-        attackSpeed = speedChange;
-    }
+	public virtual void AttributeChange(float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f)
+	{
+		maxhealth += maxHealthChange;
+		attackPower += attackChange;
+		if (newSpeed != 0) {
+			GetComponent<NavMeshAgent> ().speed = 0.1f * newSpeed;
+		}
+		if (newRadius != 0) {
+			GetComponent<SphereCollider>().radius = attackRadius = newRadius;
+		}
+		if (newAttackSpeed != 0) {
+			attackSpeed = newAttackSpeed;
+		}
+	}
 
 
     [ClientRpc]

@@ -23,7 +23,11 @@ public class Status : MonoBehaviour {
 	}
 
 	public void SetHP(float hp){
-        HP.text = hp.ToString();
+		if (hp == 999) {
+			HP.text = "FULL";
+		}else{
+			HP.text = hp.ToString();
+		}
 	}
 
 	public void SetSpeed(float s){

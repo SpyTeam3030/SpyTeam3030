@@ -107,7 +107,7 @@
 	"type" : "ST",
 	"description" : "Health Pack",
 
-	"health" : 200,
+	"health" : 999,
 	"speed" : 0,
 	"attack" : 0,
 

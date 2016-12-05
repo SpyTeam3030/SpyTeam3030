@@ -342,6 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b89eb9364e31ae43bb87a738b9c3afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalHealth: 100
   maxhealth: 100
   attackPower: 10
   attackRadius: 4.5

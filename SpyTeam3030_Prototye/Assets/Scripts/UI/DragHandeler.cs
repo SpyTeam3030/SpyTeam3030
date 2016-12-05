@@ -16,9 +16,6 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
 	private int id;
 	private Card card;
-	public float attack;
-	public float hp;
-    public float speed;
 
 	void Start(){
 		mCardManager.NextCard (gameObject);
@@ -65,10 +62,11 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         {
             if (hit.transform.gameObject.tag == "CombatObject")
             {
-                hit.transform.gameObject.GetComponent<CombatController>().AttributeChange(hp, attack, 0, speed);
+				hit.transform.gameObject.GetComponent<CombatController>().AttributeChange(
+					card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed);
                 Debug.Log("Take Effect");
 
-				mCardManager.NextCard (gameObject);
+				mCardManager.NextCard (this.gameObject);
             }
         } 
 	}
@@ -76,25 +74,19 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 	#endregion
 
 	public void SetInformation(){
-		status.SetDescription (description);
-		status.SetAttack (attack);
-		status.SetHP (hp);
-		status.SetSpeed (speed);
+		status.SetDescription (card.description);
+		status.SetAttack (card.attack);
+		status.SetHP (card.health);
+		status.SetSpeed (card.speed);
 	}
 
 	public void ResetInformation(){
 		status.ResetInformation ();
 	}
 
-	public void Init(Card card){
-		this.id = card.id;
-		this.description = card.description;
-		this.attack = card.attack;
-		this.hp = card.health;
-		this.speed = card.speed;
+	public void Init(Card c){
+		this.card = c;
 
-		//attackSpeed
-		//attackRange
 		GetComponent<Image> ().sprite = card.image;
 	}
 }
