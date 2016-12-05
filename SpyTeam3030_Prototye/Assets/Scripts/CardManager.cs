@@ -69,11 +69,6 @@ public class CardManager : MonoBehaviour {
 			cards.Push (c);
 		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	public void NextCard(GameObject go){
 		go.GetComponent<DragHandeler> ().Init (cards.Pop ());
