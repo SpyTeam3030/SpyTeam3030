@@ -18,6 +18,8 @@ public class CombatController : NetworkBehaviour
     public float attackRadius;
     [SyncVar]
     public float attackSpeed;
+	[SyncVar]
+	public bool card;
 
     [Header("Combat Display")]
     public GameObject healthBar;
@@ -38,8 +40,9 @@ public class CombatController : NetworkBehaviour
         mSpyController = GetComponent<SpyController>();
         id = mSpyController.GetTeamID();
         counter = 0.0f;
-		health = originalHealth;
 		maxhealth = originalHealth;
+		health = maxhealth;
+		card = false;
         attackTargets = new List<CombatController>();
         fullHealth = healthBar.transform.localScale;
         emptyHealth = fullHealth;
@@ -110,9 +113,14 @@ public class CombatController : NetworkBehaviour
         RpcDisplayPopup(power.ToString(), popUpPos.position);
         if (health <= 0.0f)
         {
-			health = originalHealth;
+			card = false;
 			maxhealth = originalHealth;
+			health = maxhealth;
 			GetComponent<NavMeshAgent> ().speed = 3.5f;
+			attackPower = 10f;
+			attackRadius = 4.5f;
+			attackSpeed = 1f;
+
             attackTargets.Clear();
             counter = 0.0f;
             mSpyController.Respawn();
@@ -126,12 +134,17 @@ public class CombatController : NetworkBehaviour
         return id == otherID;
     }
 
-	public virtual void AttributeChange(float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f)
+	public virtual bool AttributeChange(float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f)
 	{
+		if (card == true) {
+			return false;
+		}
+
+		card = true;
 		maxhealth += maxHealthChange;
 		attackPower += attackChange;
 		if (newSpeed != 0) {
-			GetComponent<NavMeshAgent> ().speed = 0.1f * newSpeed;
+			GetComponent<NavMeshAgent> ().speed = newSpeed * 3.5f;
 		}
 		if (newRadius != 0) {
 			GetComponent<SphereCollider>().radius = attackRadius = newRadius;
@@ -139,13 +152,14 @@ public class CombatController : NetworkBehaviour
 		if (newAttackSpeed != 0) {
 			attackSpeed = newAttackSpeed;
 		}
+		return true;
 	}
 
 
     [ClientRpc]
     void RpcDisplayPopup(string value, Vector3 location)
     {
-        Debug.Log("pop up");
+//        Debug.Log("pop up");
         PopupController.DisplayPopup(value, location);
     }
 

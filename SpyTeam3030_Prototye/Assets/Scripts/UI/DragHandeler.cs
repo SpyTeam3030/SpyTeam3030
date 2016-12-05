@@ -62,11 +62,12 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         {
             if (hit.transform.gameObject.tag == "CombatObject")
             {
-				hit.transform.gameObject.GetComponent<CombatController>().AttributeChange(
-					card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed);
-                Debug.Log("Take Effect");
+				if (hit.transform.gameObject.GetComponent<CombatController> ().AttributeChange (
+					    card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
+					Debug.Log ("Take Effect");
 
-				mCardManager.NextCard (this.gameObject);
+					mCardManager.NextCard (this.gameObject);
+				}
             }
         } 
 	}

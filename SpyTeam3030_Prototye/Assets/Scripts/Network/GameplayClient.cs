@@ -17,7 +17,7 @@ public class GameplayClient : NetworkBehaviour
 
     public override void OnStartLocalPlayer()
     {
-        Debug.Log("hjgjk");
+        Debug.Log("OnStartLocalPlayer");
         CmdRoateCamera();
         CmdSpawnSpy();
     }
@@ -47,7 +47,7 @@ public class GameplayClient : NetworkBehaviour
     {
         Debug.Log("rotate");
 //        Camera.main.GetComponent<Transform>().RotateAround(Vector3.zero, Vector3.up, 180.0f);
-		Camera.main.GetComponent<Transform> ().position = new Vector3 (5.1f, 27.4f, 7.6f);
-		Camera.main.GetComponent<Transform> ().eulerAngles = new Vector3 (66.798f, -180f, 0f);
+		Camera.main.GetComponent<Transform> ().position = new Vector3 (5.1f, 27.4f, 10.1f);
+		Camera.main.GetComponent<Transform> ().eulerAngles = new Vector3 (66.798f, 180f, 0f);
     }
 }

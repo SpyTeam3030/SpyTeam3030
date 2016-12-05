@@ -100,12 +100,12 @@ public class TowerController : CombatController
         return id == otherID;
     }
 
-	public virtual void AttributeChange(float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f)
+	public override bool AttributeChange(float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f)
 	{
 		maxhealth += maxHealthChange;
 		attackPower += attackChange;
 		if (newSpeed != 0) {
-			GetComponent<NavMeshAgent> ().speed = 3.5f * newSpeed;
+			GetComponent<NavMeshAgent> ().speed = newSpeed * 3.5f;
 		}
 		if (newRadius != 0) {
 			GetComponent<SphereCollider>().radius = attackRadius = newRadius;
@@ -113,12 +113,13 @@ public class TowerController : CombatController
 		if (newAttackSpeed != 0) {
 			attackSpeed = newAttackSpeed;
 		}
+		return true;
 	}
         
     [ClientRpc]
     void RpcDisplayPopup(string value, Vector3 location)
     {
-        Debug.Log("pop up");
+//        Debug.Log("pop up");
         PopupController.DisplayPopup(value, location);
     }
 

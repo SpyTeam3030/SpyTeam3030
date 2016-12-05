@@ -4,7 +4,7 @@
 	"description" : "Monster Truck",
 
 	"health" : 50,
-	"speed" : 15,
+	"speed" : 1.5,
 	"attack" : 0,
 
 	"attackSpeed" : 0.85,
@@ -17,7 +17,7 @@
 	"description" : "Ray Gun",
 
 	"health" : 0,
-	"speed" : 0,
+	"speed" : 1,
 	"attack" : 40,
 
 	"attackSpeed" : 1.2,
@@ -30,7 +30,7 @@
 	"description" : "Jet Boots",
 
 	"health" : 0,
-	"speed" : 10,
+	"speed" : 1,
 	"attack" : 25,
 
 	"attackSpeed" : 1.4,
@@ -43,7 +43,7 @@
 	"description" : "Portable Shield",
 
 	"health" : 100,
-	"speed" : -5,
+	"speed" : 0.5,
 	"attack" : 0,
 
 	"attackSpeed" : 1,
@@ -56,7 +56,7 @@
 	"description" : "Tank",
 
 	"health" : 75,
-	"speed" : -7,
+	"speed" : 0.7,
 	"attack" : 40,
 
 	"attackSpeed" : 2,
@@ -69,7 +69,7 @@
 	"description" : "Sports Car",
 
 	"health" : 20,
-	"speed" : 25,
+	"speed" : 2.5,
 	"attack" : 0,
 
 	"attackSpeed" : 0.75,
@@ -82,7 +82,7 @@
 	"description" : "Mech Suit",
 
 	"health" : 50,
-	"speed" : -5,
+	"speed" : 0.5,
 	"attack" : 40,
 
 	"attackSpeed" : 1.3,
@@ -95,7 +95,7 @@
 	"description" : "RPG Launcher",
 
 	"health" : 0,
-	"speed" : -2,
+	"speed" : 0.2,
 	"attack" : 30,
 
 	"attackSpeed" : 1.5,
@@ -108,7 +108,7 @@
 	"description" : "Health Pack",
 
 	"health" : 999,
-	"speed" : 0,
+	"speed" : 1,
 	"attack" : 0,
 
 	"attackSpeed" : 0,
@@ -121,7 +121,7 @@
 	"description" : "Exo Suit",
 
 	"health" : 20,
-	"speed" : 10,
+	"speed" : 1,
 	"attack" : 0,
 
 	"attackSpeed" : 0.9,
@@ -134,7 +134,7 @@
 	"description" : "Broadsword",
 
 	"health" : 20,
-	"speed" : -2,
+	"speed" : 0.2,
 	"attack" : 30,
 
 	"attackSpeed" : 1.3,
@@ -147,7 +147,7 @@
 	"description" : "Samurai Sword",
 
 	"health" : 0,
-	"speed" : 15,
+	"speed" : 1.5,
 	"attack" : 20,
 
 	"attackSpeed" : 0.8,
@@ -160,7 +160,7 @@
 	"description" : "Tele-Crystal Staff",
 
 	"health" : 30,
-	"speed" : 0,
+	"speed" : 1,
 	"attack" : 30,
 
 	"attackSpeed" : 1,
@@ -173,7 +173,7 @@
 	"description" : "Tele-Crystal Shield",
 
 	"health" : 50,
-	"speed" : 0,
+	"speed" : 1,
 	"attack" : 20,
 
 	"attackSpeed" : 1,
@@ -186,7 +186,7 @@
 	"description" : "Last Ditch Shield",
 
 	"health" : 50,
-	"speed" : 0,
+	"speed" : 1,
 	"attack" : 0,
 
 	"attackSpeed" : 1,
@@ -199,7 +199,7 @@
 	"description" : "Mini-Sub",
 
 	"health" : 0,
-	"speed" : -5,
+	"speed" : 0.5,
 	"attack" : 40,
 
 	"attackSpeed" : 1.1,

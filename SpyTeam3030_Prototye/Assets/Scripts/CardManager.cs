@@ -39,7 +39,7 @@ public struct Card{
 }
 
 public class CardManager : MonoBehaviour {
-
+	public TextAsset json;
 	public Sprite[] images;
 
 	private Stack<Card> cards;//contains everything needed for a card
@@ -49,20 +49,16 @@ public class CardManager : MonoBehaviour {
 	void Awake () {
 		cards = new Stack<Card> ();
 		ids = new List<int> ();
-		for (int i = 0; i < 32; i++) {
+		for (int i = 0; i < 16; i++) {
+			ids.Add(i + 1);
 			ids.Add(i + 1);
 		}
 		ids = Shuffle (ids);
 
-		string jsonString = File.ReadAllText (Application.dataPath + "/Cards.json");
-		Card[] cardDeck = JsonHelper.getJsonArray<Card> (jsonString);
-
+		Card[] cardDeck = JsonHelper.getJsonArray<Card> (json.text);
 		for (int i = 0; i < ids.Count; i++){
 
 			int ID = ids [i];
-			if (ID > 16) {
-				ID -= 16;
-			}
 			Card c = cardDeck[ID - 1];
 			c.image = images [ID-1];
 
