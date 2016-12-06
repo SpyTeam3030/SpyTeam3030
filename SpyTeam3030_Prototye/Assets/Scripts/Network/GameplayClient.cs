@@ -9,11 +9,23 @@ public class GameplayClient : NetworkBehaviour
 
     private GameplayServer myServer;
     private int teamID;
+	[SyncVar]
+	public float time;
+	public Timer mTimer;
 
     public override void OnStartServer()
     {
         myServer = GameObject.Find("Gameplay_Server").GetComponent<GameplayServer>();
+		time = 240f;
     }
+
+	void Update(){
+		if (myServer != null && myServer.GetPlayerCount() == 2) {
+			Debug.Log("timer");
+			time -= Time.deltaTime;
+		}
+		GameObject.Find ("TimePanel").GetComponent<Timer> ().UpdateTime (time);
+	}
 
     public override void OnStartLocalPlayer()
     {
