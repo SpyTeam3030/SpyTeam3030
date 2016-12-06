@@ -8,6 +8,8 @@ public class SpyController : MonoBehaviour {
     public float maxMovementSpeed;
     public float moveAcceleration;
 
+	public GameObject mesh;
+
     private Vector3 spawnPosition = Vector3.zero;
     private Vector3 enemyBase = Vector3.zero;
     private NavMeshAgent agent;
@@ -77,7 +79,7 @@ public class SpyController : MonoBehaviour {
         Debug.Log("spy 3");
         GetComponent<Transform>().position = spawnPosition;  
         leaveCombat();
-        //StartCoroutine(WaitForRespawn());
+        StartCoroutine(WaitForRespawn());
     }
         
 
@@ -86,6 +88,8 @@ public class SpyController : MonoBehaviour {
         agent.enabled = false;
         yield return new WaitForSeconds(3.0f);
         GetComponent<Transform>().position = spawnPosition;
+
+		GetComponent<CombatController> ().RpcRespawn ();
         agent.enabled = true;
         agent.Resume();
         combat = false;
