@@ -55,6 +55,7 @@ public class CombatController : NetworkBehaviour
             return;
         if(attackTargets.Count != 0)
         {
+			GetComponent<Animator> ().SetBool ("Attack", true);
             if(counter < attackSpeed)
             {
                 counter += Time.deltaTime;
@@ -64,7 +65,9 @@ public class CombatController : NetworkBehaviour
                 counter = 0.0f;
                 attackTargets[0].TakeDamge(attackPower);
             }
-        }
+        } else {
+			GetComponent<Animator> ().SetBool ("Attack", false);
+		}
 	}
 
     void OnTriggerEnter(Collider other)
@@ -113,19 +116,21 @@ public class CombatController : NetworkBehaviour
         RpcDisplayPopup(power.ToString(), popUpPos.position);
         if (health <= 0.0f)
         {
+			GetComponent<Animator> ().SetTrigger ("Dead");
 			card = false;
 			maxhealth = originalHealth;
 			health = maxhealth;
-			GetComponent<NavMeshAgent> ().speed = 3.5f;
+			GetComponent<NavMeshAgent> ().speed = mSpyController.maxMovementSpeed;
 			attackPower = 10f;
 			attackRadius = 4.5f;
 			attackSpeed = 1f;
 
-            attackTargets.Clear();
-            counter = 0.0f;
-            mSpyController.Respawn();
-            healthBar.transform.localScale = fullHealth;
-        }
+			attackTargets.Clear();
+			counter = 0.0f;
+			healthBar.transform.localScale = fullHealth;
+
+			Invoke ("RpcDie", 2.1f);
+		}
         RpcUpdateHealthBar(health / maxhealth);
     }
 
@@ -134,17 +139,30 @@ public class CombatController : NetworkBehaviour
         return id == otherID;
     }
 
+	[ClientRpc]
+	public void RpcDie(){
+		mSpyController.Respawn();
+
+	}
+
 	public virtual bool AttributeChange(float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f)
 	{
-		if (card == true) {
+		if (maxHealthChange > 900) {
+			health = maxhealth;
+			return true;
+		}
+
+		if (card) {
 			return false;
 		}
 
 		card = true;
+
 		maxhealth += maxHealthChange;
+		health += maxHealthChange;
 		attackPower += attackChange;
 		if (newSpeed != 0) {
-			GetComponent<NavMeshAgent> ().speed = newSpeed * 3.5f;
+			GetComponent<NavMeshAgent> ().speed = newSpeed * mSpyController.maxMovementSpeed;
 		}
 		if (newRadius != 0) {
 			GetComponent<SphereCollider>().radius = attackRadius = newRadius;
