@@ -51,6 +51,10 @@ public class GameplayServer : NetworkBehaviour
         return copy;
     }
 
+	public int GetPlayerCount(){
+		return playerCount;
+	}
+
     public void SpawnSpy(int id)
     {
         Debug.Log("spawn spy");
