@@ -116,7 +116,8 @@ public class CombatController : NetworkBehaviour
         RpcDisplayPopup(power.ToString(), popUpPos.position);
         if (health <= 0.0f)
         {
-			GetComponent<Animator> ().SetTrigger ("Dead");
+			RpcDie ();
+
 			card = false;
 			maxhealth = originalHealth;
 			health = maxhealth;
@@ -129,7 +130,7 @@ public class CombatController : NetworkBehaviour
 			counter = 0.0f;
 			healthBar.transform.localScale = fullHealth;
 
-			Invoke ("RpcDie", 2.1f);
+			mSpyController.Respawn();
 		}
         RpcUpdateHealthBar(health / maxhealth);
     }
@@ -141,8 +142,12 @@ public class CombatController : NetworkBehaviour
 
 	[ClientRpc]
 	public void RpcDie(){
-		mSpyController.Respawn();
+		mSpyController.mesh.SetActive (false);
+	}
 
+	[ClientRpc]
+	public void RpcRespawn(){
+		mSpyController.mesh.SetActive (true);
 	}
 
 	public virtual bool AttributeChange(float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f)
