@@ -85,7 +85,7 @@ public class GameplayServer : NetworkBehaviour
                 // spawn the related tower
 				pos = towerSpanPosList[num].position;
 				rotation = towerSpanPosList[num].rotation;
-                GameObject tower = (GameObject)Instantiate(towerTypeList[0], pos, rotation);
+				GameObject tower = (GameObject)Instantiate(towerTypeList[localId], pos, rotation);
                 tower.GetComponent<TowerController>().InitiID(localId);
                 NetworkServer.Spawn(tower);
 

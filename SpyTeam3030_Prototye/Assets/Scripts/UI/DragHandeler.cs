@@ -67,6 +67,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 					Debug.Log ("Take Effect");
 
 					mCardManager.NextCard (this.gameObject);
+					GetComponent<Animator> ().SetTrigger ("Appear");
 				}
             }
         } 

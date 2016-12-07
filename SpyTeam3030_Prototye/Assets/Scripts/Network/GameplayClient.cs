@@ -25,6 +25,9 @@ public class GameplayClient : NetworkBehaviour
 			time -= Time.deltaTime;
 		}
 		GameObject.Find ("TimePanel").GetComponent<Timer> ().UpdateTime (time);
+		if (time <= 0f) {
+			//Game ends, show win/lose/tie
+		}
 	}
 
     public override void OnStartLocalPlayer()

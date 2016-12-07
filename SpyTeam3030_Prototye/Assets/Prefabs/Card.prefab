@@ -21,9 +21,9 @@ GameObject:
   - 224: {fileID: 224000012570555338}
   - 222: {fileID: 222000012440318418}
   - 114: {fileID: 114000013967459162}
-  - 95: {fileID: 95000013339703538}
   - 225: {fileID: 225000013381477846}
   - 114: {fileID: 114000013725410278}
+  - 95: {fileID: 95000011505969568}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -31,16 +31,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &95000013339703538
+--- !u!95 &95000011505969568
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012599669154}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cfb9be916b4574efc9b433353165b6b0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1148edba7bd454121bc119665bcd2823, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -61,10 +61,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mCardManager: {fileID: 0}
   status: {fileID: 0}
-  description: Assault Rifle
-  attack: 10
-  hp: 10
-  speed: -0.5
 --- !u!114 &114000013967459162
 MonoBehaviour:
   m_ObjectHideFlags: 1
