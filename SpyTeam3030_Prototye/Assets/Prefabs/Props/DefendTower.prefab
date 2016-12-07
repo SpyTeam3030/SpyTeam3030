@@ -59,7 +59,7 @@ GameObject:
   - 114: {fileID: 114000011501637572}
   m_Layer: 0
   m_Name: DefendTower
-  m_TagString: Untagged
+  m_TagString: CombatObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -504,8 +504,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalHealth: 0
-  maxhealth: 200
-  attackPower: 10
+  maxhealth: 100
+  attackPower: 1
   attackRadius: 4
   attackSpeed: 1
   card: 0

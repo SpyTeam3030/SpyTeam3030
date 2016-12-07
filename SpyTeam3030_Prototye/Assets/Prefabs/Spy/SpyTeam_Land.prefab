@@ -2201,7 +2201,6 @@ MonoBehaviour:
   maxMovementSpeed: 5
   moveAcceleration: 3
   mesh: {fileID: 1000012871064426}
-  col: {fileID: 135000011688254180}
 --- !u!114 &114000011057472286
 MonoBehaviour:
   m_ObjectHideFlags: 1

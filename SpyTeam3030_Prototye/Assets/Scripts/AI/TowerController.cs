@@ -5,6 +5,8 @@ using System.Collections.Generic;
 
 public class TowerController : CombatController
 {
+    public bool isBase = false;
+
     public void InitiID(int id)
     {
         this.id = id;
@@ -36,7 +38,6 @@ public class TowerController : CombatController
             else
             {
                 counter = 0.0f;
-                DrawLine(transform.position, attackTargets[0].transform.position, Color.green);
                 attackTargets[0].TakeDamge(attackPower);
             }
         }
@@ -82,17 +83,28 @@ public class TowerController : CombatController
         GameObject.Destroy(myLine, duration);
     }
 
-    public override void TakeDamge(float power)
+    public override bool TakeDamge(float power)
     {
         if (!isServer)
-            return;
+            return false;
+        
         health -= power;
         RpcDisplayPopup(power.ToString(), popUpPos.position);
         if (health <= 0.0f)
         {
-            Destroy(gameObject);
+            if (isBase)
+            {
+                GameObject.Find("Gameplay_Server").GetComponent<GameplayServer>().SetWinner((id + 1) % 2);
+            }
+            else
+            {
+                GameObject.Find("Gameplay_Server").GetComponent<GameplayServer>().UpdateTowerCount(id);
+            }
+            Destroy(gameObject, 0.25f);
+            return true;
         }
         RpcUpdateHealthBar(health / maxhealth);
+        return false;
     }
 
     public override bool IsSameTeam(int otherID)

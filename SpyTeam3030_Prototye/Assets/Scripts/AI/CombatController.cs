@@ -63,7 +63,10 @@ public class CombatController : NetworkBehaviour
             else
             {
                 counter = 0.0f;
-                attackTargets[0].TakeDamge(attackPower);
+                if (attackTargets[0].TakeDamge(attackPower))
+                {
+                    attackTargets.RemoveAt(0);                
+                }
             }
         } else {
 			GetComponent<Animator> ().SetBool ("Attack", false);
@@ -107,10 +110,10 @@ public class CombatController : NetworkBehaviour
         }
     }
 
-    public virtual void TakeDamge(float power)
+    public virtual bool TakeDamge(float power)
     {
         if (!isServer)
-            return;
+            return false;
         
         health -= power;
         RpcDisplayPopup(power.ToString(), popUpPos.position);
@@ -133,6 +136,7 @@ public class CombatController : NetworkBehaviour
 			mSpyController.Respawn();
 		}
         RpcUpdateHealthBar(health / maxhealth);
+        return false;
     }
 
     public virtual bool IsSameTeam(int otherID)

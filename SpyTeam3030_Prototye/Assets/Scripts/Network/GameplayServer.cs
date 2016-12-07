@@ -30,6 +30,7 @@ public class GameplayServer : NetworkBehaviour
     [Header("Spy Pool")]
     public List<GameObject> spyTypeList;
     public List<GameObject> towerTypeList;
+    public List<GameObject> baseTypeList;
     public List<Transform> spawnPosList;
     public List<Transform> towerSpanPosList;
     public List<Transform> basePosList;
@@ -37,13 +38,17 @@ public class GameplayServer : NetworkBehaviour
 
     private int playerCount = 0;
     private int rotate = 0;
+    public float time;
+    GameObject[] clients;
+    int[] towerCount = { 0, 0 };
 
     private List<SpyInfo> allSpyList;
 
     void Start()
     {
         allSpyList = new List<SpyInfo>();
-		winner = 2;
+		winner = 10;
+        time = 240.0f;
     }
 
     public int rotateCamera()
@@ -51,6 +56,56 @@ public class GameplayServer : NetworkBehaviour
         int copy = rotate;
         rotate++;
         return copy;
+    }
+
+    void Update()
+    {
+        if (winner == 10 && time > 0.0f)
+        {
+            time -= Time.deltaTime;
+            for (int i = 0; i < clients.Length; i++)
+            {
+                Debug.Log(i + "time");
+                clients[i].GetComponent<GameplayClient>().UpdateTime(time);
+            }
+
+        }
+        else
+        {
+            if (winner == 10)
+            {
+                if (towerCount[0] > towerCount[1])
+                {
+                    winner = 1;
+                }
+                else if (towerCount[0] < towerCount[1])
+                {
+                    winner = 0;
+                }
+            }
+            GameObject[] clients = GameObject.FindGameObjectsWithTag("Client");
+            for (int i = 0; i < clients.Length; i++)
+            {
+                Debug.Log(i + "win");
+                clients[i].GetComponent<GameplayClient>().EndGame(winner);
+                clients[i].GetComponent<GameplayClient>().UpdateTime(0f);
+            }
+        }
+    }
+
+    public float GetTime()
+    {
+        return time;
+    }
+
+    public void SetWinner(int id)
+    {
+        winner = id;
+    }
+
+    public void UpdateTowerCount(int index)
+    {
+        towerCount[index]++;
     }
 
 	public int GetPlayerCount(){
@@ -70,6 +125,21 @@ public class GameplayServer : NetworkBehaviour
 
         if(playerCount == 2)
         {
+            clients = GameObject.FindGameObjectsWithTag("Client");
+            var posbase = basePosList[0].position;
+            var rotationbase = basePosList[0].rotation;
+
+            GameObject base0 = (GameObject)Instantiate(baseTypeList[0], posbase, rotationbase);
+            base0.GetComponent<TowerController>().InitiID(0);
+            NetworkServer.Spawn(base0);
+
+            posbase = basePosList[1].position;
+            rotationbase = basePosList[1].rotation;
+
+            GameObject base1 = (GameObject)Instantiate(baseTypeList[1], posbase, rotationbase);
+            base0.GetComponent<TowerController>().InitiID(1);
+            NetworkServer.Spawn(base1);
+            
             int[] index = {0,0};
             for(int i = 0; i < 6; i++)
             {
