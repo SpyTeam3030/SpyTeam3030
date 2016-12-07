@@ -4,7 +4,7 @@ using System.Collections;
 public class Backgroundmusic : MonoBehaviour {
 
 	public AudioClip loopClip;
-	public float length;
+	private float length;
 
 	// Use this for initialization
 	void Start () {

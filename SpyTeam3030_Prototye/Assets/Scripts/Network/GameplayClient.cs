@@ -11,23 +11,37 @@ public class GameplayClient : NetworkBehaviour
     private int teamID;
 	[SyncVar]
 	public float time;
-	public Timer mTimer;
+	private EndGame mEndGameCanvas;
+
+	void Awake(){
+		time = 1f;//240f;
+		mEndGameCanvas = GameObject.Find ("WinLoseCanvas").GetComponent<EndGame> ();
+	}
 
     public override void OnStartServer()
     {
         myServer = GameObject.Find("Gameplay_Server").GetComponent<GameplayServer>();
-		time = 240f;
     }
 
 	void Update(){
+		if (time <= 0f) {
+//			Time.timeScale = 0f;
+			if (myServer.winner == 2) {
+				mEndGameCanvas.Draw ();
+			}else if(myServer.winner == teamID){
+				mEndGameCanvas.Win ();
+			}else{
+				mEndGameCanvas.Lose ();
+			}
+			return;
+		}
+
 		if (myServer != null && myServer.GetPlayerCount() == 2) {
 			Debug.Log("timer");
 			time -= Time.deltaTime;
 		}
 		GameObject.Find ("TimePanel").GetComponent<Timer> ().UpdateTime (time);
-		if (time <= 0f) {
-			//Game ends, show win/lose/tie
-		}
+
 	}
 
     public override void OnStartLocalPlayer()

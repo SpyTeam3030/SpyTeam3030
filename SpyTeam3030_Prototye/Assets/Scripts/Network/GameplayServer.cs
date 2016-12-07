@@ -33,6 +33,7 @@ public class GameplayServer : NetworkBehaviour
     public List<Transform> spawnPosList;
     public List<Transform> towerSpanPosList;
     public List<Transform> basePosList;
+	public int winner;
 
     private int playerCount = 0;
     private int rotate = 0;
@@ -42,6 +43,7 @@ public class GameplayServer : NetworkBehaviour
     void Start()
     {
         allSpyList = new List<SpyInfo>();
+		winner = 2;
     }
 
     public int rotateCamera()
