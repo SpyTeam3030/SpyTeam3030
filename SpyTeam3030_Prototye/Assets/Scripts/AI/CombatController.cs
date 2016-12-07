@@ -179,6 +179,9 @@ public class CombatController : NetworkBehaviour
 		if (newAttackSpeed != 0) {
 			attackSpeed = newAttackSpeed;
 		}
+
+		RpcUpdateHealthBar(health / maxhealth);
+
 		return true;
 	}
 

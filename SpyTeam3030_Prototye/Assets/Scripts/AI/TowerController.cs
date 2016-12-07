@@ -94,7 +94,8 @@ public class TowerController : CombatController
         {
             if (isBase)
             {
-                GameObject.Find("Gameplay_Server").GetComponent<GameplayServer>().SetWinner((id + 1) % 2);
+                GameObject.Find("Gameplay_Server").GetComponent<GameplayServer>().SetWinner(id);
+
             }
             else
             {

@@ -276,11 +276,13 @@ MonoBehaviour:
   originalHealth: 500
   maxhealth: 500
   attackPower: 5
-  attackRadius: 14.5
+  attackRadius: 15
   attackSpeed: 1
   card: 0
   healthBar: {fileID: 1000010081752886}
   popUpPos: {fileID: 4000011895057704}
+  health: 0
+  id: 0
   isBase: 1
 --- !u!114 &114000012881258792
 MonoBehaviour:

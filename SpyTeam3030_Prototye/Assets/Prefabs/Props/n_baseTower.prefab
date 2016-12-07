@@ -322,6 +322,8 @@ MonoBehaviour:
   card: 0
   healthBar: {fileID: 1000014064800624}
   popUpPos: {fileID: 4000012296306920}
+  health: 0
+  id: 0
   isBase: 1
 --- !u!114 &114000013854506994
 MonoBehaviour:

@@ -49,6 +49,7 @@ public class GameplayServer : NetworkBehaviour
         allSpyList = new List<SpyInfo>();
 		winner = 10;
         time = 240.0f;
+		clients = null;
     }
 
     public int rotateCamera()
@@ -60,12 +61,15 @@ public class GameplayServer : NetworkBehaviour
 
     void Update()
     {
+		if (clients == null || clients.Length != 2) {
+			return;
+		}
         if (winner == 10 && time > 0.0f)
         {
             time -= Time.deltaTime;
             for (int i = 0; i < clients.Length; i++)
             {
-                Debug.Log(i + "time");
+//                Debug.Log(i + "time");
                 clients[i].GetComponent<GameplayClient>().UpdateTime(time);
             }
 
@@ -83,10 +87,9 @@ public class GameplayServer : NetworkBehaviour
                     winner = 0;
                 }
             }
-            GameObject[] clients = GameObject.FindGameObjectsWithTag("Client");
             for (int i = 0; i < clients.Length; i++)
             {
-                Debug.Log(i + "win");
+//                Debug.Log(i + "win");
                 clients[i].GetComponent<GameplayClient>().EndGame(winner);
                 clients[i].GetComponent<GameplayClient>().UpdateTime(0f);
             }
