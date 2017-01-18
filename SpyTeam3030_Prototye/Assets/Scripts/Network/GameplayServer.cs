@@ -44,9 +44,12 @@ public class GameplayServer : NetworkBehaviour
 
     private List<SpyInfo> allSpyList;
 
+	public List<GameObject> alltheSpys;
+
     void Start()
     {
         allSpyList = new List<SpyInfo>();
+		alltheSpys = new List<GameObject> ();
 		winner = 10;
         time = 240.0f;
 		clients = null;
@@ -156,6 +159,7 @@ public class GameplayServer : NetworkBehaviour
                 GameObject enemy = (GameObject)Instantiate(spyTypeList[num], pos, rotation);
                 enemy.GetComponent<SpyController>().InitilizeSpy(pos, basePosList[localId].position, localId);
                 NetworkServer.Spawn(enemy);
+				alltheSpys.Add (enemy);
 
                 // spawn the related tower
 				pos = towerSpanPosList[num].position;

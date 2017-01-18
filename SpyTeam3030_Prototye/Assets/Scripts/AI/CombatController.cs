@@ -30,7 +30,7 @@ public class CombatController : NetworkBehaviour
     protected List<CombatController> attackTargets;
     protected SpyController mSpyController;
     protected float counter;
-    protected float health;
+    public float health;
     protected int id;
 
 
