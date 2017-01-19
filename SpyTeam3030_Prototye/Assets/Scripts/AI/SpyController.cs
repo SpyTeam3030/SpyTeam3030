@@ -81,7 +81,6 @@ public class SpyController : MonoBehaviour {
         leaveCombat();
         StartCoroutine(WaitForRespawn());
     }
-        
 
     IEnumerator WaitForRespawn()
     {

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -32,12 +33,15 @@ public class CombatController : NetworkBehaviour
     protected float counter;
     protected float health;
     protected int id;
+    protected InputField mDevelopWindow;
 
 
     // Use this for initialization
-    void Start () {
+    void Start () 
+    {
         GetComponent<SphereCollider>().radius = attackRadius;
         mSpyController = GetComponent<SpyController>();
+        mDevelopWindow = GameObject.FindObjectOfType<InputField>();
         id = mSpyController.GetTeamID();
         counter = 0.0f;
 		maxhealth = originalHealth;
@@ -50,7 +54,8 @@ public class CombatController : NetworkBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+    {
         if (!isServer)
             return;
         if(attackTargets.Count != 0)
@@ -68,7 +73,9 @@ public class CombatController : NetworkBehaviour
                     attackTargets.RemoveAt(0);                
                 }
             }
-        } else {
+        } 
+        else 
+        {
 			GetComponent<Animator> ().SetBool ("Attack", false);
 		}
 	}
@@ -156,12 +163,14 @@ public class CombatController : NetworkBehaviour
 
 	public virtual bool AttributeChange(float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f)
 	{
-		if (maxHealthChange > 900) {
+		if (maxHealthChange > 900) 
+        {
 			health = maxhealth;
 			return true;
 		}
 
-		if (card) {
+		if (card) 
+        {
 			return false;
 		}
 
@@ -170,13 +179,17 @@ public class CombatController : NetworkBehaviour
 		maxhealth += maxHealthChange;
 		health += maxHealthChange;
 		attackPower += attackChange;
-		if (newSpeed != 0) {
+        mDevelopWindow.text += "attributes update";
+		if (newSpeed != 0) 
+        {
 			GetComponent<NavMeshAgent> ().speed = newSpeed * mSpyController.maxMovementSpeed;
 		}
-		if (newRadius != 0) {
+		if (newRadius != 0) 
+        {
 			GetComponent<SphereCollider>().radius = attackRadius = newRadius;
 		}
-		if (newAttackSpeed != 0) {
+		if (newAttackSpeed != 0) 
+        {
 			attackSpeed = newAttackSpeed;
 		}
 
