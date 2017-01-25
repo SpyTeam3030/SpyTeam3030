@@ -16,10 +16,10 @@ public class CardDisplay : MonoBehaviour {
 		if (spys.Count == 0) {
 			return;
 		}
-		for(int i = 0; i < 6; i++){
-			CombatController cc = spys[i].GetComponent<CombatController>();
-			cards [i].SetStats (cc.attackPower, cc.health, cc.attackSpeed);//plug in character's stats
-		}
+//		for(int i = 0; i < 6; i++){
+//			CombatController cc = spys[i].GetComponent<CombatController>();
+//			cards [i].SetStats (cc.attackPower, cc.health, cc.attackSpeed);//plug in character's stats
+//		}
 	}
 
 
