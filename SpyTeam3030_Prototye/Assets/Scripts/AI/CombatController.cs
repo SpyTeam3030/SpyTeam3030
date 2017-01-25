@@ -179,7 +179,12 @@ public class CombatController : NetworkBehaviour
 		maxhealth += maxHealthChange;
 		health += maxHealthChange;
 		attackPower += attackChange;
-        mDevelopWindow.text += "attributes update";
+        mDevelopWindow.text += "Attributes Update";
+        mDevelopWindow.text += "Max Health Change: " + maxHealthChange;
+        mDevelopWindow.text += "Attack Change: " + maxHealthChange;
+        mDevelopWindow.text += "New Speed: " + newSpeed;
+        mDevelopWindow.text += "New Radius: " + newRadius;
+        mDevelopWindow.text += "New Attack Speed: " + newAttackSpeed;
 		if (newSpeed != 0) 
         {
 			GetComponent<NavMeshAgent> ().speed = newSpeed * mSpyController.maxMovementSpeed;
