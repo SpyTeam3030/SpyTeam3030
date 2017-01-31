@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class CardDisplay : MonoBehaviour {
-	public CardStatus[] cards;
+	public CharacterIcon[] icons;
 	public GameplayServer gs;
+	public List<GameObject> spys;
 
 	// Use this for initialization
 	void Start () {
@@ -12,14 +13,17 @@ public class CardDisplay : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		List<GameObject> spys = gs.alltheSpys;
+		
+	}
+
+	public void SetSpys(){
+		spys = gs.alltheSpys;
 		if (spys.Count == 0) {
 			return;
 		}
-//		for(int i = 0; i < 6; i++){
-//			CombatController cc = spys[i].GetComponent<CombatController>();
-//			cards [i].SetStats (cc.attackPower, cc.health, cc.attackSpeed);//plug in character's stats
-//		}
+		for(int i = 0; i < 6; i++){
+			icons [i].SetSpy (spys [i].GetComponent<CombatController>());
+		}
 	}
 
 

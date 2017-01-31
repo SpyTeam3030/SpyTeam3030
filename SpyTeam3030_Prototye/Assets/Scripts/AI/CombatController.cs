@@ -80,6 +80,10 @@ public class CombatController : NetworkBehaviour
 		}
 	}
 
+	public int getID(){
+		return id;
+	}
+
     void OnTriggerEnter(Collider other)
     {
         if (!isServer)

@@ -170,6 +170,8 @@ public class GameplayServer : NetworkBehaviour
 
                 index[localId]++;
             }
+			Debug.Log ("alltheSpys " + alltheSpys.Count);
+			GameObject.Find ("CardDisplay").GetComponent<CardDisplay>().SetSpys ();
         }
 
     }

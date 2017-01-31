@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
 public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
 
@@ -55,22 +56,43 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         GetComponentInParent<Image>().color = c;
 		ResetInformation ();
 
-        // RayCasting
-        Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-        RaycastHit hit;
-        if (Physics.Raycast (ray, out hit, 200.0f)) 
-        {
-            if (hit.transform.gameObject.tag == "CombatObject")
-            {
-				if (hit.transform.gameObject.GetComponent<CombatController> ().AttributeChange (
-					    card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
+		Debug.Log ("EndDrag");
+
+		//Code to be place in a MonoBehaviour with a GraphicRaycaster component
+		GraphicRaycaster gr = GameObject.Find("CardHitCanvas").GetComponent<GraphicRaycaster>();
+		//Create the PointerEventData with null for the EventSystem
+		PointerEventData ped = new PointerEventData(null);
+		//Set required parameters, in this case, mouse position
+		ped.position = Input.mousePosition;
+		//Create list to receive all results
+		List<RaycastResult> results = new List<RaycastResult>();
+		//Raycast it
+		gr.Raycast(ped, results);
+
+		if (results.Count > 0) {
+			Debug.Log ("Raycast");
+			if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI")) 
+			{
+				Debug.Log ("Hit Icon");
+				if (results[0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (
+					card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
 					Debug.Log ("Take Effect");
 
 					mCardManager.NextCard (this.gameObject);
 					GetComponent<Animator> ().SetTrigger ("Appear");
 				}
-            }
-        } 
+			}
+		}
+
+//        // RayCasting
+//        Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+//        RaycastHit hit;
+//
+//        if (Physics.Raycast (ray, out hit, 200f)) 
+//        {
+//			
+//			
+//        } 
 	}
 
 	#endregion

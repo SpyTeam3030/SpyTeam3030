@@ -8,7 +8,7 @@ public class GameplayClient : NetworkBehaviour
 {
 
     private GameplayServer myServer;
-    private int teamID;
+    public int teamID;
 	private EndGame mEndGameCanvas;
 
     public override void OnStartServer()

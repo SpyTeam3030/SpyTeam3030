@@ -1890,6 +1890,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013804007642, guid: ace6f48eed6bd46fca274ff8fba7fa63, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ace6f48eed6bd46fca274ff8fba7fa63, type: 2}
   m_IsPrefabParent: 0
@@ -5093,6 +5097,10 @@ Prefab:
     - target: {fileID: 143904, guid: 0fd9deaacae167547856187487435bda, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 143904, guid: 0fd9deaacae167547856187487435bda, type: 2}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fd9deaacae167547856187487435bda, type: 2}
@@ -9526,6 +9534,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 143904, guid: 0fd9deaacae167547856187487435bda, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fd9deaacae167547856187487435bda, type: 2}
   m_IsPrefabParent: 0
@@ -10689,9 +10701,9 @@ GameObject:
   - 114: {fileID: 281276900}
   - 114: {fileID: 281276899}
   - 114: {fileID: 281276898}
-  m_Layer: 5
-  m_Name: Mid (5)
-  m_TagString: Untagged
+  m_Layer: 8
+  m_Name: DIce
+  m_TagString: Icon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10709,10 +10721,10 @@ RectTransform:
   m_Children:
   - {fileID: 784961258}
   m_Father: {fileID: 1614186809}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -376.81, y: -648.82}
+  m_AnchoredPosition: {x: -374.07, y: -647.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &281276898
@@ -10723,12 +10735,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 281276896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 366159d56eb294a27ac8638bcaf69e31, type: 3}
+  m_Script: {fileID: 11500000, guid: d2bbfc729eb0446c09b01d388d3ae94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackText: {fileID: 0}
-  HealthText: {fileID: 0}
-  SpeedText: {fileID: 0}
+  gs: {fileID: 2120444535}
+  name: DethCorp_Ice(Clone)
+  mySpy: {fileID: 0}
 --- !u!114 &281276899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10761,7 +10773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -13385,6 +13397,10 @@ Prefab:
     - target: {fileID: 143904, guid: 0fd9deaacae167547856187487435bda, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 143904, guid: 0fd9deaacae167547856187487435bda, type: 2}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fd9deaacae167547856187487435bda, type: 2}
@@ -16840,7 +16856,7 @@ GameObject:
   - 224: {fileID: 428091617}
   - 222: {fileID: 428091619}
   - 114: {fileID: 428091618}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16880,7 +16896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -17235,6 +17251,10 @@ Prefab:
     - target: {fileID: 143904, guid: 0fd9deaacae167547856187487435bda, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 143904, guid: 0fd9deaacae167547856187487435bda, type: 2}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fd9deaacae167547856187487435bda, type: 2}
@@ -17906,9 +17926,9 @@ GameObject:
   - 114: {fileID: 443366018}
   - 114: {fileID: 443366017}
   - 114: {fileID: 443366016}
-  m_Layer: 5
-  m_Name: Mid (3)
-  m_TagString: Untagged
+  m_Layer: 8
+  m_Name: DSea
+  m_TagString: Icon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17926,10 +17946,10 @@ RectTransform:
   m_Children:
   - {fileID: 1056735978}
   m_Father: {fileID: 1614186809}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -332.63, y: -648.82}
+  m_AnchoredPosition: {x: -333.3, y: -647.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &443366016
@@ -17940,12 +17960,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 443366014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 366159d56eb294a27ac8638bcaf69e31, type: 3}
+  m_Script: {fileID: 11500000, guid: d2bbfc729eb0446c09b01d388d3ae94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackText: {fileID: 0}
-  HealthText: {fileID: 0}
-  SpeedText: {fileID: 0}
+  gs: {fileID: 2120444535}
+  name: DethCorp_Sea(Clone)
+  mySpy: {fileID: 0}
 --- !u!114 &443366017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17978,7 +17998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -18279,6 +18299,10 @@ Prefab:
     - target: {fileID: 1000012838699940, guid: 05fe29116f08342a98dd63af9d761b1b, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012838699940, guid: 05fe29116f08342a98dd63af9d761b1b, type: 2}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 05fe29116f08342a98dd63af9d761b1b, type: 2}
@@ -23283,9 +23307,9 @@ GameObject:
   - 114: {fileID: 563849262}
   - 114: {fileID: 563849264}
   - 114: {fileID: 563849265}
-  m_Layer: 5
-  m_Name: Mid
-  m_TagString: Untagged
+  m_Layer: 8
+  m_Name: SLand
+  m_TagString: Icon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23304,10 +23328,10 @@ RectTransform:
   m_Children:
   - {fileID: 428091617}
   m_Father: {fileID: 1614186809}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -354.17, y: -648.82}
+  m_AnchoredPosition: {x: -354.7, y: -647.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &563849262
@@ -23323,7 +23347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -23375,12 +23399,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 563849260}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 366159d56eb294a27ac8638bcaf69e31, type: 3}
+  m_Script: {fileID: 11500000, guid: d2bbfc729eb0446c09b01d388d3ae94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackText: {fileID: 0}
-  HealthText: {fileID: 0}
-  SpeedText: {fileID: 0}
+  gs: {fileID: 2120444535}
+  name: SpyTeam_Land(Clone)
+  mySpy: {fileID: 0}
 --- !u!1 &564369718
 GameObject:
   m_ObjectHideFlags: 0
@@ -25754,7 +25778,7 @@ GameObject:
   - 224: {fileID: 622886625}
   - 222: {fileID: 622886627}
   - 114: {fileID: 622886626}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25792,7 +25816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -28017,7 +28041,7 @@ GameObject:
   - 224: {fileID: 696892509}
   - 222: {fileID: 696892511}
   - 114: {fileID: 696892510}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28055,7 +28079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -31828,7 +31852,7 @@ GameObject:
   - 224: {fileID: 784961258}
   - 222: {fileID: 784961260}
   - 114: {fileID: 784961259}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31866,7 +31890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -37004,9 +37028,9 @@ GameObject:
   - 114: {fileID: 904023144}
   - 114: {fileID: 904023143}
   - 114: {fileID: 904023142}
-  m_Layer: 5
-  m_Name: Mid (2)
-  m_TagString: Untagged
+  m_Layer: 8
+  m_Name: SSea
+  m_TagString: Icon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37024,10 +37048,10 @@ RectTransform:
   m_Children:
   - {fileID: 696892509}
   m_Father: {fileID: 1614186809}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -332.07, y: -648.82}
+  m_AnchoredPosition: {x: -333.3, y: -647.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &904023142
@@ -37038,12 +37062,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 904023140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 366159d56eb294a27ac8638bcaf69e31, type: 3}
+  m_Script: {fileID: 11500000, guid: d2bbfc729eb0446c09b01d388d3ae94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackText: {fileID: 0}
-  HealthText: {fileID: 0}
-  SpeedText: {fileID: 0}
+  gs: {fileID: 2120444535}
+  name: SpyTeam_Sea(Clone)
+  mySpy: {fileID: 0}
 --- !u!114 &904023143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37076,7 +37100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -39308,6 +39332,10 @@ Prefab:
     - target: {fileID: 1000012867938616, guid: 85cda531abfd946718fd5e9b4989df40, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012867938616, guid: 85cda531abfd946718fd5e9b4989df40, type: 2}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85cda531abfd946718fd5e9b4989df40, type: 2}
@@ -43184,7 +43212,7 @@ GameObject:
   - 224: {fileID: 1056735978}
   - 222: {fileID: 1056735980}
   - 114: {fileID: 1056735979}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43222,7 +43250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -45535,6 +45563,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 6e3ac6e47b4d7a44685dfef9bf209413, type: 2}
+    - target: {fileID: 143904, guid: 0fd9deaacae167547856187487435bda, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fd9deaacae167547856187487435bda, type: 2}
   m_IsPrefabParent: 0
@@ -46207,6 +46239,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 143904, guid: 0fd9deaacae167547856187487435bda, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fd9deaacae167547856187487435bda, type: 2}
   m_IsPrefabParent: 0
@@ -46852,6 +46888,10 @@ Prefab:
     - target: {fileID: 143904, guid: 0fd9deaacae167547856187487435bda, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 143904, guid: 0fd9deaacae167547856187487435bda, type: 2}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fd9deaacae167547856187487435bda, type: 2}
@@ -47983,6 +48023,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011621296204, guid: a34d56088a4e34073aa97921b6058edb, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a34d56088a4e34073aa97921b6058edb, type: 2}
   m_IsPrefabParent: 0
@@ -48030,9 +48074,9 @@ GameObject:
   - 223: {fileID: 1192803039}
   - 114: {fileID: 1192803038}
   - 114: {fileID: 1192803037}
-  m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
+  m_Layer: 8
+  m_Name: CardHitCanvas
+  m_TagString: Icon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48052,7 +48096,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
 --- !u!114 &1192803038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61459,9 +61503,9 @@ GameObject:
   - 114: {fileID: 1518145862}
   - 114: {fileID: 1518145861}
   - 114: {fileID: 1518145860}
-  m_Layer: 5
-  m_Name: Mid (1)
-  m_TagString: Untagged
+  m_Layer: 8
+  m_Name: SIce
+  m_TagString: Icon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61479,10 +61523,10 @@ RectTransform:
   m_Children:
   - {fileID: 622886625}
   m_Father: {fileID: 1614186809}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -375.99, y: -648.82}
+  m_AnchoredPosition: {x: -374.07, y: -647.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1518145860
@@ -61493,12 +61537,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1518145858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 366159d56eb294a27ac8638bcaf69e31, type: 3}
+  m_Script: {fileID: 11500000, guid: d2bbfc729eb0446c09b01d388d3ae94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackText: {fileID: 0}
-  HealthText: {fileID: 0}
-  SpeedText: {fileID: 0}
+  gs: {fileID: 2120444535}
+  name: SpyTeam_Ice(Clone)
+  mySpy: {fileID: 0}
 --- !u!114 &1518145861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61531,7 +61575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -66530,7 +66574,7 @@ GameObject:
   - 224: {fileID: 1614028788}
   - 222: {fileID: 1614028790}
   - 114: {fileID: 1614028789}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66568,7 +66612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -66597,8 +66641,8 @@ GameObject:
   m_Component:
   - 224: {fileID: 1614186809}
   - 114: {fileID: 1614186810}
-  m_Layer: 5
-  m_Name: cards
+  m_Layer: 8
+  m_Name: CardDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66615,12 +66659,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 563849261}
-  - {fileID: 1518145859}
-  - {fileID: 904023141}
-  - {fileID: 443366015}
-  - {fileID: 1806696008}
   - {fileID: 281276897}
+  - {fileID: 1806696008}
+  - {fileID: 443366015}
+  - {fileID: 1518145859}
+  - {fileID: 563849261}
+  - {fileID: 904023141}
   m_Father: {fileID: 1192803040}
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -66639,14 +66683,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98fb2c26d13a342518587041eabd1c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cards:
-  - {fileID: 563849265}
-  - {fileID: 1518145860}
-  - {fileID: 904023142}
-  - {fileID: 443366016}
-  - {fileID: 1806696009}
+  icons:
   - {fileID: 281276898}
+  - {fileID: 1806696009}
+  - {fileID: 443366016}
+  - {fileID: 1518145860}
+  - {fileID: 563849265}
+  - {fileID: 904023142}
   gs: {fileID: 2120444535}
+  spys: []
 --- !u!1001 &1620347837
 Prefab:
   m_ObjectHideFlags: 0
@@ -68743,6 +68788,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 143904, guid: 0fd9deaacae167547856187487435bda, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fd9deaacae167547856187487435bda, type: 2}
   m_IsPrefabParent: 0
@@ -69359,7 +69408,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1683823291}
-  serializedVersion: 4
+  serializedVersion: 2
   lengthInSec: 5
   startDelay:
     scalar: 0
@@ -69397,13 +69446,12 @@ ParticleSystem:
       m_RotationOrder: 4
     minMaxState: 0
   speed: 1
+  randomSeed: 1097351666
   looping: 1
   prewarm: 0
   playOnAwake: 1
   moveWithTransform: 1
-  autoRandomSeed: 0
   scalingMode: 1
-  randomSeed: 1097351666
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -75395,9 +75443,9 @@ GameObject:
   - 114: {fileID: 1806696011}
   - 114: {fileID: 1806696010}
   - 114: {fileID: 1806696009}
-  m_Layer: 5
-  m_Name: Mid (4)
-  m_TagString: Untagged
+  m_Layer: 8
+  m_Name: DLand
+  m_TagString: Icon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75415,10 +75463,10 @@ RectTransform:
   m_Children:
   - {fileID: 1614028788}
   m_Father: {fileID: 1614186809}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -354.29, y: -648.82}
+  m_AnchoredPosition: {x: -354.7, y: -647.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1806696009
@@ -75429,12 +75477,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1806696007}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 366159d56eb294a27ac8638bcaf69e31, type: 3}
+  m_Script: {fileID: 11500000, guid: d2bbfc729eb0446c09b01d388d3ae94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackText: {fileID: 0}
-  HealthText: {fileID: 0}
-  SpeedText: {fileID: 0}
+  gs: {fileID: 2120444535}
+  name: DethCorp_Land(Clone)
+  mySpy: {fileID: 0}
 --- !u!114 &1806696010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75467,7 +75515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -79265,6 +79313,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 143904, guid: 0fd9deaacae167547856187487435bda, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fd9deaacae167547856187487435bda, type: 2}
   m_IsPrefabParent: 0
@@ -82564,6 +82616,10 @@ Prefab:
     - target: {fileID: 1000011502772160, guid: 814c1b76cb3c549169b399031ebf47fd, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011502772160, guid: 814c1b76cb3c549169b399031ebf47fd, type: 2}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 814c1b76cb3c549169b399031ebf47fd, type: 2}
@@ -86735,6 +86791,10 @@ Prefab:
     - target: {fileID: 143904, guid: 0fd9deaacae167547856187487435bda, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 143904, guid: 0fd9deaacae167547856187487435bda, type: 2}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fd9deaacae167547856187487435bda, type: 2}
