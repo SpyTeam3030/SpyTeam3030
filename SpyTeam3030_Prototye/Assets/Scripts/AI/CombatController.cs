@@ -138,7 +138,7 @@ public class CombatController : NetworkBehaviour
 			card = false;
 			maxhealth = originalHealth;
 			health = maxhealth;
-			GetComponent<NavMeshAgent> ().speed = mSpyController.maxMovementSpeed;
+			GetComponent<UnityEngine.AI.NavMeshAgent> ().speed = mSpyController.maxMovementSpeed;
 			attackPower = 10f;
 			attackRadius = 4.5f;
 			attackSpeed = 1f;
@@ -194,7 +194,7 @@ public class CombatController : NetworkBehaviour
         //mDevelopWindow.text += "New Attack Speed: " + newAttackSpeed;
         if (newSpeed != 0) 
         {
-			GetComponent<NavMeshAgent> ().speed = newSpeed * mSpyController.maxMovementSpeed;
+			GetComponent<UnityEngine.AI.NavMeshAgent> ().speed = newSpeed * mSpyController.maxMovementSpeed;
 		}
 		if (newRadius != 0) 
         {
