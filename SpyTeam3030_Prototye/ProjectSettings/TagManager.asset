@@ -7,6 +7,7 @@ TagManager:
   - CombatObject
   - Client
   - Icon
+  - DebugConsole
   layers:
   - Default
   - TransparentFX
