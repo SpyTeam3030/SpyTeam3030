@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8322042bbcc56040bc4bd53340e8e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 0
+  teamID: 0
 --- !u!114 &114000011105966766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -128,4 +128,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8322042bbcc56040bc4bd53340e8e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 0
+  teamID: 0

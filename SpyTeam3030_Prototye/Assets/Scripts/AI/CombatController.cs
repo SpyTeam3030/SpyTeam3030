@@ -205,7 +205,7 @@ public class CombatController : NetworkBehaviour
 			attackSpeed = newAttackSpeed;
 		}
 
-		RpcUpdateHealthBar(health / maxhealth);
+		healthBar.transform.localScale = Vector3.Lerp(emptyHealth, fullHealth, health / maxhealth);
 
 		return true;
 	}
