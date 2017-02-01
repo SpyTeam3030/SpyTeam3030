@@ -175,5 +175,13 @@ public class GameplayServer : NetworkBehaviour
         }
 
     }
+
+	public void ChangeAttribute(string name, float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f){
+		CombatController cc = GameObject.Find (name).GetComponent<CombatController> ();
+		if (cc == null) {
+			return;
+		}
+		cc.AttributeChange (maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
+	}
 }
 

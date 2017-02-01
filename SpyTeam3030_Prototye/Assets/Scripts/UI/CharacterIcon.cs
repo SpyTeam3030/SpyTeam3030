@@ -34,20 +34,28 @@ public class CharacterIcon : MonoBehaviour {
 //	}
 
 	public bool ChangeSpy(float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f){
-		Debug.Log ("Trying to Change");
 		mySpy = GameObject.Find (name).GetComponent<CombatController> ();
 		if (mySpy == null) {
 			return false;
 		}
-		if (gs.isServer && mySpy.getID() != 0) {
+//		if (gs.isServer && mySpy.getID() != 0) {
+//			return false;
+//		}
+//		if (gs.isClient && mySpy.getID() != 1) {
+//			return false;
+//		}
+		GameObject[] obs = GameObject.FindGameObjectsWithTag ("Client");
+		if (obs.Length == 0) {
 			return false;
 		}
-		if (gs.isClient && mySpy.getID() != 1) {
-			return false;
+		foreach(var gameobject in obs)
+		{
+			if(gameobject.GetComponent<GameplayClient>().isLocalPlayer){
+				gameobject.GetComponent<GameplayClient> ().CmdAttributeChange (name, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
+			}
 		}
-		return (mySpy.AttributeChange (maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed));
 
-//		return true;
+		return true;
 		
 	}
 }

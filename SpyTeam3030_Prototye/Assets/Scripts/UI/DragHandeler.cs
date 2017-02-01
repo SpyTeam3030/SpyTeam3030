@@ -56,8 +56,6 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         GetComponentInParent<Image>().color = c;
 		ResetInformation ();
 
-		Debug.Log ("EndDrag");
-
 		//Code to be place in a MonoBehaviour with a GraphicRaycaster component
 		GraphicRaycaster gr = GameObject.Find("CardHitCanvas").GetComponent<GraphicRaycaster>();
 		//Create the PointerEventData with null for the EventSystem
@@ -70,10 +68,8 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 		gr.Raycast(ped, results);
 
 		if (results.Count > 0) {
-			Debug.Log ("Raycast");
 			if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI")) 
 			{
-				Debug.Log ("Hit Icon");
 				if (results[0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (
 					card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
 					Debug.Log ("Take Effect");
