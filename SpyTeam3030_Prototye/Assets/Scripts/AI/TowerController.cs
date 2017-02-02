@@ -118,7 +118,7 @@ public class TowerController : CombatController
 		maxhealth += maxHealthChange;
 		attackPower += attackChange;
 		if (newSpeed != 0) {
-			GetComponent<UnityEngine.AI.NavMeshAgent> ().speed = newSpeed * 3.5f;
+			GetComponent<NavMeshAgent> ().speed = newSpeed * 3.5f;
 		}
 		if (newRadius != 0) {
 			GetComponent<SphereCollider>().radius = attackRadius = newRadius;

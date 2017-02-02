@@ -46111,8 +46111,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 285927953}
   m_HandleRect: {fileID: 285927952}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0.10666667
+  m_Value: 0.00000009589183
+  m_Size: 0.106666654
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -60781,9 +60781,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7798a80cd54ed34586be03d622c4334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewContainer: {fileID: 441966322}
-  logTextArea: {fileID: 1738729833}
-  inputField: {fileID: 1633623767}
+  viewContainer: {fileID: 0}
+  logTextArea: {fileID: 0}
+  inputField: {fileID: 0}
 --- !u!1 &1494154424
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ public class SpyController : MonoBehaviour {
 
     private Vector3 spawnPosition = Vector3.zero;
     private Vector3 enemyBase = Vector3.zero;
-    private UnityEngine.AI.NavMeshAgent agent;
+    private NavMeshAgent agent;
     private bool combat;
     private bool isServer = false;
     private int teamID;
@@ -29,7 +29,7 @@ public class SpyController : MonoBehaviour {
 
     void Start()
     {
-        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
         agent.speed = maxMovementSpeed;
         agent.acceleration = moveAcceleration;
     }

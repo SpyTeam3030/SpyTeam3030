@@ -33,7 +33,6 @@ public class CombatController : NetworkBehaviour
     protected float counter;
     public float health;
     protected int id;
-    protected ConsoleView m_consoleController;
 
 
     // Use this for initialization
@@ -41,7 +40,6 @@ public class CombatController : NetworkBehaviour
     {
         GetComponent<SphereCollider>().radius = attackRadius;
         mSpyController = GetComponent<SpyController>();
-        m_consoleController = GameObject.FindGameObjectWithTag("DebugConsole").GetComponent<ConsoleView>();
         id = mSpyController.GetTeamID();
         counter = 0.0f;
 		maxhealth = originalHealth;
@@ -126,9 +124,6 @@ public class CombatController : NetworkBehaviour
         if (!isServer)
             return false;
 
-        m_consoleController.inputField.text = id + "Game object is: " + gameObject.GetInstanceID();
-        m_consoleController.runCommand();
-
         health -= power;
         RpcDisplayPopup(power.ToString(), popUpPos.position);
         if (health <= 0.0f)
@@ -138,7 +133,7 @@ public class CombatController : NetworkBehaviour
 			card = false;
 			maxhealth = originalHealth;
 			health = maxhealth;
-			GetComponent<UnityEngine.AI.NavMeshAgent> ().speed = mSpyController.maxMovementSpeed;
+			GetComponent<NavMeshAgent> ().speed = mSpyController.maxMovementSpeed;
 			attackPower = 10f;
 			attackRadius = 4.5f;
 			attackSpeed = 1f;
@@ -186,15 +181,9 @@ public class CombatController : NetworkBehaviour
 		maxhealth += maxHealthChange;
 		health += maxHealthChange;
 		attackPower += attackChange;
-        //mDevelopWindow.text += "Attributes Update";
-        //mDevelopWindow.text += "Max Health Change: " + maxHealthChange;
-        //mDevelopWindow.text += "Attack Change: " + maxHealthChange;
-        //mDevelopWindow.text += "New Speed: " + newSpeed;
-        //mDevelopWindow.text += "New Radius: " + newRadius;
-        //mDevelopWindow.text += "New Attack Speed: " + newAttackSpeed;
         if (newSpeed != 0) 
         {
-			GetComponent<UnityEngine.AI.NavMeshAgent> ().speed = newSpeed * mSpyController.maxMovementSpeed;
+			GetComponent<NavMeshAgent> ().speed = newSpeed * mSpyController.maxMovementSpeed;
 		}
 		if (newRadius != 0) 
         {

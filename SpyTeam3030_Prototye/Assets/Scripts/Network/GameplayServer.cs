@@ -46,10 +46,13 @@ public class GameplayServer : NetworkBehaviour
 
 	public List<GameObject> alltheSpys;
 
+    private ConsoleView m_consoleView;
+
     void Start()
     {
         allSpyList = new List<SpyInfo>();
 		alltheSpys = new List<GameObject> ();
+        m_consoleView = GameObject.FindGameObjectWithTag("DebugConsole").GetComponent<ConsoleView>();
 		winner = 10;
         time = 240.0f;
 		clients = null;
@@ -182,6 +185,13 @@ public class GameplayServer : NetworkBehaviour
 			return;
 		}
 		cc.AttributeChange (maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
+        for (int i = 0; i < alltheSpys.Count; ++i)
+        {
+            CombatController m_cc = alltheSpys[i].GetComponent<CombatController>();
+            m_consoleView.inputField.text = m_cc.name + " (Health: " + m_cc.health + " Attack: " + m_cc.attackPower + "/" + m_cc.attackRadius
+                + "/" + m_cc.attackSpeed +" )";
+            m_consoleView.runCommand();
+        }
 	}
 }
 
