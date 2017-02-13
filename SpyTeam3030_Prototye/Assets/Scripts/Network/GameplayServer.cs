@@ -171,17 +171,36 @@ public class GameplayServer : NetworkBehaviour
                 index[localId]++;
             }
 			Debug.Log ("alltheSpys " + alltheSpys.Count);
-			GameObject.Find ("CardDisplay").GetComponent<CardDisplay>().SetSpys ();
+			CallSetSpys ();
         }
 
     }
 
-	public void ChangeAttribute(string name, float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f){
+	public void SetSpys(){
+		GameObject.Find ("CardDisplay").GetComponent<CardDisplay>().SetSpys ();
+	}
+
+	public void ChangeAttribute(bool success, string name, int cardID, float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f){
 		CombatController cc = GameObject.Find (name).GetComponent<CombatController> ();
 		if (cc == null) {
+			success = false;
 			return;
 		}
-		cc.AttributeChange (maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
+		success = cc.AttributeChange (cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
+	}
+
+	public void CallSetSpys(){
+		GameObject[] obs = GameObject.FindGameObjectsWithTag ("Client");
+		if (obs.Length == 0) {
+			return;
+		}
+		foreach(var gameobject in obs)
+		{
+			if(gameobject.GetComponent<GameplayClient>().isLocalPlayer){
+				gameobject.GetComponent<GameplayClient> ().CmdSetSpys();
+			}
+		}
+
 	}
 }
 

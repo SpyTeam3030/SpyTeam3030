@@ -113,7 +113,7 @@ public class TowerController : CombatController
         return id == otherID;
     }
 
-	public override bool AttributeChange(float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f)
+	public override bool AttributeChange(int cardID, float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f)
 	{
 		maxhealth += maxHealthChange;
 		attackPower += attackChange;

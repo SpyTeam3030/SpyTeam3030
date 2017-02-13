@@ -70,7 +70,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 		if (results.Count > 0) {
 			if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI")) 
 			{
-				if (results[0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (
+				if (results[0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id,
 					card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
 					Debug.Log ("Take Effect");
 

@@ -21,6 +21,8 @@ public class CombatController : NetworkBehaviour
     public float attackSpeed;
 	[SyncVar]
 	public bool card;
+	[SyncVar]
+	public int cardID;
 
     [Header("Combat Display")]
     public GameObject healthBar;
@@ -47,6 +49,7 @@ public class CombatController : NetworkBehaviour
 		maxhealth = originalHealth;
 		health = maxhealth;
 		card = false;
+		cardID = 0;
         attackTargets = new List<CombatController>();
         fullHealth = healthBar.transform.localScale;
         emptyHealth = fullHealth;
@@ -136,6 +139,7 @@ public class CombatController : NetworkBehaviour
 			RpcDie ();
 
 			card = false;
+			cardID = 0;
 			maxhealth = originalHealth;
 			health = maxhealth;
 			GetComponent<NavMeshAgent> ().speed = mSpyController.maxMovementSpeed;
@@ -168,12 +172,16 @@ public class CombatController : NetworkBehaviour
 		mSpyController.mesh.SetActive (true);
 	}
 
-	public virtual bool AttributeChange(float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f)
+	public virtual bool AttributeChange(int cardID, float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f)
 	{
 		if (maxHealthChange > 900) 
         {
 			health = maxhealth;
 			return true;
+		}
+
+		if (this.cardID != 0) {
+			return false;
 		}
 
 		if (card) 
@@ -182,6 +190,7 @@ public class CombatController : NetworkBehaviour
 		}
 
 		card = true;
+		this.cardID = cardID;
 
 		maxhealth += maxHealthChange;
 		health += maxHealthChange;

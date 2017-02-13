@@ -87,12 +87,17 @@ public class GameplayClient : NetworkBehaviour
         GameObject.Find ("TimePanel").GetComponent<Timer> ().UpdateTime(t);
     }
 
-	public void AttributeChange(string name, float maxHealthChange, float attackChange, float newSpeed, float newRadius, float newAttackSpeed){
-		CmdAttributeChange (name, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
+	public void AttributeChange(bool success, string name, int cardID, float maxHealthChange, float attackChange, float newSpeed, float newRadius, float newAttackSpeed){
+		CmdAttributeChange (success, name, cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
 	}
 
 	[Command]
-	public void CmdAttributeChange(string name, float maxHealthChange, float attackChange, float newSpeed, float newRadius, float newAttackSpeed){
-		myServer.ChangeAttribute (name, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
+	public void CmdAttributeChange(bool success, string name, int cardID, float maxHealthChange, float attackChange, float newSpeed, float newRadius, float newAttackSpeed){
+		myServer.ChangeAttribute (success, name, cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
+	}
+
+	[Command]
+	public void CmdSetSpys(){
+		myServer.SetSpys ();
 	}
 }
