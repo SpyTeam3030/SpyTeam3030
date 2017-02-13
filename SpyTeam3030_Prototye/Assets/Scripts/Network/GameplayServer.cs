@@ -44,15 +44,18 @@ public class GameplayServer : NetworkBehaviour
 
     private List<SpyInfo> allSpyList;
 
-	public List<GameObject> alltheSpys;
+    public List<GameObject> alltheSpys;
+
+    private ConsoleView m_consoleView;
 
     void Start()
     {
         allSpyList = new List<SpyInfo>();
-		alltheSpys = new List<GameObject> ();
-		winner = 10;
+        alltheSpys = new List<GameObject> ();
+        m_consoleView = GameObject.FindGameObjectWithTag("DebugConsole").GetComponent<ConsoleView>();
+        winner = 10;
         time = 240.0f;
-		clients = null;
+        clients = null;
     }
 
     public int rotateCamera()
@@ -64,9 +67,9 @@ public class GameplayServer : NetworkBehaviour
 
     void Update()
     {
-		if (clients == null || clients.Length != 2) {
-			return;
-		}
+        if (clients == null || clients.Length != 2) {
+            return;
+        }
         if (winner == 10 && time > 0.0f)
         {
             time -= Time.deltaTime;
@@ -114,9 +117,9 @@ public class GameplayServer : NetworkBehaviour
         towerCount[index]++;
     }
 
-	public int GetPlayerCount(){
-		return playerCount;
-	}
+    public int GetPlayerCount(){
+        return playerCount;
+    }
 
     public void SpawnSpy(int id)
     {
@@ -151,56 +154,63 @@ public class GameplayServer : NetworkBehaviour
             {
                 // spawn the spay
                 int localId = allSpyList[i].teamID;
-				int num = localId * 3 + index[localId];
-//				Debug.Log(allSpyList[i].lineID + " " + localId + " " + num);
-				var pos = spawnPosList[num].position;
-				var rotation = spawnPosList[num].rotation;
+                int num = localId * 3 + index[localId];
+//              Debug.Log(allSpyList[i].lineID + " " + localId + " " + num);
+                var pos = spawnPosList[num].position;
+                var rotation = spawnPosList[num].rotation;
 
                 GameObject enemy = (GameObject)Instantiate(spyTypeList[num], pos, rotation);
                 enemy.GetComponent<SpyController>().InitilizeSpy(pos, basePosList[localId].position, localId);
                 NetworkServer.Spawn(enemy);
-				alltheSpys.Add (enemy);
+                alltheSpys.Add (enemy);
 
                 // spawn the related tower
-				pos = towerSpanPosList[num].position;
-				rotation = towerSpanPosList[num].rotation;
-				GameObject tower = (GameObject)Instantiate(towerTypeList[localId], pos, rotation);
+                pos = towerSpanPosList[num].position;
+                rotation = towerSpanPosList[num].rotation;
+                GameObject tower = (GameObject)Instantiate(towerTypeList[localId], pos, rotation);
                 tower.GetComponent<TowerController>().InitiID(localId);
                 NetworkServer.Spawn(tower);
 
                 index[localId]++;
             }
-			Debug.Log ("alltheSpys " + alltheSpys.Count);
-			CallSetSpys ();
+            Debug.Log ("alltheSpys " + alltheSpys.Count);
+            CallSetSpys ();
         }
 
     }
 
-	public void SetSpys(){
-		GameObject.Find ("CardDisplay").GetComponent<CardDisplay>().SetSpys ();
-	}
+    public void SetSpys(){
+        GameObject.Find ("CardDisplay").GetComponent<CardDisplay>().SetSpys ();
+    }
 
-	public void ChangeAttribute(bool success, string name, int cardID, float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f){
-		CombatController cc = GameObject.Find (name).GetComponent<CombatController> ();
-		if (cc == null) {
-			success = false;
-			return;
-		}
-		success = cc.AttributeChange (cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
-	}
+    public void ChangeAttribute(bool success, string name, int cardID, float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f){
+        CombatController cc = GameObject.Find (name).GetComponent<CombatController> ();
+        if (cc == null) {
+            success = false;
+            return;
+        }
+        success cc.AttributeChange (cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
+        for (int i = 0; i < alltheSpys.Count; ++i)
+        {
+            CombatController m_cc = alltheSpys[i].GetComponent<CombatController>();
+            m_consoleView.inputField.text = m_cc.name + " (Health: " + m_cc.health + " Attack: " + m_cc.attackPower + "/" + m_cc.attackRadius
+                + "/" + m_cc.attackSpeed +" )";
+            m_consoleView.runCommand();
+        }
+    }
 
-	public void CallSetSpys(){
-		GameObject[] obs = GameObject.FindGameObjectsWithTag ("Client");
-		if (obs.Length == 0) {
-			return;
-		}
-		foreach(var gameobject in obs)
-		{
-			if(gameobject.GetComponent<GameplayClient>().isLocalPlayer){
-				gameobject.GetComponent<GameplayClient> ().CmdSetSpys();
-			}
-		}
+    public void CallSetSpys(){
+        GameObject[] obs = GameObject.FindGameObjectsWithTag ("Client");
+        if (obs.Length == 0) {
+            return;
+        }
+        foreach(var gameobject in obs)
+        {
+            if(gameobject.GetComponent<GameplayClient>().isLocalPlayer){
+                gameobject.GetComponent<GameplayClient> ().CmdSetSpys();
+            }
+        }
 
-	}
+    }
 }
 
