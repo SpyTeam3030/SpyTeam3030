@@ -189,7 +189,7 @@ public class GameplayServer : NetworkBehaviour
             success = false;
             return;
         }
-        success cc.AttributeChange (cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
+        cc.AttributeChange (cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
         for (int i = 0; i < alltheSpys.Count; ++i)
         {
             CombatController m_cc = alltheSpys[i].GetComponent<CombatController>();
