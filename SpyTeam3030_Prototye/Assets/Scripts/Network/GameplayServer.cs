@@ -11,6 +11,13 @@ public enum LineType
     RightLine = 2
 };
 
+public enum EffectType
+{
+    LINE,
+    ALL,
+    SINGLE
+};
+
 public class SpyInfo
 {
     public int teamID;
@@ -23,6 +30,24 @@ public class SpyInfo
         lineID = line;
         spy = obj;
     }
+};
+
+public delegate void SpecialEffectHandler();
+
+// different handlers for different types of effects
+
+public class SpecialEffectInfo
+{
+    SpecialEffectInfo(SpecialEffectHandler handler)
+    {
+        m_handler = handler;
+    }
+    public SpecialEffectHandler m_handler;
+    public EffectType m_type;
+
+    public LineType lineID;
+    public int spyID;
+    public fixed int values[3];
 };
 
 public class GameplayServer : NetworkBehaviour
@@ -67,7 +92,8 @@ public class GameplayServer : NetworkBehaviour
 
     void Update()
     {
-        if (clients == null || clients.Length != 2) {
+        if (clients == null || clients.Length != 2) 
+        {
             return;
         }
         if (winner == 10 && time > 0.0f)
@@ -75,7 +101,6 @@ public class GameplayServer : NetworkBehaviour
             time -= Time.deltaTime;
             for (int i = 0; i < clients.Length; i++)
             {
-//                Debug.Log(i + "time");
                 clients[i].GetComponent<GameplayClient>().UpdateTime(time);
             }
 
@@ -95,7 +120,6 @@ public class GameplayServer : NetworkBehaviour
             }
             for (int i = 0; i < clients.Length; i++)
             {
-//                Debug.Log(i + "win");
                 clients[i].GetComponent<GameplayClient>().EndGame(winner);
                 clients[i].GetComponent<GameplayClient>().UpdateTime(0f);
             }
@@ -117,7 +141,8 @@ public class GameplayServer : NetworkBehaviour
         towerCount[index]++;
     }
 
-    public int GetPlayerCount(){
+    public int GetPlayerCount()
+    {
         return playerCount;
     }
 
@@ -152,10 +177,8 @@ public class GameplayServer : NetworkBehaviour
             int[] index = {0,0};
             for(int i = 0; i < 6; i++)
             {
-                // spawn the spay
                 int localId = allSpyList[i].teamID;
                 int num = localId * 3 + index[localId];
-//              Debug.Log(allSpyList[i].lineID + " " + localId + " " + num);
                 var pos = spawnPosList[num].position;
                 var rotation = spawnPosList[num].rotation;
 
@@ -164,7 +187,6 @@ public class GameplayServer : NetworkBehaviour
                 NetworkServer.Spawn(enemy);
                 alltheSpys.Add (enemy);
 
-                // spawn the related tower
                 pos = towerSpanPosList[num].position;
                 rotation = towerSpanPosList[num].rotation;
                 GameObject tower = (GameObject)Instantiate(towerTypeList[localId], pos, rotation);
@@ -179,13 +201,16 @@ public class GameplayServer : NetworkBehaviour
 
     }
 
-    public void SetSpys(){
+    public void SetSpys()
+    {
         GameObject.Find ("CardDisplay").GetComponent<CardDisplay>().SetSpys ();
     }
 
-    public void ChangeAttribute(bool success, string name, int cardID, float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f){
+    public void ChangeAttribute(bool success, string name, int cardID, float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f)
+    {
         CombatController cc = GameObject.Find (name).GetComponent<CombatController> ();
-        if (cc == null) {
+        if (cc == null) 
+        {
             success = false;
             return;
         }
@@ -199,18 +224,40 @@ public class GameplayServer : NetworkBehaviour
         }
     }
 
-    public void CallSetSpys(){
+    public void CallSetSpys()
+    {
         GameObject[] obs = GameObject.FindGameObjectsWithTag ("Client");
-        if (obs.Length == 0) {
+        if (obs.Length == 0) 
+        {
             return;
         }
         foreach(var gameobject in obs)
         {
-            if(gameobject.GetComponent<GameplayClient>().isLocalPlayer){
+            if(gameobject.GetComponent<GameplayClient>().isLocalPlayer)
+            {
                 gameobject.GetComponent<GameplayClient> ().CmdSetSpys();
             }
         }
 
+    }
+
+    public void takeSpecialEffect(ref SpecialEffectInfo handler)
+    {
+        switch(handler.m_type)
+        {
+            case EffectType.LINE:
+                //TODO
+                break;
+            case EffectType.ALL:
+                //TODO
+                break;
+            case EffectType.SINGLE:
+                //TODO
+                break;
+            default:
+                //TODO
+                break;
+        }
     }
 }
 
