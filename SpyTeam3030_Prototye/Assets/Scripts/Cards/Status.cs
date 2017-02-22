@@ -14,30 +14,52 @@ public class Status : MonoBehaviour {
 		ResetInformation ();
 	}
 
+	public void SetInfo(string d, float a, float hp, float s, Vector2 pos){
+		gameObject.SetActive(true);
+		attack.gameObject.SetActive(true);
+		HP.gameObject.SetActive(true);
+		speed.gameObject.SetActive(true);
+
+		SetDescription (d);
+		SetHP (hp);
+		SetAttack (a);
+		SetSpeed (s);
+		pos += new Vector2 (0, 120);
+		GetComponent<Transform> ().position = pos;
+	}
+
 	public void SetDescription(string d){
 		description.text = d;
 	}
 
 	public void SetAttack(float a){
-        attack.text = a.ToString();
+		if (a == 0) {
+			attack.gameObject.SetActive(false);
+		} else {
+			attack.text = "+" + a.ToString () + " ATT";
+		}
 	}
 
 	public void SetHP(float hp){
-		if (hp == 999) {
+		if (hp == 0) {
+			HP.gameObject.SetActive(false);
+		}
+		else if (hp == 999) {
 			HP.text = "FULL";
 		}else{
-			HP.text = hp.ToString();
+			HP.text = "+" + hp.ToString() + " HP";
 		}
 	}
 
 	public void SetSpeed(float s){
-        speed.text = s.ToString();
+		if (s == 0) {
+			speed.gameObject.SetActive (false);
+		} else {
+			speed.text = "+" + s.ToString () + " SP";
+		}
 	}
 
 	public void ResetInformation(){
-		description.text = "";
-		attack.text = 000 + "";
-		HP.text = 000 + "";
-		speed.text = 000 + "";
+		gameObject.SetActive(false);
 	}
 }

@@ -29,8 +29,9 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 		startPosition = transform.position;
 		GetComponent<CanvasGroup> ().blocksRaycasts = false;
         Color c = GetComponentInParent<Image>().color;
-        c.a = 0.25f;
+        c.a = 0.5f;
         GetComponentInParent<Image>().color = c;
+		gameObject.transform.SetAsLastSibling();
 	}
 	#endregion
 
@@ -39,7 +40,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 	public void OnDrag (PointerEventData eventData)
 	{
 		GetComponent<Transform>().position = eventData.position;
-		SetInformation ();
+		SetInformation (eventData.position);
 	}
 
 	#endregion
@@ -54,6 +55,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         Color c = GetComponentInParent<Image>().color;
         c.a = 1.0f;
         GetComponentInParent<Image>().color = c;
+		GameObject.Find ("CoverImage").gameObject.transform.SetAsLastSibling ();
 		ResetInformation ();
 
 		//Code to be place in a MonoBehaviour with a GraphicRaycaster component
@@ -93,11 +95,8 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
 	#endregion
 
-	public void SetInformation(){
-		status.SetDescription (card.description);
-		status.SetAttack (card.attack);
-		status.SetHP (card.health);
-		status.SetSpeed (card.speed);
+	public void SetInformation(Vector2 pos){
+		status.SetInfo (card.description, card.attack, card.health, card.speed, pos);
 	}
 
 	public void ResetInformation(){
