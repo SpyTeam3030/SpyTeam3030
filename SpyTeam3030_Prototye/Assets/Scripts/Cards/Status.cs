@@ -24,8 +24,20 @@ public class Status : MonoBehaviour {
 		SetHP (hp);
 		SetAttack (a);
 		SetSpeed (s);
-		pos += new Vector2 (0, 120);
+		pos += new Vector2 (0, 140);
 		GetComponent<Transform> ().position = pos;
+	}
+
+	public void SetInfo(string d, float a, float hp, float s){
+		gameObject.SetActive(true);
+		attack.gameObject.SetActive(true);
+		HP.gameObject.SetActive(true);
+		speed.gameObject.SetActive(true);
+
+		SetDescription (d);
+		SetHP (hp);
+		SetAttack (a);
+		SetSpeed (s);
 	}
 
 	public void SetDescription(string d){

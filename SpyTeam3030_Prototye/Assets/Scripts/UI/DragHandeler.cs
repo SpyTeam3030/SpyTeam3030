@@ -12,14 +12,33 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 	Transform startParent;
 
 	public Status status;
+	public Status overlayStatus;
   
 	private string description;
 
 	private int id;
 	private Card card;
 
+	public bool clicked;
+	public CardStatPanel cardStatPanel;
+
 	void Start(){
 		mCardManager.NextCard (gameObject);
+		clicked = false;
+	}
+
+	void Update(){
+		if (clicked) {
+			overlayStatus.gameObject.SetActive (true);
+		}
+		else{
+			overlayStatus.gameObject.SetActive (false);
+		}
+	}
+
+	public void Clicked(){
+		overlayStatus.SetInfo (card.description, card.attack, card.health, card.speed);
+		clicked = !clicked;
 	}
 
 	#region IBeginDragHandler implementation
@@ -31,7 +50,8 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         Color c = GetComponentInParent<Image>().color;
         c.a = 0.5f;
         GetComponentInParent<Image>().color = c;
-		gameObject.transform.SetAsLastSibling();
+		clicked = false;
+		cardStatPanel.HideCardStats ();
 	}
 	#endregion
 
@@ -55,7 +75,6 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         Color c = GetComponentInParent<Image>().color;
         c.a = 1.0f;
         GetComponentInParent<Image>().color = c;
-		GameObject.Find ("CoverImage").gameObject.transform.SetAsLastSibling ();
 		ResetInformation ();
 
 		//Code to be place in a MonoBehaviour with a GraphicRaycaster component
@@ -97,6 +116,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
 	public void SetInformation(Vector2 pos){
 		status.SetInfo (card.description, card.attack, card.health, card.speed, pos);
+		overlayStatus.SetInfo (card.description, card.attack, card.health, card.speed);
 	}
 
 	public void ResetInformation(){
