@@ -13,10 +13,13 @@ public class PopupText : MonoBehaviour {
         Destroy(gameObject, animationLength);
     }
 
-    public void SetDamageText(string value)
+    public void SetDamageText(string value, Color c)
     {
 
         damgeText = animator.GetComponent<Text>();
         damgeText.text = value;
+
+        Outline damgeOutline = animator.GetComponent<Outline>();
+        damgeOutline.effectColor = c;
     }
 }

@@ -108,12 +108,7 @@ public class TowerController : CombatController
         return false;
     }
 
-    public override bool IsSameTeam(int otherID)
-    {
-        return id == otherID;
-    }
-
-	public override bool AttributeChange(int cardID, float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f)
+    public override bool AttributeChange(int cardID, float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f, float rHealthChange = 0.0f)
 	{
 		maxhealth += maxHealthChange;
 		attackPower += attackChange;
@@ -133,7 +128,7 @@ public class TowerController : CombatController
     void RpcDisplayPopup(string value, Vector3 location)
     {
 //        Debug.Log("pop up");
-        PopupController.DisplayPopup(value, location);
+        PopupController.DisplayPopup(value, location, Color.red);
     }
 
     [ClientRpc]

@@ -6,7 +6,7 @@ public class PopupController : MonoBehaviour
     private static GameObject canvas = null;
     private static PopupText mPopup = null;
     
-    public static void DisplayPopup(string value, Vector3 pos)
+    public static void DisplayPopup(string value, Vector3 pos, Color c)
     {
         if(mPopup == null)
         {
@@ -21,6 +21,6 @@ public class PopupController : MonoBehaviour
         Vector2 screenPos = Camera.main.WorldToScreenPoint(pos);
         instance.transform.SetParent(canvas.transform, false);
         instance.transform.position = screenPos;
-        instance.SetDamageText(value);
+        instance.SetDamageText(value, c);
     }
 }

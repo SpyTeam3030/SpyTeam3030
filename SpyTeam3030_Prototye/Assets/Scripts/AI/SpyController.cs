@@ -17,12 +17,14 @@ public class SpyController : MonoBehaviour {
     private bool isServer = false;
     private int teamID;
     private Vector3 hidePos = Vector3.one * -100;
+    private int m_spyID;
 
-    public void InitilizeSpy(Vector3 spawnpos, Vector3 basepos, int id)
+    public void InitilizeSpy(Vector3 spawnpos, Vector3 basepos, int tid, int sid)
     {
         spawnPosition = spawnpos;
         enemyBase = basepos;
-        teamID = id;
+        teamID = tid;
+        m_spyID = sid;
         isServer = true;
         Debug.Log("spy init");
     }
@@ -97,5 +99,10 @@ public class SpyController : MonoBehaviour {
     public int GetTeamID()
     {
         return teamID;
+    }
+
+    public int GetMyID()
+    {
+        return m_spyID;
     }
 }

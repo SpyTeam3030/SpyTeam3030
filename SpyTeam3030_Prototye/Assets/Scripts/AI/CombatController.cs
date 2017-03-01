@@ -23,8 +23,10 @@ public class CombatController : NetworkBehaviour
 	public bool card;
 	[SyncVar]
 	public int cardID;
+    [SyncVar]
+    public int restoreHealth;
 
-    [Header("Combat Display")]
+    [Header("Combat Display")] 
     public GameObject healthBar;
     public Transform popUpPos;
     protected Vector3 fullHealth;
@@ -35,6 +37,7 @@ public class CombatController : NetworkBehaviour
     protected float counter;
     public float health;
     protected int id;
+    protected int m_id;
 
 
     // Use this for initialization
@@ -43,6 +46,7 @@ public class CombatController : NetworkBehaviour
         GetComponent<SphereCollider>().radius = attackRadius;
         mSpyController = GetComponent<SpyController>();
         id = mSpyController.GetTeamID();
+        m_id = mSpyController.GetMyID();
         counter = 0.0f;
 		maxhealth = originalHealth;
 		health = maxhealth;
@@ -52,6 +56,7 @@ public class CombatController : NetworkBehaviour
         fullHealth = healthBar.transform.localScale;
         emptyHealth = fullHealth;
         emptyHealth.x = 0.0f;
+        restoreHealth = 0.0f;
 	}
 	
 	// Update is called once per frame
@@ -79,16 +84,26 @@ public class CombatController : NetworkBehaviour
         {
 			GetComponent<Animator> ().SetBool ("Attack", false);
 		}
+
+        health += restoreHealth;
+        health = Mathf.Min(health, maxhealth);
 	}
 
 	public int getID(){
 		return id;
 	}
 
+    public int getMyID()
+    {
+        return m_id;
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (!isServer)
             return;
+
+        //TODO: restore the speed to original one if the card is gripping gun
         
         if(other.gameObject.tag == "CombatObject")
         {
@@ -128,7 +143,7 @@ public class CombatController : NetworkBehaviour
             return false;
 
         health -= power;
-        RpcDisplayPopup(power.ToString(), popUpPos.position);
+        RpcDisplayPopup(power.ToString(), popUpPos.position, Color.red);
         if (health <= 0.0f)
         {
 			RpcDie ();
@@ -137,6 +152,7 @@ public class CombatController : NetworkBehaviour
 			cardID = 0;
 			maxhealth = originalHealth;
 			health = maxhealth;
+            restoreHealth = 0.0f;
 			GetComponent<NavMeshAgent> ().speed = mSpyController.maxMovementSpeed;
 			attackPower = 10f;
 			attackRadius = 4.5f;
@@ -152,9 +168,34 @@ public class CombatController : NetworkBehaviour
         return false;
     }
 
+    public virtual bool TakeHealth(float power = -1.0f)
+    {
+        if (!isServer)
+            return false;
+
+        if (power == -1.0f)
+        {
+            health = maxhealth;
+        }
+        else
+        {
+            health += power;
+            health = Mathf.Min(health, maxhealth);
+        }
+
+        RpcDisplayPopup(power.ToString(), popUpPos.position, Color.green);
+        RpcUpdateHealthBar(health / maxhealth);
+        return false;
+    }
+
     public virtual bool IsSameTeam(int otherID)
     {
         return id == otherID;
+    }
+
+    public virtual bool isEqualByID(int otherID)
+    {
+        return m_id == otherID;
     }
 
 	[ClientRpc]
@@ -167,7 +208,7 @@ public class CombatController : NetworkBehaviour
 		mSpyController.mesh.SetActive (true);
 	}
 
-	public virtual bool AttributeChange(int cardID, float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f)
+    public virtual bool AttributeChange(int cardID, float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f, float rHealthChange = 0.0f)
 	{
 		if (maxHealthChange > 900) 
         {
@@ -190,6 +231,7 @@ public class CombatController : NetworkBehaviour
 		maxhealth += maxHealthChange;
 		health += maxHealthChange;
 		attackPower += attackChange;
+        restoreHealth = rHealthChange;
         if (newSpeed != 0) 
         {
 			GetComponent<NavMeshAgent> ().speed = newSpeed * mSpyController.maxMovementSpeed;
@@ -210,10 +252,10 @@ public class CombatController : NetworkBehaviour
 
 
     [ClientRpc]
-    void RpcDisplayPopup(string value, Vector3 location)
+    void RpcDisplayPopup(string value, Vector3 location, Color c)
     {
 //        Debug.Log("pop up");
-        PopupController.DisplayPopup(value, location);
+        PopupController.DisplayPopup(value, location, c);
     }
 
     [ClientRpc]
