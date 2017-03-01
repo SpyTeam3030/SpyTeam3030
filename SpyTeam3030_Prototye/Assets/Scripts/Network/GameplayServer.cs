@@ -47,7 +47,7 @@ public class SpecialEffectInfo
 
     public LineType lineID;
     public int spyID;
-    public fixed int values[3];
+    public int [] values = new int[3];
 };
 
 public class GameplayServer : NetworkBehaviour
