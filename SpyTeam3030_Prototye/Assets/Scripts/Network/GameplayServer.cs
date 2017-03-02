@@ -195,7 +195,7 @@ public class GameplayServer : NetworkBehaviour
             CallSetSpys ();
         }
 
-        allSpyList.Clear();
+        //allSpyList.Clear();
 
     }
 
