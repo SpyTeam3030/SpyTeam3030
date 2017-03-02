@@ -24,7 +24,7 @@ public class CombatController : NetworkBehaviour
 	[SyncVar]
 	public int cardID;
     [SyncVar]
-    public int restoreHealth;
+    public float restoreHealth;
 
     [Header("Combat Display")] 
     public GameObject healthBar;
