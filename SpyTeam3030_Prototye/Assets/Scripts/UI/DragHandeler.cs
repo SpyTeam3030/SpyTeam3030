@@ -88,28 +88,25 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 		//Raycast it
 		gr.Raycast(ped, results);
 
-		if (results.Count > 0) {
-			if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI")) 
-			{
-				if (results[0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id,
-					card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
+		if (results.Count > 0 && results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI")) {
+			if (card.type == "ST") {
+				if (results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id,
+					    card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
 					Debug.Log ("Take Effect");
 
 					mCardManager.NextCard (this.gameObject);
 					GetComponent<Animator> ().SetTrigger ("Appear");
 				}
 			}
-		}
+			else if (card.type == "SP") 
+			{
+				
+			}
+			else if (card.type == "SE") 
+			{
 
-//        // RayCasting
-//        Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-//        RaycastHit hit;
-//
-//        if (Physics.Raycast (ray, out hit, 200f)) 
-//        {
-//			
-//			
-//        } 
+			}
+		}
 	}
 
 	#endregion

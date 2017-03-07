@@ -105,19 +105,6 @@
 },{
     "id" : 9,
 	"type" : "ST",
-	"description" : "Health Pack",
-
-	"health" : 999,
-	"speed" : 1,
-	"attack" : 0,
-
-	"attackSpeed" : 0,
-	"attackDistance" : 0,
-
-	"image" : 1
-},{
-    "id" : 10,
-	"type" : "ST",
 	"description" : "Exo Suit",
 
 	"health" : 20,
@@ -129,7 +116,7 @@
 
 	"image" : 1
 },{
-    "id" : 11,
+    "id" : 10,
 	"type" : "ST",
 	"description" : "Broadsword",
 
@@ -142,7 +129,7 @@
 
 	"image" : 1
 },{
-    "id" : 12,
+    "id" : 11,
 	"type" : "ST",
 	"description" : "Samurai Sword",
 
@@ -155,7 +142,7 @@
 
 	"image" : 1
 },{
-    "id" : 13,
+    "id" : 12,
 	"type" : "ST",
 	"description" : "Tele-Crystal Staff",
 
@@ -168,7 +155,7 @@
 
 	"image" : 1
 },{
-    "id" : 14,
+    "id" : 13,
 	"type" : "ST",
 	"description" : "Tele-Crystal Shield",
 
@@ -181,7 +168,7 @@
 
 	"image" : 1
 },{
-    "id" : 15,
+    "id" : 14,
 	"type" : "ST",
 	"description" : "Last Ditch Shield",
 
@@ -194,7 +181,7 @@
 
 	"image" : 1
 },{
-    "id" : 16,
+    "id" : 15,
 	"type" : "ST",
 	"description" : "Mini-Sub",
 
@@ -204,6 +191,201 @@
 
 	"attackSpeed" : 1.1,
 	"attackDistance" : 4,
+
+	"image" : 1
+},{
+    "id" : 16,
+	"type" : "SP",
+	"description" : "Health Pack",
+
+	"health" : 999,
+	"speed" : 0,
+	"attack" : 0,
+
+	"attackSpeed" : 0,
+	"attackDistance" : 0,
+
+	"image" : 1
+},{
+    "id" : 17,
+	"type" : "SP",
+	"description" : "Sniper Rifle",
+
+	"health" : 0,
+	"speed" : 0,
+	"attack" : 60,
+
+	"attackSpeed" : 0,
+	"attackDistance" : 10,
+
+	"image" : 1
+},{
+    "id" : 18,
+	"type" : "SP",
+	"description" : "Shotgun",
+
+	"health" : 0,
+	"speed" : 0,
+	"attack" : 30,
+
+	"attackSpeed" : 0,
+	"attackDistance" : 5,
+
+	"image" : 1
+},{
+    "id" : 19,
+	"type" : "SP",
+	"description" : "Doubletime",
+
+	"health" : 0,
+	"speed" : 0,
+	"attack" : 0,
+
+	"attackSpeed" : 0,
+	"attackDistance" : 0,
+
+	"image" : 1
+},{
+    "id" : 20,
+	"type" : "SP",
+	"description" : "Grappling Gun",
+
+	"health" : 30,
+	"speed" : 0,
+	"attack" : 0,
+
+	"attackSpeed" : 0,
+	"attackDistance" : 0,
+
+	"image" : 1
+},{
+    "id" : 21,
+	"type" : "SP",
+	"description" : "Steroid Kit",
+
+	"health" : 999,
+	"speed" : 0,
+	"attack" : 20,
+
+	"attackSpeed" : 0,
+	"attackDistance" : 0,
+
+	"image" : 1
+},{
+    "id" : 22,
+	"type" : "SP",
+	"description" : "Tele-Crystal Helm",
+
+	"health" : 15,
+	"speed" : 0,
+	"attack" : 0,
+
+	"attackSpeed" : 0,
+	"attackDistance" : 0,
+
+	"image" : 1
+},{
+    "id" : 23,
+	"type" : "SP",
+	"description" : "Demolitions Kit",
+
+	"health" : 30,
+	"speed" : 0,
+	"attack" : 30,
+
+	"attackSpeed" : 0,
+	"attackDistance" : 0,
+
+	"image" : 1
+},{
+    "id" : 24,
+	"type" : "SP",
+	"description" : "Cloaking Device",
+
+	"health" : 0,
+	"speed" : 0,
+	"attack" : 0,
+
+	"attackSpeed" : 0,
+	"attackDistance" : 0,
+
+	"image" : 1
+},{
+    "id" : 25,
+	"type" : "SE",
+	"description" : "Natural Disaster",
+
+	"health" : 0,
+	"speed" : 0,
+	"attack" : 0,
+
+	"attackSpeed" : 0,
+	"attackDistance" : 0,
+
+	"image" : 1
+},{
+    "id" : 26,
+	"type" : "SE",
+	"description" : "Surface-to-Air Missile",
+
+	"health" : 0,
+	"speed" : 0,
+	"attack" : 0,
+
+	"attackSpeed" : 0,
+	"attackDistance" : 0,
+
+	"image" : 1
+},{
+    "id" : 27,
+	"type" : "SE",
+	"description" : "EMP",
+
+	"health" : 0,
+	"speed" : 0,
+	"attack" : 0,
+
+	"attackSpeed" : 0,
+	"attackDistance" : 0,
+
+	"image" : 1
+},{
+    "id" : 28,
+	"type" : "SE",
+	"description" : "Counter-Intelligence",
+
+	"health" : 0,
+	"speed" : 0,
+	"attack" : 0,
+
+	"attackSpeed" : 0,
+	"attackDistance" : 0,
+
+	"image" : 1
+},{
+    "id" : 29,
+	"type" : "SE",
+	"description" : "Spy Drone",
+
+	"health" : 0,
+	"speed" : 0,
+	"attack" : 0,
+
+	"attackSpeed" : 0,
+	"attackDistance" : 0,
+
+	"image" : 1
+},{
+    "id" : 30,
+	"type" : "SE",
+	"description" : "Air Strike",
+
+	"health" : 0,
+	"speed" : 0,
+	"attack" : 50,
+
+	"attackSpeed" : 0,
+	"attackDistance" : 0,
 
 	"image" : 1
 }]

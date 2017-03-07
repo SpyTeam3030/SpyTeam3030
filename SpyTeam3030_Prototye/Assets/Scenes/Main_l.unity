@@ -49024,7 +49024,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7771a0487ebd18845bb7b82374434840, type: 3}
   - {fileID: 21300000, guid: 502535ac28ac25e43a472f6ef1a385ab, type: 3}
   - {fileID: 21300000, guid: 99df3e9456231854ea00075939f4f190, type: 3}
-  - {fileID: 21300000, guid: 4979c2e7e3a012442a0a45076a868905, type: 3}
   - {fileID: 21300000, guid: 9f705606f4af3584a8148173d1cf73cb, type: 3}
   - {fileID: 21300000, guid: 8969988ad9e3475438c9a48c8844501b, type: 3}
   - {fileID: 21300000, guid: 06647627773ce4b4fb2823371c1839bb, type: 3}
@@ -49032,6 +49031,21 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 49bda19208b357448ab67add1c8182b4, type: 3}
   - {fileID: 21300000, guid: 08455dba578b1084b8da8bc8e8c68fe0, type: 3}
   - {fileID: 21300000, guid: 4cc827ab0e6c88d4fad828eefcf4139a, type: 3}
+  - {fileID: 21300000, guid: 4979c2e7e3a012442a0a45076a868905, type: 3}
+  - {fileID: 21300000, guid: aa7be3eb84a03a940bf75f06b357629a, type: 3}
+  - {fileID: 21300000, guid: 389f06b36813b954abda990b2813f01d, type: 3}
+  - {fileID: 21300000, guid: 281a2d4ceef65384e9f8aecd7042d62a, type: 3}
+  - {fileID: 21300000, guid: 7302e5a3841b98242b18ece54efea026, type: 3}
+  - {fileID: 21300000, guid: 95b1bd7f49d034349b3b8f10814c6d11, type: 3}
+  - {fileID: 21300000, guid: 45d07130ea8ce9647b8da856000b3f43, type: 3}
+  - {fileID: 21300000, guid: 7228ed72f95d7af4590e1b599a0c10dd, type: 3}
+  - {fileID: 21300000, guid: 7be307b7569ddb04081b41e1890ac805, type: 3}
+  - {fileID: 21300000, guid: 09610fc2753a0764581517babc122f69, type: 3}
+  - {fileID: 21300000, guid: b8062f8c4a6967649ad0f03c1fdfd6aa, type: 3}
+  - {fileID: 21300000, guid: 80fd52b14e61e3c45bf8dff61d2d02a6, type: 3}
+  - {fileID: 21300000, guid: 99053c225f37d334bba224a308fa13a5, type: 3}
+  - {fileID: 21300000, guid: 01486e73ee47fb74a9b9b0e3da42ce07, type: 3}
+  - {fileID: 21300000, guid: 4846fdbe34e46a345ab16da3391e71ad, type: 3}
 --- !u!4 &1178032470
 Transform:
   m_ObjectHideFlags: 0
@@ -91055,6 +91069,7 @@ MonoBehaviour:
   winner: 0
   time: 0
   alltheSpys: []
+  alltheTowers: []
 --- !u!114 &2120444536
 MonoBehaviour:
   m_ObjectHideFlags: 0

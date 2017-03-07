@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System.IO;
 
+
 [System.Serializable]
 public class JsonHelper
 {
@@ -41,6 +42,7 @@ public struct Card{
 public class CardManager : MonoBehaviour {
 	public TextAsset json;
 	public Sprite[] images;
+	int num_cards = 30;
 
 	private Stack<Card> cards;//contains everything needed for a card
 	private List<int> ids;//ids from 1-30
@@ -49,8 +51,7 @@ public class CardManager : MonoBehaviour {
 	void Awake () {
 		cards = new Stack<Card> ();
 		ids = new List<int> ();
-		for (int i = 0; i < 16; i++) {
-			ids.Add(i + 1);
+		for (int i = 0; i < num_cards; i++) {
 			ids.Add(i + 1);
 		}
 		ids = Shuffle (ids);

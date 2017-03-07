@@ -56,24 +56,36 @@ public class CharacterIcon : MonoBehaviour {
 		if (mySpy == null) {
 			return false;
 		}
-//		if (gs.isServer && mySpy.getID() != 0) {
-//			return false;
-//		}
-//		if (gs.isClient && mySpy.getID() != 1) {
-//			return false;
-//		}
+		if (gs.isServer && mySpy.getID() != 0) {
+			return false;
+		}
+		if (!gs.isServer && mySpy.getID() != 1) {
+			return false;
+		}
 		GameObject[] obs = GameObject.FindGameObjectsWithTag ("Client");
 		if (obs.Length == 0) {
 			return false;
 		}
 
 		bool result = !mySpy.card;
-		foreach(var gameobject in obs)
-		{
-			if(gameobject.GetComponent<GameplayClient>().isLocalPlayer){
-				gameobject.GetComponent<GameplayClient> ().CmdAttributeChange (result, name, cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
+		if (gs.isServer) {
+			print ("is server");
+			result = mySpy.AttributeChange(cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
+		}else {
+			foreach(var gameobject in obs)
+			{
+				if(gameobject.GetComponent<GameplayClient>().isLocalPlayer){
+					gameobject.GetComponent<GameplayClient> ().CmdAttributeChange (result, name, cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
+				}
 			}
 		}
+
+//		foreach(var gameobject in obs)
+//		{
+//			if(gameobject.GetComponent<GameplayClient>().isLocalPlayer){
+//				gameobject.GetComponent<GameplayClient> ().CmdAttributeChange (result, name, cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
+//			}
+//		}
 
 		return result;
 		
