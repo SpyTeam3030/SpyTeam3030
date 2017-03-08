@@ -310,8 +310,12 @@ MonoBehaviour:
   attackRadius: 4.5
   attackSpeed: 1
   card: 0
+  cardID: 0
+  restoreHealth: 0
+  changed: 0
   healthBar: {fileID: 1000012396889690}
   popUpPos: {fileID: 4000012453163168}
+  health: 0
 --- !u!114 &114000013838690434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -325,7 +329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxMovementSpeed: 5
   moveAcceleration: 3
-  teamID: 0
+  mesh: {fileID: 0}
 --- !u!114 &114000013937739842
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -23,12 +23,14 @@ public class SpyInfo
     public int teamID;
     public LineType lineID;
     public GameObject spy;
+    public GameObject player;
 
-    public SpyInfo(int id, LineType line, GameObject obj)
+    public SpyInfo(int id, LineType line, GameObject obj, GameObject p)
     {
         teamID = id;
         lineID = line;
         spy = obj;
+        player = p;
     }
 };
     
@@ -142,7 +144,7 @@ public class GameplayServer : NetworkBehaviour
         return playerCount;
     }
 
-    public void SpawnSpy(int id)
+    public void SpawnSpy(int id, GameObject go)
     {
         Debug.Log("spawn spy");
         playerCount++;
@@ -150,7 +152,7 @@ public class GameplayServer : NetworkBehaviour
         // Instantiate the spys for the team with the id "id"
         for (int i = 0; i < 3; i++)
         {
-            allSpyList.Add(new SpyInfo(id, (LineType)i, null));
+            allSpyList.Add(new SpyInfo(id, (LineType)i, null, go));
         }
 
         if(playerCount == 2)
@@ -204,12 +206,11 @@ public class GameplayServer : NetworkBehaviour
         GameObject.Find ("CardDisplay").GetComponent<CardDisplay>().SetSpys ();
     }
 
-    public void ChangeAttribute(bool success, string name, int cardID, float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f)
+    public void ChangeAttribute(string name, int cardID, float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f)
     {
         CombatController cc = GameObject.Find (name).GetComponent<CombatController> ();
         if (cc == null) 
         {
-            success = false;
             return;
         }
         cc.AttributeChange (cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);

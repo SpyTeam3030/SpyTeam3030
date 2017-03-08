@@ -9,7 +9,7 @@ public class CharacterIcon : MonoBehaviour {
 //	public Text SpeedText;
 	public Sprite defaultSprite;
 	public Sprite currentSprite;
-	public GameplayServer gs;
+    public GameplayClient gc;
 	public string name;
 
 	public CombatController mySpy;
@@ -18,6 +18,7 @@ public class CharacterIcon : MonoBehaviour {
 	void Start () {
 		mySpy = null;
 		currentSprite = defaultSprite;
+        gc = null;
 	}
 	
 	// Update is called once per frame
@@ -46,48 +47,28 @@ public class CharacterIcon : MonoBehaviour {
 		mySpy = GameObject.Find (name).GetComponent<CombatController> ();
 	}
 
-//	public void SetStats(float attack, float health, float speed){
-//		AttackText.text = "Attack: " + attack;
-//		HealthText.text = "Health: " + health;
-//		SpeedText.text = "Speed: " + speed;
-//	}
-
 	public bool ChangeSpy(int cardID, float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f){
-		if (mySpy == null) {
-			return false;
-		}
-		if (gs.isServer && mySpy.getID() != 0) {
-			return false;
-		}
-		if (!gs.isServer && mySpy.getID() != 1) {
-			return false;
-		}
-		GameObject[] obs = GameObject.FindGameObjectsWithTag ("Client");
-		if (obs.Length == 0) {
-			return false;
-		}
+        if (gc == null)
+        {
+            GameObject[] gcs = GameObject.FindGameObjectsWithTag("LocalClient");
+            foreach(GameObject g in gcs)
+            {
+                if (g.GetComponent<GameplayClient>().isLocalPlayer)
+                {
+                    gc = g.GetComponent<GameplayClient>();
+                    break;
+                }
+            }
+        }
 
-		bool result = !mySpy.card;
-		if (gs.isServer) {
-			print ("is server");
-			result = mySpy.AttributeChange(cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
-		}else {
-			foreach(var gameobject in obs)
-			{
-				if(gameobject.GetComponent<GameplayClient>().isLocalPlayer){
-					gameobject.GetComponent<GameplayClient> ().CmdAttributeChange (result, name, cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
-				}
-			}
-		}
-
-//		foreach(var gameobject in obs)
-//		{
-//			if(gameobject.GetComponent<GameplayClient>().isLocalPlayer){
-//				gameobject.GetComponent<GameplayClient> ().CmdAttributeChange (result, name, cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
-//			}
-//		}
-
-		return result;
-		
+        if (mySpy == null)
+        {
+            return false;
+        }
+        else
+        {
+            gc.CmdAttributeChange(mySpy.name, cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
+            return true;
+        }
 	}
 }

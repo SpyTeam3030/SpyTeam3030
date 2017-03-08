@@ -3947,7 +3947,6 @@ MonoBehaviour:
   maxMovementSpeed: 5
   moveAcceleration: 3
   mesh: {fileID: 1000011466717936}
-  col: {fileID: 135000011762614496}
 --- !u!114 &114000013377157552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4004,8 +4003,12 @@ MonoBehaviour:
   attackRadius: 4.5
   attackSpeed: 1
   card: 0
+  cardID: 0
+  restoreHealth: 0
+  changed: 0
   healthBar: {fileID: 1000010319785496}
   popUpPos: {fileID: 4000010581858330}
+  health: 0
 --- !u!135 &135000011762614496
 SphereCollider:
   m_ObjectHideFlags: 1

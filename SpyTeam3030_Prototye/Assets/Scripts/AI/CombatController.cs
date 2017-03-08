@@ -25,6 +25,8 @@ public class CombatController : NetworkBehaviour
 	public int cardID;
     [SyncVar]
     public float restoreHealth;
+    [SyncVar]
+    public bool changed;
 
     [Header("Combat Display")] 
     public GameObject healthBar;
@@ -210,6 +212,8 @@ public class CombatController : NetworkBehaviour
 
     public virtual bool AttributeChange(int cardID, float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f, float rHealthChange = 0.0f)
 	{
+            
+        Debug.Log("attribute change");
 		if (maxHealthChange > 900) 
         {
 			health = maxhealth;
@@ -225,6 +229,8 @@ public class CombatController : NetworkBehaviour
 			return false;
 		}
 
+        Debug.Log("attribute change doing real job");
+        Debug.Log(maxHealthChange.ToString() + ":" + attackChange.ToString() + ":" + newSpeed.ToString() + ":" + newRadius.ToString() + ":" + newAttackSpeed.ToString() + ":" + rHealthChange.ToString());
 		card = true;
 		this.cardID = cardID;
 

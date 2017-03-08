@@ -8,6 +8,7 @@ TagManager:
   - Client
   - Icon
   - DebugConsole
+  - LocalClient
   layers:
   - Default
   - TransparentFX

@@ -2305,8 +2305,12 @@ MonoBehaviour:
   attackRadius: 4.5
   attackSpeed: 1
   card: 0
+  cardID: 0
+  restoreHealth: 0
+  changed: 0
   healthBar: {fileID: 1000010324712860}
   popUpPos: {fileID: 4000011070525784}
+  health: 0
 --- !u!114 &114000012560558812
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -90,8 +90,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
 		if (results.Count > 0 && results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI")) {
 			if (card.type == "ST") {
-				if (results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id,
-					    card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
+				if (results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
 					Debug.Log ("Take Effect");
 
 					mCardManager.NextCard (this.gameObject);

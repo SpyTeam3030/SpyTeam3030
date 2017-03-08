@@ -21,6 +21,7 @@ public class GameplayClient : NetworkBehaviour
         Debug.Log("OnStartLocalPlayer");
         CmdRoateCamera();
         CmdSpawnSpy();
+        gameObject.tag = "LocalClient";
     }
 
     void OnDisconnectedFromServer(NetworkDisconnection info) 
@@ -46,7 +47,7 @@ public class GameplayClient : NetworkBehaviour
     [Command]
     void CmdSpawnSpy()
     {
-        myServer.SpawnSpy(teamID);
+        myServer.SpawnSpy(teamID, gameObject);
     }
 
     [ClientRpc]
@@ -87,13 +88,9 @@ public class GameplayClient : NetworkBehaviour
         GameObject.Find ("TimePanel").GetComponent<Timer> ().UpdateTime(t);
     }
 
-	public void AttributeChange(bool success, string name, int cardID, float maxHealthChange, float attackChange, float newSpeed, float newRadius, float newAttackSpeed){
-		CmdAttributeChange (success, name, cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
-	}
-
 	[Command]
-	public void CmdAttributeChange(bool success, string name, int cardID, float maxHealthChange, float attackChange, float newSpeed, float newRadius, float newAttackSpeed){
-		myServer.ChangeAttribute (success, name, cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
+	public void CmdAttributeChange(string name, int cardID, float maxHealthChange, float attackChange, float newSpeed, float newRadius, float newAttackSpeed){
+		myServer.ChangeAttribute (name, cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
 	}
 
 	[Command]
