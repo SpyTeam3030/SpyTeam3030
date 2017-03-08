@@ -7,6 +7,8 @@ public class TowerController : CombatController
 {
     public bool isBase = false;
 
+	public GameObject rubble;
+
     public void InitiID(int id)
     {
         this.id = id;
@@ -101,7 +103,9 @@ public class TowerController : CombatController
             {
                 GameObject.Find("Gameplay_Server").GetComponent<GameplayServer>().UpdateTowerCount(id);
             }
-            Destroy(gameObject, 0.25f);
+//            Destroy(gameObject, 0.25f);
+			gameObject.SetActive (false);
+			rubble.SetActive (true);
             return true;
         }
         RpcUpdateHealthBar(health / maxhealth);
