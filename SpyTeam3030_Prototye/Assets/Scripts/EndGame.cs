@@ -9,30 +9,40 @@ public class EndGame : MonoBehaviour {
 	public Text myText;
 	public Text enemyText;
 	public Text drawText;
+	private bool set;
 
 	// Use this for initialization
 	void Start () {
+		set = false;
 		children.SetActive (false);
 	}
 	
 	// Update is called once per frame
 	public void Win(){
-		children.SetActive (true);
-		myText.text = "WINNER!";
-		enemyText.text = "LOSER!";
-
+		if (set == false) {
+			set = true;
+			children.SetActive (true);
+			myText.text = "WINNER!";
+			enemyText.text = "LOSER!";
+		}
 	}
 
 	public void Lose(){
-		children.SetActive (true);
-		myText.text = "LOSER!";
-		enemyText.text = "WINNER!";
+		if (set == false) {
+			set = true;
+			children.SetActive (true);
+			myText.text = "LOSER!";
+			enemyText.text = "WINNER!";
+		}
 	}
 
 	public void Draw(){
-		children.SetActive (true);
-		myText.gameObject.SetActive (false);
-		enemyText.gameObject.SetActive (false);
-		drawText.gameObject.SetActive (true);
+		if (set == false) {
+			set = true;
+			children.SetActive (true);
+			myText.gameObject.SetActive (false);
+			enemyText.gameObject.SetActive (false);
+			drawText.gameObject.SetActive (true);
+		}
 	}
 }

@@ -99,11 +99,58 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 			}
 			else if (card.type == "SP") 
 			{
-				
+				//Sniper rifle
+				if (card.id == 17) {
+					if (results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, card.attack)) {
+						Debug.Log ("Take Effect");
+
+						mCardManager.NextCard (this.gameObject);
+						GetComponent<Animator> ().SetTrigger ("Appear");
+					}				
+				}
+				else if (card.id == 18) {
+					if (results [0].gameObject != null) {
+						int m_id = -1;
+						GameplayClient gc = null;
+						GameplayClient[] clients = GameObject.FindObjectsOfType<GameplayClient> ();
+						foreach(GameplayClient cobj in clients)
+						{
+							if(cobj.isLocalPlayer)
+							{
+								gc = cobj;
+								m_id = cobj.teamID;
+								break;
+							}
+						}
+
+						GameObject[] obs = GameObject.FindGameObjectsWithTag ("Icon");
+						for (int i = 0; i < obs.Length; i++) {
+							CharacterIcon ci = obs [i].GetComponent<CharacterIcon> ();
+							if (ci != null && !ci.IsSameTeam(m_id)) {
+								gc.CmdAttributeChange(ci.mySpy.name, card.id, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, card.attack);
+							}
+						}
+					}
+				}
+				else if (card.id == 19) 
+				{
+					if (results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
+						Debug.Log ("Take Effect");
+
+						mCardManager.NextCard (this.gameObject);
+						GetComponent<Animator> ().SetTrigger ("Appear");
+					}
+				}else if (card.id == 20) {
+					results [0].gameObject.GetComponent<CharacterIcon> ().mySpy.Flash (100.0f);
+					Debug.Log ("Take Effect");
+
+					mCardManager.NextCard (this.gameObject);
+					GetComponent<Animator> ().SetTrigger ("Appear");
+				}
 			}
 			else if (card.type == "SE") 
 			{
-
+				
 			}
 		}
 	}

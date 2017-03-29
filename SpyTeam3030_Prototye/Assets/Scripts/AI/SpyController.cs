@@ -12,7 +12,7 @@ public class SpyController : MonoBehaviour {
 
     private Vector3 spawnPosition = Vector3.zero;
     private Vector3 enemyBase = Vector3.zero;
-    private NavMeshAgent agent;
+    private UnityEngine.AI.NavMeshAgent agent;
     private bool combat;
     private bool isServer = false;
     private int teamID;
@@ -31,7 +31,7 @@ public class SpyController : MonoBehaviour {
 
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         agent.speed = maxMovementSpeed;
         agent.acceleration = moveAcceleration;
     }
@@ -59,7 +59,6 @@ public class SpyController : MonoBehaviour {
 
     public void onCombat()
     {
-        Debug.Log("spy 1");
         agent.Stop();
         agent.velocity *= 0.2f;
         combat = true;
@@ -67,7 +66,6 @@ public class SpyController : MonoBehaviour {
 
     public void leaveCombat()
     {
-        Debug.Log("spy 2");
         if (agent.enabled)
         {
             agent.Resume();
@@ -77,8 +75,6 @@ public class SpyController : MonoBehaviour {
     
     public void Respawn()
     {
-
-        Debug.Log("spy 3");
         GetComponent<Transform>().position = spawnPosition;  
         leaveCombat();
         StartCoroutine(WaitForRespawn());

@@ -206,14 +206,19 @@ public class GameplayServer : NetworkBehaviour
         GameObject.Find ("CardDisplay").GetComponent<CardDisplay>().SetSpys ();
     }
 
-    public void ChangeAttribute(string name, int cardID, float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f)
+    public void ChangeAttribute(string name, int cardID, float maxHealthChange = 0.0f, float attackChange = 0.0f, float newSpeed = 0.0f, float newRadius = 0.0f, float newAttackSpeed = 0.0f, float damage = 0.0f)
     {
         CombatController cc = GameObject.Find (name).GetComponent<CombatController> ();
         if (cc == null) 
         {
             return;
         }
-        cc.AttributeChange (cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
+		if (damage == 0.0f) {
+			cc.AttributeChange (cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
+		}
+		else{
+			cc.TakeDamge (damage);
+		}
         for (int i = 0; i < alltheSpys.Count; ++i)
         {
             CombatController m_cc = alltheSpys[i].GetComponent<CombatController>();

@@ -33,7 +33,7 @@ public class GameplayClient : NetworkBehaviour
     public void UpdateTime(float t)
     {
         RpcUpdateTime(t);
-    }
+	}
 
     [Command]
     void CmdRoateCamera()
@@ -89,8 +89,8 @@ public class GameplayClient : NetworkBehaviour
     }
 
 	[Command]
-	public void CmdAttributeChange(string name, int cardID, float maxHealthChange, float attackChange, float newSpeed, float newRadius, float newAttackSpeed){
-		myServer.ChangeAttribute (name, cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed);
+	public void CmdAttributeChange(string name, int cardID, float maxHealthChange, float attackChange, float newSpeed, float newRadius, float newAttackSpeed, float damage){
+			myServer.ChangeAttribute (name, cardID, maxHealthChange, attackChange, newSpeed, newRadius, newAttackSpeed, damage);
 	}
 
 	[Command]

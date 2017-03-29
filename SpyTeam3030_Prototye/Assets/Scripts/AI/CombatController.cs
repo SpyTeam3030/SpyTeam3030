@@ -28,6 +28,8 @@ public class CombatController : NetworkBehaviour
     [SyncVar]
     public bool changed;
 
+	public string m_name;
+
     [Header("Combat Display")] 
     public GameObject healthBar;
     public Transform popUpPos;
@@ -40,6 +42,7 @@ public class CombatController : NetworkBehaviour
     public float health;
     protected int id;
     protected int m_id;
+	protected bool flash = false;
 
 
     // Use this for initialization
@@ -76,6 +79,11 @@ public class CombatController : NetworkBehaviour
             else
             {
                 counter = 0.0f;
+				if(flash)
+				{
+					flash = false;
+					GetComponent<UnityEngine.AI.NavMeshAgent> ().speed = mSpyController.maxMovementSpeed;
+				}
                 if (attackTargets[0].TakeDamge(attackPower))
                 {
                     attackTargets.RemoveAt(0);                
@@ -155,7 +163,7 @@ public class CombatController : NetworkBehaviour
 			maxhealth = originalHealth;
 			health = maxhealth;
             restoreHealth = 0.0f;
-			GetComponent<NavMeshAgent> ().speed = mSpyController.maxMovementSpeed;
+			GetComponent<UnityEngine.AI.NavMeshAgent> ().speed = mSpyController.maxMovementSpeed;
 			attackPower = 10f;
 			attackRadius = 4.5f;
 			attackSpeed = 1f;
@@ -240,7 +248,7 @@ public class CombatController : NetworkBehaviour
         restoreHealth = rHealthChange;
         if (newSpeed != 0) 
         {
-			GetComponent<NavMeshAgent> ().speed = newSpeed * mSpyController.maxMovementSpeed;
+			GetComponent<UnityEngine.AI.NavMeshAgent> ().speed = newSpeed * mSpyController.maxMovementSpeed;
 		}
 		if (newRadius != 0) 
         {
@@ -254,6 +262,12 @@ public class CombatController : NetworkBehaviour
 		healthBar.transform.localScale = Vector3.Lerp(emptyHealth, fullHealth, health / maxhealth);
 
 		return true;
+	}
+
+	public virtual void Flash(float newSpeedFactor)
+	{
+		GetComponent<UnityEngine.AI.NavMeshAgent> ().speed = newSpeedFactor * mSpyController.maxMovementSpeed;
+		flash = true;
 	}
 
 
