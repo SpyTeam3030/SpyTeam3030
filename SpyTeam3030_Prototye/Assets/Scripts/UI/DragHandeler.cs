@@ -88,9 +88,10 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 		//Raycast it
 		gr.Raycast(ped, results);
 
-		if (results.Count > 0 && results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI")) {
+		if (results.Count > 0) {
 			if (card.type == "ST") {
-				if (results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
+				if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI") && 
+					results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
 					Debug.Log ("Take Effect");
 
 					mCardManager.NextCard (this.gameObject);
@@ -101,7 +102,8 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 			{
 				//Sniper rifle
 				if (card.id == 17) {
-					if (results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, card.attack)) {
+					if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI") && 
+						results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, card.attack)) {
 						Debug.Log ("Take Effect");
 
 						mCardManager.NextCard (this.gameObject);
@@ -134,23 +136,55 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 				}
 				else if (card.id == 19) 
 				{
-					if (results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
+					if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI") && 
+						results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
 						Debug.Log ("Take Effect");
 
 						mCardManager.NextCard (this.gameObject);
 						GetComponent<Animator> ().SetTrigger ("Appear");
 					}
 				}else if (card.id == 20) {
-					results [0].gameObject.GetComponent<CharacterIcon> ().mySpy.Flash (100.0f);
-					Debug.Log ("Take Effect");
+					if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI")) {
+						results [0].gameObject.GetComponent<CharacterIcon> ().mySpy.Flash (100.0f);
+						Debug.Log ("Take Effect");
 
-					mCardManager.NextCard (this.gameObject);
-					GetComponent<Animator> ().SetTrigger ("Appear");
+						mCardManager.NextCard (this.gameObject);
+						GetComponent<Animator> ().SetTrigger ("Appear");
+					}
+				}
+				else if (card.id == 21 || card.id == 22 || card.id == 24) {
+					if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI") && 
+						results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
+						Debug.Log ("Take Effect");
+
+						mCardManager.NextCard (this.gameObject);
+						GetComponent<Animator> ().SetTrigger ("Appear");
+					}
+				}
+				else if (card.id == 23) {
+					//deal 30 damage to tower in the lane
 				}
 			}
 			else if (card.type == "SE") 
 			{
-				
+				if (card.id == 25) {
+					
+				}
+				else if (card.id == 26) {
+					
+				}
+				else if (card.id == 27) {
+					
+				}
+				else if (card.id == 28) {
+					
+				}
+				else if (card.id == 29) {
+
+				}
+				else if (card.id == 30) {
+
+				}
 			}
 		}
 	}

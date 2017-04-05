@@ -225,15 +225,11 @@ public class CombatController : NetworkBehaviour
 		if (maxHealthChange > 900) 
         {
 			health = maxhealth;
+			attackPower += attackChange;
 			return true;
 		}
 
-		if (this.cardID != 0) {
-			return false;
-		}
-
-		if (card) 
-        {
+		else if (this.cardID != 0 || card) {
 			return false;
 		}
 
