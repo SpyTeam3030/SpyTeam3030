@@ -23,7 +23,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 	public CardStatPanel cardStatPanel;
 
 	void Start(){
-		mCardManager.NextCard (gameObject);
+		mCardManager.NextCard (gameObject, -1);
 		clicked = false;
 	}
 
@@ -77,40 +77,45 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         GetComponentInParent<Image>().color = c;
 		ResetInformation ();
 
-		//Code to be place in a MonoBehaviour with a GraphicRaycaster component
-		GraphicRaycaster gr = GameObject.Find("CardHitCanvas").GetComponent<GraphicRaycaster>();
-		//Create the PointerEventData with null for the EventSystem
-		PointerEventData ped = new PointerEventData(null);
-		//Set required parameters, in this case, mouse position
-		ped.position = Input.mousePosition;
-		//Create list to receive all results
-		List<RaycastResult> results = new List<RaycastResult>();
-		//Raycast it
-		gr.Raycast(ped, results);
+		if (card.type == "SE") 
+		{
+			//Code to be place in a MonoBehaviour with a GraphicRaycaster component
+			GraphicRaycaster gr = GameObject.Find("Canvas").GetComponent<GraphicRaycaster>();
+			//Create the PointerEventData with null for the EventSystem
+			PointerEventData ped = new PointerEventData(null);
+			//Set required parameters, in this case, mouse position
+			ped.position = Input.mousePosition;
+			//Create list to receive all results
+			List<RaycastResult> results = new List<RaycastResult>();
+			//Raycast it
+			gr.Raycast(ped, results);
 
-		if (results.Count > 0) {
-			if (card.type == "ST") {
-				if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI") && 
-					results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
-					Debug.Log ("Take Effect");
+			if (results.Count == 0) {
+				Debug.Log ("Card type SE");
+				if (card.id == 25) {
 
-					mCardManager.NextCard (this.gameObject);
-					GetComponent<Animator> ().SetTrigger ("Appear");
 				}
-			}
-			else if (card.type == "SP") 
-			{
-				//Sniper rifle
-				if (card.id == 17) {
-					if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI") && 
-						results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, card.attack)) {
-						Debug.Log ("Take Effect");
+				else if (card.id == 26) {
 
-						mCardManager.NextCard (this.gameObject);
-						GetComponent<Animator> ().SetTrigger ("Appear");
-					}				
 				}
-				else if (card.id == 18) {
+				else if (card.id == 27) {
+					GameplayClient[] clients = GameObject.FindObjectsOfType<GameplayClient> ();
+					foreach(GameplayClient cobj in clients)
+					{
+						if(!cobj.isLocalPlayer)
+						{
+							cobj.CmdDisableHUD();
+							break;
+						}
+					}
+				}
+				else if (card.id == 28) {
+
+				}
+				else if (card.id == 29) {
+
+				}
+				else if (card.id == 30) {
 					if (results [0].gameObject != null) {
 						int m_id = -1;
 						GameplayClient gc = null;
@@ -134,59 +139,105 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 						}
 					}
 				}
-				else if (card.id == 19) 
-				{
-					if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI") && 
-						results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
-						Debug.Log ("Take Effect");
-
-						mCardManager.NextCard (this.gameObject);
-						GetComponent<Animator> ().SetTrigger ("Appear");
-					}
-				}else if (card.id == 20) {
-					if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI")) {
-						results [0].gameObject.GetComponent<CharacterIcon> ().mySpy.Flash (100.0f);
-						Debug.Log ("Take Effect");
-
-						mCardManager.NextCard (this.gameObject);
-						GetComponent<Animator> ().SetTrigger ("Appear");
-					}
-				}
-				else if (card.id == 21 || card.id == 22 || card.id == 24) {
-					if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI") && 
-						results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
-						Debug.Log ("Take Effect");
-
-						mCardManager.NextCard (this.gameObject);
-						GetComponent<Animator> ().SetTrigger ("Appear");
-					}
-				}
-				else if (card.id == 23) {
-					//deal 30 damage to tower in the lane
-				}
 			}
-			else if (card.type == "SE") 
-			{
-				if (card.id == 25) {
-					
-				}
-				else if (card.id == 26) {
-					
-				}
-				else if (card.id == 27) {
-					
-				}
-				else if (card.id == 28) {
-					
-				}
-				else if (card.id == 29) {
 
-				}
-				else if (card.id == 30) {
+			return;
+		}
 
+		else{
+			//Code to be place in a MonoBehaviour with a GraphicRaycaster component
+			GraphicRaycaster gr = GameObject.Find("CardHitCanvas").GetComponent<GraphicRaycaster>();
+			//Create the PointerEventData with null for the EventSystem
+			PointerEventData ped = new PointerEventData(null);
+			//Set required parameters, in this case, mouse position
+			ped.position = Input.mousePosition;
+			//Create list to receive all results
+			List<RaycastResult> results = new List<RaycastResult>();
+			//Raycast it
+			gr.Raycast(ped, results);
+
+			if (results.Count > 0) {
+				if (card.type == "ST") {
+					Debug.Log ("Card type ST");
+					if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI") && 
+						results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
+						Debug.Log ("Take Effect");
+
+						mCardManager.NextCard (this.gameObject, card.id);
+						GetComponent<Animator> ().SetTrigger ("Appear");
+					}
+				}
+				else if (card.type == "SP") 
+				{
+					Debug.Log ("Card type SP");
+					//Sniper rifle
+					if (card.id == 17) {
+						if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI") && 
+							results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, card.attack)) {
+							Debug.Log ("Take Effect");
+
+							mCardManager.NextCard (this.gameObject, card.id);
+							GetComponent<Animator> ().SetTrigger ("Appear");
+						}				
+					}
+					else if (card.id == 18) {
+						if (results [0].gameObject != null) {
+							int m_id = -1;
+							GameplayClient gc = null;
+							GameplayClient[] clients = GameObject.FindObjectsOfType<GameplayClient> ();
+							foreach(GameplayClient cobj in clients)
+							{
+								if(cobj.isLocalPlayer)
+								{
+									gc = cobj;
+									m_id = cobj.teamID;
+									break;
+								}
+							}
+
+							GameObject[] obs = GameObject.FindGameObjectsWithTag ("Icon");
+							for (int i = 0; i < obs.Length; i++) {
+								CharacterIcon ci = obs [i].GetComponent<CharacterIcon> ();
+								if (ci != null && !ci.IsSameTeam(m_id)) {
+									gc.CmdAttributeChange(ci.mySpy.name, card.id, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, card.attack);
+								}
+							}
+						}
+					}
+					else if (card.id == 19) 
+					{
+						if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI") && 
+							results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
+							Debug.Log ("Take Effect");
+
+							mCardManager.NextCard (this.gameObject, card.id);
+							GetComponent<Animator> ().SetTrigger ("Appear");
+						}
+					}else if (card.id == 20) {
+						if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI")) {
+							results [0].gameObject.GetComponent<CharacterIcon> ().mySpy.Flash (100.0f);
+							Debug.Log ("Take Effect");
+
+							mCardManager.NextCard (this.gameObject, card.id);
+							GetComponent<Animator> ().SetTrigger ("Appear");
+						}
+					}
+					else if (card.id == 21 || card.id == 22 || card.id == 24) {
+						if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI") && 
+							results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
+							Debug.Log ("Take Effect");
+
+							mCardManager.NextCard (this.gameObject, card.id);
+							GetComponent<Animator> ().SetTrigger ("Appear");
+						}
+					}
+					else if (card.id == 23) {
+						//deal 30 damage to tower in the lane
+					}
 				}
 			}
 		}
+
 	}
 
 	#endregion

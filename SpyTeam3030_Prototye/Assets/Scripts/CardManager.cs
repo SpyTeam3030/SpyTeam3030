@@ -46,11 +46,13 @@ public class CardManager : MonoBehaviour {
 
 	private Stack<Card> cards;//contains everything needed for a card
 	private List<int> ids;//ids from 1-30
+	public List<Card> hand;
 
 	// Use this for initialization
 	void Awake () {
 		cards = new Stack<Card> ();
 		ids = new List<int> ();
+		hand = new List<Card> ();
 		for (int i = 0; i < num_cards; i++) {
 			ids.Add(i + 1);
 		}
@@ -61,14 +63,21 @@ public class CardManager : MonoBehaviour {
 
 			int ID = ids [i];
 			Card c = cardDeck[ID - 1];
-			c.image = images [ID-1];
+			c.image = images [ID - 1];
 
 			cards.Push (c);
 		}
 	}
 
-	public void NextCard(GameObject go){
-		go.GetComponent<DragHandeler> ().Init (cards.Pop ());
+	public void NextCard(GameObject go, int cardID){
+		for (int i = 0; i < hand.Count; i++) {
+			if (cardID == hand[i].id) {
+				hand.Remove(hand [i]);
+			}
+		}
+		Card new_card = cards.Pop ();
+		go.GetComponent<DragHandeler> ().Init (new_card);
+		hand.Add (new_card);
 	}
 
 	public Card ReadTop(){
@@ -98,5 +107,9 @@ public class CardManager : MonoBehaviour {
 		}
 
 		return aList;
+	}
+
+	public List<Card> GetHand(){
+		return hand;
 	}
 }

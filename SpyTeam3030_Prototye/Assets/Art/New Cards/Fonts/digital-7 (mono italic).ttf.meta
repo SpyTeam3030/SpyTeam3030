@@ -1,0 +1,31 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 63409f1dd6b93f943a1a065acd281309
+timeCreated: 1476407992
+licenseType: Pro
+=======
+guid: 41281f0cafbc64c2c9fa0ffd94aed9b4
+timeCreated: 1476406202
+licenseType: Free
+>>>>>>> af43c19c41f53e18654bf312316285998ed3ec7e
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Digital-7 Mono
+<<<<<<< HEAD
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 4ef6bfb907b711948af3bdf02c084d70, type: 3}
+=======
+  fallbackFontReferences: []
+>>>>>>> af43c19c41f53e18654bf312316285998ed3ec7e
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

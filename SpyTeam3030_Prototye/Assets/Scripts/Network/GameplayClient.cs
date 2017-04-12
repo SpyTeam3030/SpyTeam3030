@@ -94,6 +94,11 @@ public class GameplayClient : NetworkBehaviour
 	}
 
 	[Command]
+	public void CmdDisableHUD(){
+		myServer.DisableHUD ();
+	}
+
+	[Command]
 	public void CmdSetSpys(){
 		myServer.SetSpys ();
 	}

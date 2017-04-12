@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 4ffc8cb4f550e9a46b91de366ae259c6
+timeCreated: 1476407992
+licenseType: Pro
+=======
+guid: 50bf9a3bd335343c983f71f76c839cad
+timeCreated: 1476406202
+licenseType: Free
+>>>>>>> af43c19c41f53e18654bf312316285998ed3ec7e
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Digital-7 Italic
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

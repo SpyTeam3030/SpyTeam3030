@@ -100,7 +100,7 @@ public class CharacterIcon : MonoBehaviour {
 	}
 
 	public bool IsSameTeam(int id){
-		return false;
+		return mySpy.IsSameTeam(id);
 	}
 
 }

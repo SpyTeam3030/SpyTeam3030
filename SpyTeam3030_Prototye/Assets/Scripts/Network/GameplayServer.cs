@@ -245,6 +245,14 @@ public class GameplayServer : NetworkBehaviour
 
     }
 
+	public void GetHand(){
+		return;
+		GameObject.Find ("CardManager").GetComponent<CardManager> ().GetHand ();
+	}
+		
+	public void DisableHUD(){
+		GameObject.Find ("Canvas").GetComponent<CardHUD> ().DisableHUD ();
+	}
 
     // handler for taking effect to all enemies
     public void doDamageToAllEnemies(ref SpecialEffectInfo handler)
@@ -294,5 +302,7 @@ public class GameplayServer : NetworkBehaviour
                 break;
         }
     }
+
+
 }
 
