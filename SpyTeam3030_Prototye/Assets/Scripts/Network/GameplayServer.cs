@@ -260,7 +260,7 @@ public class GameplayServer : NetworkBehaviour
         foreach(GameObject tower in alltheTowers)
         {
             TowerController tc = tower.GetComponent<TowerController>();
-            if(tc != null)
+            if(tc != null && tc.isEqualByID(id))
             {
                 tc.TakeDamge(damage);
             }
