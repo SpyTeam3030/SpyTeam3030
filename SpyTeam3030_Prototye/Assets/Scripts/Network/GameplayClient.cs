@@ -102,4 +102,10 @@ public class GameplayClient : NetworkBehaviour
 	public void CmdSetSpys(){
 		myServer.SetSpys ();
 	}
+
+    [Command]
+    public void CmdDoDamageToSingleTower(float damage, int id)
+    {
+        myServer.doDamageToSingleTower(damage, id);
+    }
 }

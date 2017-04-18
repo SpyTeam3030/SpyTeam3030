@@ -26,7 +26,6 @@ public class SpyController : MonoBehaviour {
         teamID = tid;
         m_spyID = sid;
         isServer = true;
-        Debug.Log("spy init");
     }
 
     void Start()

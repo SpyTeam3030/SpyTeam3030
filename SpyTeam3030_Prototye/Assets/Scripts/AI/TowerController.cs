@@ -9,9 +9,10 @@ public class TowerController : CombatController
 
 	public GameObject rubble;
 
-    public void InitiID(int id)
+    public void InitiID(int id, int mid)
     {
         this.id = id;
+        this.m_id = mid;
     }
 
     // Use this for initialization

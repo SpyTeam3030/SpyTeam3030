@@ -162,14 +162,14 @@ public class GameplayServer : NetworkBehaviour
             var rotationbase = basePosList[0].rotation;
 
             GameObject base0 = (GameObject)Instantiate(baseTypeList[0], posbase, rotationbase);
-            base0.GetComponent<TowerController>().InitiID(0);
+            base0.GetComponent<TowerController>().InitiID(0, 0);
             NetworkServer.Spawn(base0);
 
             posbase = basePosList[1].position;
             rotationbase = basePosList[1].rotation;
 
             GameObject base1 = (GameObject)Instantiate(baseTypeList[1], posbase, rotationbase);
-            base0.GetComponent<TowerController>().InitiID(1);
+            base0.GetComponent<TowerController>().InitiID(1, 1);
             NetworkServer.Spawn(base1);
             
             int[] index = {0,0};
@@ -188,8 +188,9 @@ public class GameplayServer : NetworkBehaviour
                 pos = towerSpanPosList[num].position;
                 rotation = towerSpanPosList[num].rotation;
                 GameObject tower = (GameObject)Instantiate(towerTypeList[localId], pos, rotation);
-                tower.GetComponent<TowerController>().InitiID(localId);
+                tower.GetComponent<TowerController>().InitiID(localId, i);
                 NetworkServer.Spawn(tower);
+                alltheTowers.Add(tower);
 
                 index[localId]++;
             }
@@ -254,55 +255,16 @@ public class GameplayServer : NetworkBehaviour
 		GameObject.Find ("Canvas").GetComponent<CardHUD> ().DisableHUD ();
 	}
 
-    // handler for taking effect to all enemies
-    public void doDamageToAllEnemies(ref SpecialEffectInfo handler)
+    public void doDamageToSingleTower(float damage, int id)
     {
-        foreach (GameObject go in alltheSpys)
+        foreach(GameObject tower in alltheTowers)
         {
-            CombatController cc = go.GetComponent<CombatController>();
-            if (cc.getID() != handler.m_myTeamID)
+            TowerController tc = tower.GetComponent<TowerController>();
+            if(tc != null)
             {
-                cc.TakeDamge(handler.values[0]);
-                cc.TakeHealth(handler.values[1]);
+                tc.TakeDamge(damage);
             }
         }
     }
-
-    // handler for doing damage to one single enemy
-    public void doDamageToSingleEnemy(ref SpecialEffectInfo handler)
-    {
-        foreach (GameObject go in alltheSpys)
-        {
-            CombatController cc = go.GetComponent<CombatController>();
-            if (cc.isEqualByID(handler.spyID[0]))
-            {
-                cc.TakeDamge(handler.values[0]);
-                cc.TakeHealth(handler.values[1]);
-                break;
-            }
-        }
-    }
-
-
-    public void takeSpecialEffect(ref SpecialEffectInfo handler)
-    {
-        switch(handler.m_type)
-        {
-            case EffectType.LINE:
-                //TODO
-                break;
-            case EffectType.ALL:
-                //TODO
-                break;
-            case EffectType.SINGLE:
-                //TODO
-                break;
-            default:
-                //TODO
-                break;
-        }
-    }
-
-
 }
 
