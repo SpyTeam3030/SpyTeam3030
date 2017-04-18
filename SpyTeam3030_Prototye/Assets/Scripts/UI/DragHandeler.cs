@@ -77,53 +77,43 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         GetComponentInParent<Image>().color = c;
 		ResetInformation ();
 
-		if (card.type == "SE") 
-		{
+		if (card.type == "SE") {
 			//Code to be place in a MonoBehaviour with a GraphicRaycaster component
-			GraphicRaycaster gr = GameObject.Find("Canvas").GetComponent<GraphicRaycaster>();
+			GraphicRaycaster gr = GameObject.Find ("Canvas").GetComponent<GraphicRaycaster> ();
 			//Create the PointerEventData with null for the EventSystem
-			PointerEventData ped = new PointerEventData(null);
+			PointerEventData ped = new PointerEventData (null);
 			//Set required parameters, in this case, mouse position
 			ped.position = Input.mousePosition;
 			//Create list to receive all results
-			List<RaycastResult> results = new List<RaycastResult>();
+			List<RaycastResult> results = new List<RaycastResult> ();
 			//Raycast it
-			gr.Raycast(ped, results);
+			gr.Raycast (ped, results);
 
 			if (results.Count == 0) {
 				Debug.Log ("Card type SE");
 				if (card.id == 25) {
 
-				}
-				else if (card.id == 26) {
+				} else if (card.id == 26) {
 
-				}
-				else if (card.id == 27) {
+				} else if (card.id == 27) {
 					GameplayClient[] clients = GameObject.FindObjectsOfType<GameplayClient> ();
-					foreach(GameplayClient cobj in clients)
-					{
-						if(!cobj.isLocalPlayer)
-						{
-							cobj.CmdDisableHUD();
+					foreach (GameplayClient cobj in clients) {
+						if (!cobj.isLocalPlayer) {
+							cobj.CmdDisableHUD ();
 							break;
 						}
 					}
-				}
-				else if (card.id == 28) {
+				} else if (card.id == 28) {
 
-				}
-				else if (card.id == 29) {
+				} else if (card.id == 29) {
 
-				}
-				else if (card.id == 30) {
+				} else if (card.id == 30) {
 					if (results [0].gameObject != null) {
 						int m_id = -1;
 						GameplayClient gc = null;
 						GameplayClient[] clients = GameObject.FindObjectsOfType<GameplayClient> ();
-						foreach(GameplayClient cobj in clients)
-						{
-							if(cobj.isLocalPlayer)
-							{
+						foreach (GameplayClient cobj in clients) {
+							if (cobj.isLocalPlayer) {
 								gc = cobj;
 								m_id = cobj.teamID;
 								break;
@@ -133,8 +123,8 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 						GameObject[] obs = GameObject.FindGameObjectsWithTag ("Icon");
 						for (int i = 0; i < obs.Length; i++) {
 							CharacterIcon ci = obs [i].GetComponent<CharacterIcon> ();
-							if (ci != null && !ci.IsSameTeam(m_id)) {
-								gc.CmdAttributeChange(ci.mySpy.name, card.id, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, card.attack);
+							if (ci != null && !ci.IsSameTeam (m_id)) {
+								gc.CmdAttributeChange (ci.mySpy.name, card.id, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, card.attack);
 							}
 						}
 					}
@@ -142,6 +132,13 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 			}
 
 			return;
+		} else if (card.type == "SP" && card.id == 23) {
+			//deal 30 damage to tower in the lane
+			RaycastHit hit; 
+			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition); 
+			if (Physics.Raycast (ray, out hit, 100.0f)) {
+				hit.transform.GetComponent<TowerController> ();
+			}
 		}
 
 		else{
@@ -230,9 +227,6 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 							mCardManager.NextCard (this.gameObject, card.id);
 							GetComponent<Animator> ().SetTrigger ("Appear");
 						}
-					}
-					else if (card.id == 23) {
-						//deal 30 damage to tower in the lane
 					}
 				}
 			}
