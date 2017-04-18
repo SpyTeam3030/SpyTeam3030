@@ -251,8 +251,21 @@ public class GameplayServer : NetworkBehaviour
 		GameObject.Find ("CardManager").GetComponent<CardManager> ().GetHand ();
 	}
 		
-	public void DisableHUD(){
-		GameObject.Find ("Canvas").GetComponent<CardHUD> ().DisableHUD ();
+	public void DisableHUD(int id){
+		GameObject[] obs = GameObject.FindGameObjectsWithTag ("Client");
+		if (obs.Length == 0) 
+		{
+			return;
+		}
+		foreach(var gameobject in obs)
+		{
+			if(gameobject.GetComponent<GameplayClient>().teamID != id)
+			{
+				Debug.Log ("my id should be " + gameobject.GetComponent<GameplayClient> ().teamID + " and id" + id);
+				gameobject.GetComponent<GameplayClient> ().RpcFindAndDisableHUD ();
+				break;
+			}
+		}
 	}
 
     public void doDamageToSingleTower(float damage, int id)

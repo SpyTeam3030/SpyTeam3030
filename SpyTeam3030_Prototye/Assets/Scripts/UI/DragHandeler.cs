@@ -92,16 +92,43 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 			if (results.Count == 0) {
 				Debug.Log ("Card type SE");
 				if (card.id == 25) {
+					//right now it just kills all enemy spies
+					if (results [0].gameObject != null) {
+						int m_id = -1;
+						GameplayClient gc = null;
+						GameplayClient[] clients = GameObject.FindObjectsOfType<GameplayClient> ();
+						foreach (GameplayClient cobj in clients) {
+							if (cobj.isLocalPlayer) {
+								gc = cobj;
+								m_id = cobj.teamID;
+								break;
+							}
+						}
 
+						GameObject[] obs = GameObject.FindGameObjectsWithTag ("Icon");
+						for (int i = 0; i < obs.Length; i++) {
+							CharacterIcon ci = obs [i].GetComponent<CharacterIcon> ();
+							if (ci != null && !ci.IsSameTeam (m_id)) {
+								gc.CmdAttributeChange (ci.mySpy.name, card.id, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 999.0f);
+							}
+						}
+					}
 				} else if (card.id == 26) {
 
 				} else if (card.id == 27) {
+					GameplayClient gc = null;
 					GameplayClient[] clients = GameObject.FindObjectsOfType<GameplayClient> ();
-					foreach (GameplayClient cobj in clients) {
-						if (!cobj.isLocalPlayer) {
-							cobj.CmdDisableHUD ();
+					foreach(GameplayClient cobj in clients)
+					{
+						if(cobj.isLocalPlayer)
+						{
+							Debug.Log ("local player id " + cobj.teamID);
+							gc = cobj;
 							break;
 						}
+					}
+					if (gc != null) {
+						gc.CmdDisableHUD (gc.teamID);
 					}
 				} else if (card.id == 28) {
 
@@ -137,10 +164,30 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 			RaycastHit hit; 
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition); 
 			if (Physics.Raycast (ray, out hit, 100.0f)) {
-				hit.transform.GetComponent<TowerController> ();
+				TowerController tc = hit.transform.GetComponent<TowerController> ();
+				if (tc == null) {
+					return;
+				}
+				int myid = tc.getMyID();
+				GameplayClient gc = null;
+				GameplayClient[] clients = GameObject.FindObjectsOfType<GameplayClient> ();
+				foreach(GameplayClient cobj in clients)
+				{
+					if(cobj.isLocalPlayer)
+					{
+						gc = cobj;
+						break;
+					}
+				}
+				if (gc != null && !tc.IsSameTeam(gc.teamID)) {
+					gc.CmdDoDamageToSingleTower (card.attack, myid);
+					Debug.Log ("do damage to tower " + myid);
+
+					mCardManager.NextCard (this.gameObject, card.id);
+					GetComponent<Animator> ().SetTrigger ("Appear");
+				}
 			}
 		}
-
 		else{
 			//Code to be place in a MonoBehaviour with a GraphicRaycaster component
 			GraphicRaycaster gr = GameObject.Find("CardHitCanvas").GetComponent<GraphicRaycaster>();

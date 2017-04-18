@@ -32,6 +32,7 @@ public class CombatController : NetworkBehaviour
 
     [Header("Combat Display")] 
     public GameObject healthBar;
+	public GameObject extraHealthBar;
     public Transform popUpPos;
     protected Vector3 fullHealth;
     protected Vector3 emptyHealth;

@@ -8,7 +8,7 @@ public class GameplayClient : NetworkBehaviour
 {
 
     private GameplayServer myServer;
-    public int teamID;
+    public int teamID = -1;
 	private EndGame mEndGameCanvas;
 
     public override void OnStartServer()
@@ -94,8 +94,8 @@ public class GameplayClient : NetworkBehaviour
 	}
 
 	[Command]
-	public void CmdDisableHUD(){
-		myServer.DisableHUD ();
+	public void CmdDisableHUD(int id){
+		myServer.DisableHUD (id);
 	}
 
 	[Command]
@@ -108,4 +108,9 @@ public class GameplayClient : NetworkBehaviour
     {
         myServer.doDamageToSingleTower(damage, id);
     }
+
+	[ClientRpc]
+	public void RpcFindAndDisableHUD(){
+		GameObject.Find ("Canvas").GetComponent<CardHUD> ().DisableHUD ();
+	}
 }

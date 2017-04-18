@@ -289,7 +289,7 @@
 	"type" : "SP",
 	"description" : "Demolitions Kit",
 
-	"health" : 30,
+	"health" : 0,
 	"speed" : 0,
 	"attack" : 30,
 

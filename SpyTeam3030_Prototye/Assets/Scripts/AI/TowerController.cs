@@ -104,9 +104,8 @@ public class TowerController : CombatController
             {
                 GameObject.Find("Gameplay_Server").GetComponent<GameplayServer>().UpdateTowerCount(id);
             }
-//            Destroy(gameObject, 0.25f);
-			gameObject.SetActive (false);
-			rubble.SetActive (true);
+            Destroy(gameObject, 0.25f);
+			RpcCreateRubble (transform.position, transform.rotation);
             return true;
         }
         RpcUpdateHealthBar(health / maxhealth);
@@ -141,4 +140,9 @@ public class TowerController : CombatController
     {
         healthBar.transform.localScale = Vector3.Lerp(emptyHealth, fullHealth, ratio);
     }
+
+	[ClientRpc]
+	void RpcCreateRubble(Vector3 pos, Quaternion rot){
+		Instantiate (rubble, transform.position, transform.rotation);
+	}
 }
