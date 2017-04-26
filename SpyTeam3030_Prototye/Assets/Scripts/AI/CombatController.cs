@@ -41,6 +41,7 @@ public class CombatController : NetworkBehaviour
     protected SpyController mSpyController;
     protected float counter;
     public float health;
+    public float orignal_health;
     protected int id;
     protected int m_id;
 	protected bool flash = false;
@@ -67,6 +68,8 @@ public class CombatController : NetworkBehaviour
         emptyHealth = fullHealth;
         emptyHealth.x = 0.0f;
         restoreHealth = 0.0f;
+        orignal_health = maxhealth;
+        RpcUpdateHealthBar(0.0f, 1.0f);
 	}
 	
 	// Update is called once per frame
@@ -182,7 +185,12 @@ public class CombatController : NetworkBehaviour
 
 			mSpyController.Respawn();
 		}
-        RpcUpdateHealthBar(health / maxhealth);
+        if (health > orignal_health)
+        {
+            float fh = health - orignal_health;
+            RpcUpdateHealthBar(fh / orignal_health, health / orignal_health);
+        }
+        RpcUpdateHealthBar(0.0f, health / orignal_health);
         return false;
     }
 
@@ -202,7 +210,12 @@ public class CombatController : NetworkBehaviour
         }
 
         RpcDisplayPopup(power.ToString(), popUpPos.position, Color.green);
-        RpcUpdateHealthBar(health / maxhealth);
+        if (health > orignal_health)
+        {
+            float fh = health - orignal_health;
+            RpcUpdateHealthBar(fh / orignal_health, health / orignal_health);
+        }
+        RpcUpdateHealthBar(0.0f, health / orignal_health);
         return false;
     }
 
@@ -283,9 +296,10 @@ public class CombatController : NetworkBehaviour
     }
 
     [ClientRpc]
-    void RpcUpdateHealthBar(float ratio)
+    void RpcUpdateHealthBar(float ratio1, float ratio2)
     {
-        healthBar.transform.localScale = Vector3.Lerp(emptyHealth, fullHealth, ratio);
+        if(extraHealthBar) extraHealthBar.transform.localScale = Vector3.Lerp(emptyHealth, fullHealth, ratio1);
+        healthBar.transform.localScale = Vector3.Lerp(emptyHealth, fullHealth, ratio2);
     }
 
 	[ClientRpc]
