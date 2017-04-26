@@ -1465,6 +1465,8 @@ MonoBehaviour:
   extraHealthBar: {fileID: 0}
   popUpPos: {fileID: 4000010530736916}
   health: 0
+  attackBuff: {fileID: 100010, guid: ef20b219f31a7c94c98a1fb42c491ea6, type: 2}
+  specialEffect: {fileID: 0}
 --- !u!114 &114000011444757336
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -24,6 +24,7 @@ public class EndGame : MonoBehaviour {
 			children.SetActive (true);
 			myText.text = "WINNER!";
 			enemyText.text = "LOSER!";
+			drawText.gameObject.SetActive (false);
 		}
 	}
 
@@ -33,6 +34,7 @@ public class EndGame : MonoBehaviour {
 			children.SetActive (true);
 			myText.text = "LOSER!";
 			enemyText.text = "WINNER!";
+			drawText.gameObject.SetActive (false);
 		}
 	}
 

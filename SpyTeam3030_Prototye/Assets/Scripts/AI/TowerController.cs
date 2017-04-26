@@ -8,6 +8,7 @@ public class TowerController : CombatController
     public bool isBase = false;
 
 	public GameObject rubble;
+	public GameObject explosionEffect;
 
     public void InitiID(int id, int mid)
     {
@@ -144,5 +145,6 @@ public class TowerController : CombatController
 	[ClientRpc]
 	void RpcCreateRubble(Vector3 pos, Quaternion rot){
 		Instantiate (rubble, transform.position, transform.rotation);
+		Instantiate	(explosionEffect, transform.position, transform.rotation);
 	}
 }

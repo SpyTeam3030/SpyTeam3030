@@ -45,6 +45,10 @@ public class CombatController : NetworkBehaviour
     protected int m_id;
 	protected bool flash = false;
 
+	[Header("Special Effects")]
+	public GameObject attackBuff;
+	public GameObject specialEffect;
+
 
     // Use this for initialization
     void Start () 
@@ -173,6 +177,9 @@ public class CombatController : NetworkBehaviour
 			counter = 0.0f;
 			healthBar.transform.localScale = fullHealth;
 
+			specialEffect.SetActive (false);
+			specialEffect = null;
+
 			mSpyController.Respawn();
 		}
         RpcUpdateHealthBar(health / maxhealth);
@@ -280,4 +287,12 @@ public class CombatController : NetworkBehaviour
     {
         healthBar.transform.localScale = Vector3.Lerp(emptyHealth, fullHealth, ratio);
     }
+
+	[ClientRpc]
+	void RpcShowEffects(bool attack, bool heal, bool speed)
+	{
+		if (attack) {
+			specialEffect = Instantiate (attackBuff, transform.position, transform.rotation);
+		}
+	}
 }

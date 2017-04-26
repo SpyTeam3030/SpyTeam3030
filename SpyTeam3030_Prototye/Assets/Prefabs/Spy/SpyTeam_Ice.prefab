@@ -4015,6 +4015,8 @@ MonoBehaviour:
   extraHealthBar: {fileID: 0}
   popUpPos: {fileID: 4000010581858330}
   health: 0
+  attackBuff: {fileID: 100010, guid: ef20b219f31a7c94c98a1fb42c491ea6, type: 2}
+  specialEffect: {fileID: 0}
 --- !u!135 &135000011762614496
 SphereCollider:
   m_ObjectHideFlags: 1
