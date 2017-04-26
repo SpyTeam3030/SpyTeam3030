@@ -180,8 +180,8 @@ public class CombatController : NetworkBehaviour
 			counter = 0.0f;
 			healthBar.transform.localScale = fullHealth;
 
-			specialEffect.SetActive (false);
-			specialEffect = null;
+			//specialEffect.SetActive (false);
+			//specialEffect = null;
 
 			mSpyController.Respawn();
 		}
