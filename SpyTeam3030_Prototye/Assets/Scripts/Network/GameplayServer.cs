@@ -60,7 +60,7 @@ public class GameplayServer : NetworkBehaviour
     private int playerCount = 0;
     private int rotate = 0;
     public float time;
-    GameObject[] clients;
+    List<GameObject> clients;
     int[] towerCount = { 0, 0 };
 
     private List<SpyInfo> allSpyList;
@@ -78,7 +78,7 @@ public class GameplayServer : NetworkBehaviour
         m_consoleView = GameObject.FindGameObjectWithTag("DebugConsole").GetComponent<ConsoleView>();
         winner = 10;
         time = 240.0f;
-        clients = null;
+        clients = new List<GameObject>();
     }
 
     public int rotateCamera()
@@ -90,16 +90,18 @@ public class GameplayServer : NetworkBehaviour
 
     void Update()
     {
-        if (clients == null || clients.Length != 2) 
+        if (clients.Count != 2) 
         {
+            Debug.LogFormat("Return {0}", clients.Count);
             return;
         }
         if (winner == 10 && time > 0.0f)
         {
             time -= Time.deltaTime;
-            for (int i = 0; i < clients.Length; i++)
+            for (int i = 0; i < clients.Count; i++)
             {
                 clients[i].GetComponent<GameplayClient>().UpdateTime(time);
+                Debug.LogFormat("server update for client {0}", i);
             }
 
         }
@@ -116,7 +118,7 @@ public class GameplayServer : NetworkBehaviour
                     winner = 0;
                 }
             }
-            for (int i = 0; i < clients.Length; i++)
+            for (int i = 0; i < clients.Count; i++)
             {
                 clients[i].GetComponent<GameplayClient>().EndGame(winner);
                 clients[i].GetComponent<GameplayClient>().UpdateTime(0f);
@@ -157,7 +159,9 @@ public class GameplayServer : NetworkBehaviour
 
         if(playerCount == 2)
         {
-            clients = GameObject.FindGameObjectsWithTag("Client");
+            clients.Add(GameObject.FindGameObjectWithTag("LocalClient"));
+            clients.Add(GameObject.FindGameObjectWithTag("Client"));
+
             var posbase = basePosList[0].position;
             var rotationbase = basePosList[0].rotation;
 

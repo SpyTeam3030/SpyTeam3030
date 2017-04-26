@@ -16,16 +16,16 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000014103150974}
-  - 135: {fileID: 135000010331162368}
-  - 54: {fileID: 54000011783001058}
-  - 114: {fileID: 114000012870931494}
-  - 114: {fileID: 114000011114390000}
-  - 195: {fileID: 195000010816216448}
-  - 114: {fileID: 114000013838690434}
-  - 114: {fileID: 114000013461038032}
+  - component: {fileID: 4000014103150974}
+  - component: {fileID: 135000010331162368}
+  - component: {fileID: 54000011783001058}
+  - component: {fileID: 114000012870931494}
+  - component: {fileID: 114000011114390000}
+  - component: {fileID: 195000010816216448}
+  - component: {fileID: 114000013838690434}
+  - component: {fileID: 114000013461038032}
   m_Layer: 0
   m_Name: Spy
   m_TagString: CombatObject
@@ -38,11 +38,11 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 224: {fileID: 224000014154420280}
-  - 222: {fileID: 222000011389454058}
-  - 114: {fileID: 114000010638869592}
+  - component: {fileID: 224000014154420280}
+  - component: {fileID: 222000011389454058}
+  - component: {fileID: 114000010638869592}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -55,13 +55,13 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 224: {fileID: 224000010269606760}
-  - 223: {fileID: 223000012355735878}
-  - 114: {fileID: 114000010696573522}
-  - 114: {fileID: 114000013937739842}
-  - 114: {fileID: 114000013164023306}
+  - component: {fileID: 224000010269606760}
+  - component: {fileID: 223000012355735878}
+  - component: {fileID: 114000010696573522}
+  - component: {fileID: 114000013937739842}
+  - component: {fileID: 114000013164023306}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -74,11 +74,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000012453163168}
-  - 33: {fileID: 33000014064928080}
-  - 23: {fileID: 23000011719240690}
+  - component: {fileID: 4000012453163168}
+  - component: {fileID: 33000014064928080}
+  - component: {fileID: 23000011719240690}
   m_Layer: 0
   m_Name: Popup_Position
   m_TagString: Untagged
@@ -91,11 +91,11 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 224: {fileID: 224000010163584986}
-  - 222: {fileID: 222000012594849038}
-  - 114: {fileID: 114000013989841712}
+  - component: {fileID: 224000010163584986}
+  - component: {fileID: 222000012594849038}
+  - component: {fileID: 114000013989841712}
   m_Layer: 0
   m_Name: Health
   m_TagString: Untagged
@@ -112,10 +112,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.054, y: 2.535, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000014103150974}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000014103150974
 Transform:
   m_ObjectHideFlags: 1
@@ -125,12 +125,12 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.4733784, y: -4.56, z: -2.4565275}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 224000010269606760}
   - {fileID: 4000012453163168}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23000011719240690
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -145,7 +145,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -153,7 +155,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -313,9 +315,12 @@ MonoBehaviour:
   cardID: 0
   restoreHealth: 0
   changed: 0
+  m_name: 
   healthBar: {fileID: 1000012396889690}
+  extraHealthBar: {fileID: 0}
   popUpPos: {fileID: 4000012453163168}
   health: 0
+  orignal_health: 0
 --- !u!114 &114000013838690434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -445,10 +450,10 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 224000010269606760}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1.355275, y: -0.00006261468}
@@ -463,12 +468,12 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 224000014154420280}
   - {fileID: 224000010163584986}
   m_Father: {fileID: 4000014103150974}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0.061, y: 1.759}
@@ -483,10 +488,10 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 224000010269606760}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.00012501888, y: -0.00012501515}

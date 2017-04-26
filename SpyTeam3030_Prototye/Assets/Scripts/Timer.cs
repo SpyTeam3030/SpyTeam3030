@@ -19,6 +19,7 @@ public class Timer : MonoBehaviour {
 	}
 
 	public void UpdateTime(float time){
+        Debug.LogFormat("update time in local with {0}", time);
 		int min, sec, mili;
 		min = (int)Mathf.Floor(time / 60);
 		sec = (int)Mathf.Floor (time % 60);
