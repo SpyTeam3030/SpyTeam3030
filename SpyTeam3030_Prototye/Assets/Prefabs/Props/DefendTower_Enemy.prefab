@@ -510,7 +510,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013876409374}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 8.58, y: 0, z: 0}
   m_LocalScale: {x: 1.1882858, y: 1.7261345, z: 1.1724573}
   m_Children:
   - {fileID: 224000010822664896}
@@ -1181,6 +1181,7 @@ MonoBehaviour:
   extraHealthBar: {fileID: 0}
   popUpPos: {fileID: 4000010987913308}
   health: 0
+  orignal_health: 0
   attackBuff: {fileID: 0}
   specialEffect: {fileID: 0}
   isBase: 0

@@ -70,6 +70,8 @@ public class CombatController : NetworkBehaviour
         restoreHealth = 0.0f;
         orignal_health = maxhealth;
         RpcUpdateHealthBar(0.0f, 1.0f);
+		RpcShowEffects (false, false, false);
+
 	}
 	
 	// Update is called once per frame
@@ -180,8 +182,7 @@ public class CombatController : NetworkBehaviour
 			counter = 0.0f;
 			healthBar.transform.localScale = fullHealth;
 
-			//specialEffect.SetActive (false);
-			//specialEffect = null;
+			RpcShowEffects (false, false, false);
 
 			mSpyController.Respawn();
 		}
@@ -263,6 +264,17 @@ public class CombatController : NetworkBehaviour
 		health += maxHealthChange;
 		attackPower += attackChange;
         restoreHealth = rHealthChange;
+
+		if (attackChange > 0) {
+			RpcShowEffects (true, false, false);
+		}
+		else if (maxHealthChange > 0) {
+			RpcShowEffects (false, true, false);
+		}
+		else if (newSpeed > 0) {
+			RpcShowEffects (false, false, true);
+		}
+
         if (newSpeed != 0) 
         {
 			GetComponent<UnityEngine.AI.NavMeshAgent> ().speed = newSpeed * mSpyController.maxMovementSpeed;
@@ -305,8 +317,11 @@ public class CombatController : NetworkBehaviour
 	[ClientRpc]
 	void RpcShowEffects(bool attack, bool heal, bool speed)
 	{
+		attackBuff.SetActive (false);
+
 		if (attack) {
-			specialEffect = Instantiate (attackBuff, transform.position, transform.rotation);
+			specialEffect = attackBuff;
+			attackBuff.SetActive(true);
 		}
 	}
 }

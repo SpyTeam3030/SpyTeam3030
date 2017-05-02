@@ -200,6 +200,7 @@ public class GameplayServer : NetworkBehaviour
             }
             Debug.Log ("alltheSpys " + alltheSpys.Count);
             CallSetSpys ();
+			GameObject.Find ("house").GetComponent<AudioSource> ().Play ();
         }
 
         //allSpyList.Clear();

@@ -3,23 +3,18 @@ using System.Collections;
 
 public class Backgroundmusic : MonoBehaviour {
 
-	public AudioClip loopClip;
-	private float length;
+	public AudioClip winMusic;
+	public AudioClip loseMusic;
 
-	// Use this for initialization
-	void Start () {
-		length = GetComponent<AudioSource> ().clip.length;
-//		GetComponent<AudioSource> ().time = 50f;
-		Invoke ("Loop", length - 0.04f);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-	public void Loop(){
-		GetComponent<AudioSource> ().clip = loopClip;
+	public void PlayMusic(){
 		GetComponent<AudioSource> ().Play ();
+	}
+
+	public void PlayWinLoseMusic(bool win){
+		if (win) {
+			GetComponent<AudioSource> ().PlayOneShot (winMusic);
+		} else {
+			GetComponent<AudioSource> ().PlayOneShot (loseMusic);
+		}
 	}
 }

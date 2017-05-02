@@ -62,10 +62,12 @@ public class CardManager : MonoBehaviour {
 		for (int i = 0; i < ids.Count; i++){
 
 			int ID = ids [i];
-			Card c = cardDeck[ID - 1];
-			c.image = images [ID - 1];
+			if (ID  < 25 || ID == 30) {
+				Card c = cardDeck[ID - 1];
+				c.image = images [ID - 1];
 
-			cards.Push (c);
+				cards.Push (c);
+			}
 		}
 	}
 

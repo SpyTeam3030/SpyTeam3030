@@ -300,14 +300,14 @@
 },{
     "id" : 24,
 	"type" : "SP",
-	"description" : "Cloaking Device",
+	"description" : "Assilt Rifle",
 
 	"health" : 0,
 	"speed" : 0,
-	"attack" : 0,
+	"attack" : 20,
 
-	"attackSpeed" : 0,
-	"attackDistance" : 0,
+	"attackSpeed" : 0.7,
+	"attackDistance" : 5,
 
 	"image" : 1
 },{

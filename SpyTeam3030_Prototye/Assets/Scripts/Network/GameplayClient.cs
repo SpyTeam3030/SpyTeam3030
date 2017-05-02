@@ -61,6 +61,7 @@ public class GameplayClient : NetworkBehaviour
 
     public void EndGame(int winner)
     {
+		Debug.Log ("winner is " + winner);
         RpcEndGame(winner);
     }
 
