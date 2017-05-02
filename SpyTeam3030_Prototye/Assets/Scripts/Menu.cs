@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
 
+	public AudioClip startAudio;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -15,6 +17,8 @@ public class Menu : MonoBehaviour {
 	}
 
 	public void StartButton(){
+		GetComponent<AudioSource> ().PlayOneShot (startAudio);
 		SceneManager.LoadScene ("Main_l");
+
 	}
 }
