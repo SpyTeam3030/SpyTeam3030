@@ -6,9 +6,10 @@ public class EndGame : MonoBehaviour {
 
 	public GameObject children;
 
-	public Text myText;
-	public Text enemyText;
-	public Text drawText;
+	public GameObject displayImage;
+	public Sprite drawImage;
+	public Sprite winImage;
+	public Sprite loseImage;
 	private bool set;
 
 	// Use this for initialization
@@ -22,9 +23,7 @@ public class EndGame : MonoBehaviour {
 		if (set == false) {
 			set = true;
 			children.SetActive (true);
-			myText.text = "WINNER!";
-			enemyText.text = "LOSER!";
-			drawText.gameObject.SetActive (false);
+			displayImage.GetComponent<Image> ().sprite = winImage;
 		}
 	}
 
@@ -32,9 +31,7 @@ public class EndGame : MonoBehaviour {
 		if (set == false) {
 			set = true;
 			children.SetActive (true);
-			myText.text = "LOSER!";
-			enemyText.text = "WINNER!";
-			drawText.gameObject.SetActive (false);
+			displayImage.GetComponent<Image> ().sprite = loseImage;
 		}
 	}
 
@@ -42,9 +39,7 @@ public class EndGame : MonoBehaviour {
 		if (set == false) {
 			set = true;
 			children.SetActive (true);
-			myText.gameObject.SetActive (false);
-			enemyText.gameObject.SetActive (false);
-			drawText.gameObject.SetActive (true);
+			displayImage.GetComponent<Image> ().sprite = drawImage;
 		}
 	}
 }

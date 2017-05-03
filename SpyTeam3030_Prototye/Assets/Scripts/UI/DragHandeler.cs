@@ -111,12 +111,12 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 							CharacterIcon ci = obs [i].GetComponent<CharacterIcon> ();
 							if (ci != null && !ci.IsSameTeam (m_id)) {
 								gc.CmdAttributeChange (ci.mySpy.name, card.id, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 999.0f);
-								GameObject.Find ("Canvas").GetComponent<CardSounds> ().RpcPlayCardSound (card.id);
 
-								mCardManager.NextCard (this.gameObject, card.id);
-								GetComponent<Animator> ().SetTrigger ("Appear");
 							}
 						}
+						GameObject.Find ("Canvas").GetComponent<CardSounds> ().PlayCardSound (card.id);
+						mCardManager.NextCard (this.gameObject, card.id);
+						GetComponent<Animator> ().SetTrigger ("Appear");
 					}
 				} else if (card.id == 26) {
 
@@ -134,7 +134,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 					}
 					if (gc != null) {
 						gc.CmdDisableHUD (gc.teamID);
-						GameObject.Find ("Canvas").GetComponent<CardSounds> ().RpcPlayCardSound (card.id);
+						GameObject.Find ("Canvas").GetComponent<CardSounds> ().PlayCardSound (card.id);
 
 						mCardManager.NextCard (this.gameObject, card.id);
 						GetComponent<Animator> ().SetTrigger ("Appear");
@@ -161,12 +161,12 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 							CharacterIcon ci = obs [i].GetComponent<CharacterIcon> ();
 							if (ci != null && !ci.IsSameTeam (m_id)) {
 								gc.CmdAttributeChange (ci.mySpy.name, card.id, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, card.attack);
-								GameObject.Find ("Canvas").GetComponent<CardSounds> ().RpcPlayCardSound (card.id);
 
-								mCardManager.NextCard (this.gameObject, card.id);
-								GetComponent<Animator> ().SetTrigger ("Appear");
 							}
 						}
+						GameObject.Find ("Canvas").GetComponent<CardSounds> ().PlayCardSound (card.id);
+						mCardManager.NextCard (this.gameObject, card.id);
+						GetComponent<Animator> ().SetTrigger ("Appear");
 					}
 				}
 			}
@@ -196,7 +196,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 					gc.CmdDoDamageToSingleTower (card.attack, myid);
 					Debug.Log ("do damage to tower " + myid);
 
-					GameObject.Find ("Canvas").GetComponent<CardSounds> ().RpcPlayCardSound (card.id);
+					GameObject.Find ("Canvas").GetComponent<CardSounds> ().PlayCardSound (card.id);
 
 					mCardManager.NextCard (this.gameObject, card.id);
 					GetComponent<Animator> ().SetTrigger ("Appear");
@@ -221,7 +221,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 					if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI") && 
 						results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
 						Debug.Log ("Take Effect");
-						GameObject.Find ("Canvas").GetComponent<CardSounds> ().RpcPlayCardSound (card.id);
+						GameObject.Find ("Canvas").GetComponent<CardSounds> ().PlayCardSound (card.id);
 
 						mCardManager.NextCard (this.gameObject, card.id);
 						GetComponent<Animator> ().SetTrigger ("Appear");
@@ -230,12 +230,22 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 				else if (card.type == "SP") 
 				{
 					Debug.Log ("Card type SP");
+					if (card.id == 16) {
+						if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI") && 
+							results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
+							Debug.Log ("Take Effect");
+							GameObject.Find ("Canvas").GetComponent<CardSounds> ().PlayCardSound (card.id);
+
+							mCardManager.NextCard (this.gameObject, card.id);
+							GetComponent<Animator> ().SetTrigger ("Appear");
+						}
+					}
 					//Sniper rifle
-					if (card.id == 17) {
+					else if (card.id == 17) {
 						if (results[0].gameObject.layer == LayerMask.NameToLayer("WorldUI") && 
 							results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, card.attack)) {
 							Debug.Log ("Take Effect");
-							GameObject.Find ("Canvas").GetComponent<CardSounds> ().RpcPlayCardSound (card.id);
+							GameObject.Find ("Canvas").GetComponent<CardSounds> ().PlayCardSound (card.id);
 
 							mCardManager.NextCard (this.gameObject, card.id);
 							GetComponent<Animator> ().SetTrigger ("Appear");
@@ -261,9 +271,11 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 								CharacterIcon ci = obs [i].GetComponent<CharacterIcon> ();
 								if (ci != null && !ci.IsSameTeam(m_id)) {
 									gc.CmdAttributeChange(ci.mySpy.name, card.id, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, card.attack);
-									GameObject.Find ("Canvas").GetComponent<CardSounds> ().RpcPlayCardSound (card.id);
 								}
 							}
+							GameObject.Find ("Canvas").GetComponent<CardSounds> ().PlayCardSound (card.id);
+							mCardManager.NextCard (this.gameObject, card.id);
+							GetComponent<Animator> ().SetTrigger ("Appear");
 						}
 					}
 					else if (card.id == 19) 
@@ -272,7 +284,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 							results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
 							Debug.Log ("Take Effect");
 
-							GameObject.Find ("Canvas").GetComponent<CardSounds> ().RpcPlayCardSound (card.id);
+							GameObject.Find ("Canvas").GetComponent<CardSounds> ().PlayCardSound (card.id);
 
 							mCardManager.NextCard (this.gameObject, card.id);
 							GetComponent<Animator> ().SetTrigger ("Appear");
@@ -282,7 +294,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 							results [0].gameObject.GetComponent<CharacterIcon> ().mySpy.Flash (100.0f);
 							Debug.Log ("Take Effect");
 
-							GameObject.Find ("Canvas").GetComponent<CardSounds> ().RpcPlayCardSound (card.id);
+							GameObject.Find ("Canvas").GetComponent<CardSounds> ().PlayCardSound (card.id);
 
 							mCardManager.NextCard (this.gameObject, card.id);
 							GetComponent<Animator> ().SetTrigger ("Appear");
@@ -293,7 +305,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 							results [0].gameObject.GetComponent<CharacterIcon> ().ChangeSpy (card.id, card.health, card.attack, card.speed, card.attackDistance, card.attackSpeed)) {
 							Debug.Log ("Take Effect");
 
-							GameObject.Find ("Canvas").GetComponent<CardSounds> ().RpcPlayCardSound (card.id);
+							GameObject.Find ("Canvas").GetComponent<CardSounds> ().PlayCardSound (card.id);
 
 							mCardManager.NextCard (this.gameObject, card.id);
 							GetComponent<Animator> ().SetTrigger ("Appear");

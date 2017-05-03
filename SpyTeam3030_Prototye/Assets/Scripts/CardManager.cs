@@ -62,7 +62,7 @@ public class CardManager : MonoBehaviour {
 		for (int i = 0; i < ids.Count; i++){
 
 			int ID = ids [i];
-			if (ID  < 25 || ID == 30) {
+			if (ID < 23 || ID == 24 || ID == 30) {
 				Card c = cardDeck[ID - 1];
 				c.image = images [ID - 1];
 
