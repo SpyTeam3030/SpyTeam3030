@@ -10,6 +10,7 @@ public class EndGame : MonoBehaviour {
 	public Sprite drawImage;
 	public Sprite winImage;
 	public Sprite loseImage;
+
 	private bool set;
 
 	// Use this for initialization
@@ -24,6 +25,8 @@ public class EndGame : MonoBehaviour {
 			set = true;
 			children.SetActive (true);
 			displayImage.GetComponent<Image> ().sprite = winImage;
+			Debug.Log ("WIN!");
+			GameObject.Find ("Canvas").GetComponent<CardSounds> ().PlayWinSound ();
 		}
 	}
 
@@ -32,6 +35,8 @@ public class EndGame : MonoBehaviour {
 			set = true;
 			children.SetActive (true);
 			displayImage.GetComponent<Image> ().sprite = loseImage;
+			Debug.Log ("Lose!");
+			GameObject.Find ("Canvas").GetComponent<CardSounds> ().PlayLoseSound ();
 		}
 	}
 
@@ -39,6 +44,7 @@ public class EndGame : MonoBehaviour {
 		if (set == false) {
 			set = true;
 			children.SetActive (true);
+			Debug.Log ("Draw!");
 			displayImage.GetComponent<Image> ().sprite = drawImage;
 		}
 	}

@@ -4113,6 +4113,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7eca3e932dd094c9e8ddff4cfce29014, type: 3}
   tapSound: {fileID: 8300000, guid: 3cbeaac7ff1ac46138f898eb5215ea13, type: 3}
   newcardSound: {fileID: 8300000, guid: 8c94e40453a4149639cdf7df6e7fc847, type: 3}
+  winSound: {fileID: 8300000, guid: 924ccc3edcaa14b24a37b0758f23bc2b, type: 3}
+  loseSound: {fileID: 8300000, guid: cbdcf225de1074be6b7cc560041d3464, type: 3}
 --- !u!82 &92189523
 AudioSource:
   m_ObjectHideFlags: 0

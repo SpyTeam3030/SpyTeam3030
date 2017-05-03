@@ -10,6 +10,8 @@ public class CardSounds : NetworkBehaviour {
 	public AudioClip[] clips;
 	public AudioClip tapSound;
 	public AudioClip newcardSound;
+	public AudioClip winSound;
+	public AudioClip loseSound;
 
 	// Use this for initialization
 	void Start () {
@@ -31,6 +33,14 @@ public class CardSounds : NetworkBehaviour {
 
 	public void PlayNewcardSound(){
 		source.PlayOneShot (newcardSound);
+	}
+
+	public void PlayWinSound(){
+		source.PlayOneShot (winSound);
+	}
+
+	public void PlayLoseSound(){
+		source.PlayOneShot (loseSound);
 	}
 
 	[ClientRpc]

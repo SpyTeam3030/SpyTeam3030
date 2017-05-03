@@ -101,7 +101,7 @@ public class GameplayServer : NetworkBehaviour
             for (int i = 0; i < clients.Count; i++)
             {
                 clients[i].GetComponent<GameplayClient>().UpdateTime(time);
-                Debug.LogFormat("server update for client {0}", i);
+//                Debug.LogFormat("server update for client {0}", i);
             }
 
         }
@@ -120,7 +120,7 @@ public class GameplayServer : NetworkBehaviour
             }
             for (int i = 0; i < clients.Count; i++)
             {
-                clients[i].GetComponent<GameplayClient>().EndGame(winner);
+                clients[i].GetComponent<GameplayClient>().RpcEndGame(winner);
                 clients[i].GetComponent<GameplayClient>().UpdateTime(0f);
             }
         }

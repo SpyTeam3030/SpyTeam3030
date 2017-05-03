@@ -59,15 +59,10 @@ public class GameplayClient : NetworkBehaviour
 		Camera.main.GetComponent<Transform> ().eulerAngles = new Vector3 (66.798f, 180f, 0f);
     }
 
-    public void EndGame(int winner)
+    [ClientRpc]
+    public void RpcEndGame(int winner)
     {
 		Debug.Log ("winner is " + winner);
-        RpcEndGame(winner);
-    }
-
-    [ClientRpc]
-    void RpcEndGame(int winner)
-    {
         if (winner == teamID)
         {
             // win   
