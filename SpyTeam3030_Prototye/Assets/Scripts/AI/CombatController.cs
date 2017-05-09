@@ -42,8 +42,8 @@ public class CombatController : NetworkBehaviour
     protected float counter;
     public float health;
     public float orignal_health;
-    protected int id;
-    protected int m_id;
+    public int id;
+    public int m_id;
 	protected bool flash = false;
 
 	[Header("Special Effects")]

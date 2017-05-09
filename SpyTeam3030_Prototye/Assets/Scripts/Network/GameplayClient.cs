@@ -35,6 +35,23 @@ public class GameplayClient : NetworkBehaviour
         RpcUpdateTime(t);
 	}
 
+    public void EndGame(int winner)
+    {
+        Debug.Log("winner is " + winner);
+        if (winner == teamID)
+        {
+            RpcEndGame(0);
+        }
+        else if (winner == 10)
+        {
+            RpcEndGame(2);
+        }
+        else
+        {
+            RpcEndGame(1);
+        }
+    }
+
     [Command]
     void CmdRoateCamera()
     {
@@ -54,27 +71,24 @@ public class GameplayClient : NetworkBehaviour
     void RpcRotateCamera()
     {
         Debug.Log("rotate");
-//        Camera.main.GetComponent<Transform>().RotateAround(Vector3.zero, Vector3.up, 180.0f);
 		Camera.main.GetComponent<Transform> ().position = new Vector3 (5.1f, 27.4f, 10.1f);
 		Camera.main.GetComponent<Transform> ().eulerAngles = new Vector3 (66.798f, 180f, 0f);
     }
 
     [ClientRpc]
-    public void RpcEndGame(int winner)
+    public void RpcEndGame(int result)
     {
-		Debug.Log ("winner is " + winner);
-        if (winner == teamID)
+        if (result == 0)
         {
-            // win   
-            GameObject.Find("WinLoseCanvas").GetComponent<EndGame>().Win();
+            GameObject.Find("WinLoseCanvas").GetComponent<EndGame>().Lose();
         }
-        else if (winner == 10)
+        else if (result == 2)
         {
              GameObject.Find ("WinLoseCanvas").GetComponent<EndGame> ().Draw();
         }
-        else
+        else if(result == 1)
         {
-             GameObject.Find ("WinLoseCanvas").GetComponent<EndGame> ().Lose();
+             GameObject.Find ("WinLoseCanvas").GetComponent<EndGame> ().Win();
         }
     }
 
