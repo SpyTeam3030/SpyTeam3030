@@ -22,6 +22,7 @@ public class ConsoleView : MonoBehaviour {
 			console.logChanged += onLogChanged;
 		}
 		updateLogStr(console.log);
+		toggleVisibility ();
 	}
 	
 	~ConsoleView() {
