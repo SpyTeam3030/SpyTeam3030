@@ -78,6 +78,8 @@ public class GameplayClient : NetworkBehaviour
     [ClientRpc]
     public void RpcEndGame(int result)
     {
+        if (!isLocalPlayer) return;
+
         if (result == 0)
         {
             GameObject.Find("WinLoseCanvas").GetComponent<EndGame>().Lose();
